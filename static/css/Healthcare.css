@@ -1,0 +1,43 @@
+
+.custom-section {
+      background-color: var(--color);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .custom-heading {
+      color:  var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .list-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .list-item i {
+      color: var(--primary-color);
+      font-size: 20px;
+    }
+    .list-item strong {
+      font-size: 17px;
+      color: #004a78;
+    }
+    .list-item p {
+      margin: 0;
+      color: #6c757d;
+    }
+    .custom-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    .custom-list-item {
+      margin-bottom: 10px;
+    }
+    .custom-highlight {
+      color: #007bff;
+      font-weight: bold;
+    }

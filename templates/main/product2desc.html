@@ -1,0 +1,56 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/product2desc.css">
+{% endblock csslink %}
+
+
+<body>
+{% block content %}
+<section class="hero">
+  <div class="container">
+      <div class="row justify-content-center text-center pt-4">
+          <div class="col-lg-7 col-md-12 col-12">
+              <div class="left-item align-items-center">
+                  <div class="heading-sec ">
+                      <h1>Network Management System (NMS)</h1>
+                      <p>Monitor, Manage and Maintain Networks</p>
+                      <p>(Soon to be Launched)</p>
+                  </div>
+                  <!-- <button class="learn-more-btn mt-lg-5">
+                      <a href="#" class="learn-more-link">Learn More</a>
+                  </button> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Aboutus Grand ortus Section -->
+<section class="product2desc">
+<div class="container my-lg-5">
+  <h1>NMS</h1>
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-6">
+      <div class="product-text">
+        <p>
+          A NMS is a set of hardware and software tools that allow an IT professional to monitor, manage and maintain networks.<br>
+          NMS enables the detection of network performance issues, configuration errors and device status.<br><br>
+          1. Real Time Network Monitoring<br>
+          2. Alerts and Notification for performance issue<br>
+          3. Device Configuration Management<br>
+          4. Traffic Analysis and Reporting<br>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="product-img d-flex justify-content-center position-relative">
+        <img src="/static/images/nms.jpg" class="img-fluid" alt="">
+    </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock content %}
+
+</body>
+</html>

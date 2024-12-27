@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Ortus</title>
+  <link rel="icon" href="/static/images/favicon-50x50.png">
+
+  <!-- Bootstrap CDN Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS Link -->
+
+  <link rel="stylesheet" href="/static/css/Style.css?v=1.1" />
+  <!-- responsive link -->
+  <link rel="stylesheet" href="/static/css/responsive.css">
+
+  <script src="https://code.jquery.com/jquery-1.11.3.js"> </script>
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- jQuery -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <script src="static/js/dropdown.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Owl Carousel JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- JavaScript animate-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+  <!-- Header Section -->
+
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-item.dropdown">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/static/images/Grand Ortus _BG.png" alt="Grand Ortus Logo" />
+          <span class="trademark">&trade;</span>
+        </a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto  mb-lg-0">
+            <li class="nav-item me-3 py-2 ">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+
+            <!-- Resources Dropdown -->
+
+            <li class="nav-item me-3 py-2 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+              <ul class="dropdown-menu triangle mt-4" aria-labelledby="resourcesDropdown">
+                <li><a class="dropdown-item" href="{% url "About" %}">About Us</a></li>
+                <li><a class="dropdown-item" href="{% url "Team" %}">Team</a></li>
+                <li><a class="dropdown-item" href="{% url "Blog" %}">Blogs</a></li>
+                <li><a class="dropdown-item" href="{% url "CaseStudy" %}">Case Studies</a></li>
+                <li><a class="dropdown-item" href="{% url "AwardsCertifications" %}">Awards & Certifications</a></li>
+
+                <!-- Career Dropdown within Resources -->
+
+                <li class="dropdown dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#" id="careerDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">Career</a>
+                  <ul class="dropdown-menu submenu " aria-labelledby="careerDropdown">
+                    <li><a class="dropdown-item" href="{% url "LifeGrandOrtus" %}">Life Grand Ortus</a></li>
+                    <li><a class="dropdown-item" href="{% url "CurrentJobOpening" %}">Current Openings</a></li>
+                    <li><a class="dropdown-item" href="{% url "CSR" %}">Corporate social
+                        responsibility</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="{% url "Contact" %}">Contact Us</a></li>
+              </ul>
+            </li>
+
+            <!-- Associations Dropdown -->
+
+            <li class="nav-item me-3 py-2 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="associationsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Associations</a>
+              <ul class="dropdown-menu triangle mt-4" aria-labelledby="associationsDropdown">
+                <li><a class="dropdown-item" href="{% url "Partners" %}">Partners</a></li>
+                <li><a class="dropdown-item" href="{% url "Clients" %}">Clients</a></li>
+              </ul>
+            </li>
+
+            <!-- Products Dropdown -->
+
+            <li class="nav-item me-3 py-2 dropdown">
+              <a class="nav-link dropdown-toggle" href="#Products" id="productsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu triangle mt-4" aria-labelledby="productsDropdown">
+
+                <li><a class="dropdown-item" href="{% url "product1desc" %}">Product I Description</a></li>
+                <li><a class="dropdown-item" href="{% url "product2desc" %}">Product II Description</a></li>
+              </ul>
+            </li>
+
+            <!-- Solutions Dropdown -->
+
+            <li class="nav-item dropdown me-3 py-2 position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Solutions
+              </a>
+              <div class="dropdown-menu p-3 megamenu dropdown-wide" aria-labelledby="solutionsDropdown">
+                <div class="d-flex">
+                  <!-- Company Size Section -->
+                  <div class="dropdown-column">
+                    <h6 class="dropdown-header">Company Size</h6>
+                    <a class="dropdown-item" href="#Startups">Startups</a>
+                    <a class="dropdown-item" href="#MSMES">MSMES</a>
+                    <a class="dropdown-item" href="#Enterprises">Enterprises</a>
+                  </div>
+
+                  <!-- Services Section -->
+                  <div class="dropdown-column">
+                    <h6 class="dropdown-header">Services</h6>
+                    <a class="dropdown-item" href="{% url "ServiceList" %}">Service List</a>
+                    <a class="dropdown-item" href="{% url "ImplementationServices" %}">Implementation Services</a>
+                    <a class="dropdown-item" href="{% url "Infrastructure" %}">IT Infrastructure Consulting</a>
+                    <a class="dropdown-item" href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
+                    <a class="dropdown-item" href="{% url "Networking" %}">Networking and Security</a>
+                    <a class="dropdown-item" href="{% url "MobilityAndCloud" %}">Mobility and Cloud</a>
+                    <a class="dropdown-item" href="{% url "Internet" %}">Intranet</a>
+                    <a class="dropdown-item" href="{% url "FMSAndAMCSupport" %}">FMS and AMC Support</a>
+                  </div>
+                  
+                  <!-- By Industries Section -->
+                  <div class="dropdown-column">
+                    <h6 class="dropdown-header">By Industries</h6>
+                    <a class="dropdown-item" href="{% url "ITES" %}">IT & ITES</a>
+                    <a class="dropdown-item" href="{% url "Hospitality" %}">Hospitality Industry</a>
+                    <a class="dropdown-item" href="{% url "Telecom" %}">Telecom Industry</a>
+                    <a class="dropdown-item" href="{% url "FMCG" %}">FMCG Industry</a>
+                    <a class="dropdown-item" href="{% url "Healthcare" %}">Healthcare Industry</a>
+                    <a class="dropdown-item" href="{% url "Manufacturing" %}">Manufacturing Industry</a>
+                    <a class="dropdown-item" href="{% url "Gaming" %}">Real Money Gaming Industry</a>
+                    <a class="dropdown-item" href="{% url "Retail" %}">Retail Industry</a>
+                    <a class="dropdown-item" href="{% url "Staffing" %}">Staffing and Recruitment</a>
+                    <a class="dropdown-item" href="{% url "OnDemand" %}">On Demand Economy</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Get a Quote Button -->
+          <form class="d-flex">
+            <button class="btn shadow-none" type="submit">
+              <a href="#GetAQuote">Get a Quote</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+
+  <section class="main-hero">
+    <div class="container">
+      <div class="row  align-items-center pt-4">
+        <div class="col-lg-7 col-md-12 col-12">
+          <div class="left-item">
+            <div class="heading-sec ">
+              <h1>Transform your business with <br> cutting-edge IT Solutions</h1>
+              <p>We are an IT system integrator</p>
+            </div>
+            <button class="learn-more-btn mt-lg-5">
+              <a href="#" class="learn-more-link">Learn More</a>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="img-sec">
+            <!-- <img src="images/medium-shot-man-wearing-vr-glasses.jpg" alt="" class="img-fluid"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+
+  <section class="about py-5">
+    <div class="container">
+      <h4>About us</h4>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="about-text">
+            <h1>We Are Increasing Business <br> Success With Technology</h1>
+            <div class="status  mb-4">
+              <div class="stat-item position-relative">
+                <h3 id="setInterval">300+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="stat-item position-relative">
+                <h3 id="earningsCounter">1.69M</h3>
+                <p>Earned to Worldwide</p>
+              </div>
+              <div class="stat-item">
+                <h3 id="setInter">300+</h3>
+                <p>Professional Members</p>
+              </div>
+            </div>
+            <button class="read-more">
+              <a href="#">Read More</a>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="about-img position-relative">
+
+
+            <img src="/static/images/na_april_02.jpg" alt="" class="first position-absolute">
+            <img src="/static/images/male-female-business-people-working-tablet-office.jpg" alt=""
+              class="second position-absolute">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- Services Section---- -->
+
+  <section class="service py-5">
+    <div class="container text-center mb-5">
+      <h4>Featured Services</h4>
+      <h1>Technology solutions that work for you</h1>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-4">
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">📁</div>
+            <div class="service-title">
+              <a href="/Services/Implementation Services.html">Implementation Services</a>
+            </div>
+            <div class="service-text">
+              We expertly integrate and deploy IT solutions, ensuring a smooth transition and optimal performance.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <div class="service-title">
+              <a href="/Services/Infrastructure.html">IT Infrastructure Consulting</a>
+            </div>
+            <div class="service-text">
+              Our experts provide strategic guidance to enhance your IT infrastructure, aligning it with your business
+              goals.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">🖧</div>
+            <div class="service-title">
+              <a href="/Services/FMSAnd AMCSupport.html">FMS & AMC Support</a>
+            </div>
+            <div class="service-text">
+              Unwavering support and service to keep your systems running smoothly, whenever you need it.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <div class="service-title">
+              <a href="/Services/Networking.html">Networking</a>
+            </div>
+            <div class="service-text">
+              Secure and efficient network design, implementation, and management.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">☁️</div>
+            <div class="service-title">
+              <a href="/Services/MobilityAndCloud.html">Mobility & Cloud</a>
+            </div>
+            <div class="service-text">
+              Tailored strategies for mobility and cloud adoption, empowering your business to thrive in the digital
+              landscape.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">📡</div>
+            <div class="service-title">
+              <a href="/Services/Internet.html">Intranet</a>
+            </div>
+            <div class="service-text">
+              Custom-crafted intranet systems that enhance communication, collaboration, and productivity within your
+              organization.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">🏢</div>
+            <div class="service-title">
+              <a href="/Services/Datacenter.html">Datacenter Infra Design & Deployment</a>
+            </div>
+            <div class="service-text">
+              Robust datacenter infrastructure design and deployment for reliability and scalability.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <div class="service-title">
+              <a href="/Services/ServiceList.html">Security</a>
+            </div>
+            <div class="service-text">
+              Fortified protection for your data and systems. Stay vigilant and prioritize security to protect your
+              business and its valuable assets.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- --Why Choose-- -->
+
+  <section class="choose py-lg-5">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-6">
+          <div class="chooseus-text" >
+            <h4>Why Choose us</h4>
+            <h1 class="my-lg-4">Reasons to Choose Our Expert IT Solutions, Software And Hardware Solutions</h1>
+            <p>We’re the IT architects of tomorrow, building today. Our innovative solutions and dedicated support
+              ensure your success in the digital landscape. We deliver innovative IT products and services tailored to
+              your needs.</p>
+
+            <div class="icon-box d-flex align-items-center my-lg-4">
+              <div class="choose-icon me-2">
+                <i class="fa-regular fa-handshake"></i>
+              </div>
+              <div>
+                <h5 class="mb-0"> <a href="#Bespoke Solutions">Bespoke Solutions</a> </h5>
+                <p>Tailoring Excellence to Your Unique Needs.</p>
+              </div>
+            </div>
+
+            <div class="icon-box d-flex align-items-center my-lg-4">
+              <div class="choose-icon me-2">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <h5 class="mb-0"><a href="#Customer Support">Customer Support</a> </h5>
+                <p>Guiding You Every Step of the Way.</p>
+              </div>
+            </div>
+
+            <div class="icon-box d-flex align-items-center my-lg-4">
+              <div class="choose-icon me-2">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <h5 class="mb-0"><a href="#SecureSystems">Secure Systems</a> </h5>
+                <p>
+                  Fortifying Your Digital Fortress. </p>
+              </div>
+            </div>
+            <button class="btn btn-contact "> <a href="">Contact Us </a> </button>
+
+          </div>
+        </div>
+
+
+        <div class="col-lg-6" >
+          <img src="/static/images/skeptical-adult.jpg" alt="Team " class="img-fluid choose-img">
+          <div class="client-feedback gap-4">
+            <div class=" position-relative">
+
+              <img src="/static/images/clfd.jpg" alt="Client 1" class="img-fluid circle-img1 circle-hov ms-4">
+              <img src="/static/images/young-woman.jpg" alt="Client 2" class="img-fluid circle-img2 circle-hov">
+
+              <p class=" mb-0 fw-bold">Clients Feedback</p>
+
+              <div class="reting">
+                <h1>4.9 </h1>
+                <div class="star-reting">
+                  <p class="mb-0">Overall Reviews</p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+              </div>
+
+            </div>
+            <img src="/static/images/smiling-woman-.jpg" alt="Clients Reviews" class="img-fluid clients-reviews">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --Client Feedbacks Section-- -->
+
+  <section class="feedbacks-section py-lg-5 ">
+    <div class="container">
+      <h4 class="feed-title ">Clients Feedback</h4>
+      <div class="row justify-content-between align-items-center ">
+        <!-- Left Part (Text) -->
+        <div class="col-lg-6 text-start">
+          <div class="feedbacks-text my-lg-3">
+            <h1 class="feedbacks-heading my-lg-3">What Our Happy Customers Are Saying</h1>
+            <p class="feedbacks-description">
+              We value your opinion and strive to continuously improve our services to meet your needs.
+              Your feedback is essential in helping us understand what we’re doing right and where we can improve.
+              By sharing your thoughts, you allow us to tailor our solutions more effectively, ensuring we deliver the
+              best possible experience.
+              Whether it’s a suggestion, a compliment, or an area where you feel we could do better, we encourage you to
+              let us know.
+              Your input is greatly appreciated and will directly impact the quality of service we provide.
+            </p>
+          </div>
+        </div>
+        <!-- Right Part (Feedback Card) -->
+        <div class="col-lg-6">
+          <div class="maincard">
+            <div class="owl-carousel feedback-carousel">
+              <div class="item">
+                <div class="feedback-card">
+                  <div class="feed_cont">
+                    <img src="/static/images/slider.jpg" alt="Jane Doe">
+                  </div>
+                  <div class="feed_div">
+                    <h3>Ranjeet Kumar</h3>
+                    <p>Senior IT Manager</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>We had the pleasure of working with Grand Ortus recently, and I must say that my experience was
+                      highly positive. final Implementation.</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="item">
+                <div class="feedback-card">
+                  <div class="feed_cont">
+                    <img src="/static/images/slider.jpg" alt="Jane Doe">
+                  </div>
+                  <div class="feed_div">
+                    <h3>Ranjeet Kumar</h3>
+                    <p>Senior IT Manager</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>We had the pleasure of working with Grand Ortus recently, and I must say that my experience was
+                      highly positive. final Implementation.</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="item">
+                <div class="feedback-card">
+                  <div class="feed_cont">
+                    <img src="/static/images/slider.jpg" alt="Jane Doe">
+                  </div>
+                  <div class="feed_div">
+                    <h3>Ranjeet Kumar</h3>
+                    <p>Senior IT Manager</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>We had the pleasure of working with Grand Ortus recently, and I must say that my experience was
+                      highly positive. final Implementation.</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="item">
+                <div class="feedback-card">
+                  <div class="feed_cont">
+                    <img src="/static/images/slider.jpg" alt="Jane Doe">
+                  </div>
+                  <div class="feed_div">
+                    <h3>Ranjeet Kumar</h3>
+                    <p>Senior IT Manager</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>We had the pleasure of working with Grand Ortus recently, and I must say that my experience was
+                      highly positive. final Implementation.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- ---Blog Section--- -->
+
+  <section class="blog-section py-lg-5 ">
+    <div class="container text-center">
+      <h4 blog-title>Blogs and News</h4>
+      <h1 class="blog-heading mb-3">our last blog and news</h1>
+      <div class="row d-flex align-items-stretch justify-content-center gap-lg-5 flex-wrap">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card  shadow-sm h-100">
+            <img src="/static/images/Windows vs. Linux.png" class="card-img-top" alt="Image 1">
+            <div class="card-body">
+              <h5 class="card-title">Windows vs. Linux: Unraveling the Battle of Operating Systems.</h5>
+              <p class="card-text">September 20, 2024</p>
+              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Donec id urna dui erat diam vivamus.</p> -->
+              <button class="read-more-btn mt-3"> <a href="">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md- col-sm-6">
+          <div class="card  shadow-sm h-100">
+            <img src="/static/images/Exploring.png" class="card-img-top" alt="Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Exploring the Future of Technology: A Glimpse into Tomorrow</h5>
+              <p class="card-text">September 20, 2024</p>
+              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Donec id urna dui erat diam vivamus.</p> -->
+              <button class="read-more-btn mt-3"> <a href=""> Read More</a></button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 ">
+          <div class="card  shadow-sm h-100">
+            <img src="/static/images/Transformative.png" class="card-img-top" alt="Image 2">
+            <div class="card-body">
+              <h5 class="card-title">The Transformative Power of IoT in Industries: A Journey Beyond Connectivity</h5>
+              <p class="card-text">September 20, 2024</p>
+              <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Donec id urna dui erat diam vivamus.</p> -->
+              <button class="read-more-btn mt-3"> <a href=""> Read More</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ----Contact Us Section---- -->
+
+  <section class="Contact-section py-lg-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h4 class="contact-title mb-4">Contact Us</h4>
+          <h1 class="mb-4">Let's connect with us</h1>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur. Sem amet a integer potenti tempor. Orci eu turpis justo lacus posuere sed.</p> -->
+
+          <div class="contact-info">
+
+            <div class="d-flex align-items-center mb">
+              <div class="contact-icon me-3">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 ">Email</h5>
+                <p>suresh@grandortus.com</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb">
+              <div class="contact-icon me-3">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 ">Phone</h5>
+                <p>
+                  +9179780 42115</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb">
+              <div class="contact-icon me-3">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 ">Location</h5>
+                <p>D 14/30, 2nd Floor, Sector 52, Ardeecity Gurugram, Haryana -122003, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- <div class="form-section">
+              <form id="contactForm" novalidate>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Name" id="name" placeholder="Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Email" id="email" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Phone" id="phone" placeholder="Name" pattern="[0-9]{10}" required>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" id="services" required>
+                      <option value="" disabled selected>Services</option>
+                      <option value="1">Development</option>
+                      <option value="2">Implementation Services</option>
+                      <option value="3">IT Infrastructure Consulting</option>
+                      <option value="4">Datacenter Infra Design & Deployment</option>
+                      <option value="5">Networking And Security</option>
+                      <option value="6">Mobility And Cloud</option>
+                      <option value="7">Intranet</option>
+                      <option value="8">FMS And AMC Support</option>
+                      <option value="9">Web Design</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="4" placeholder="Messages" required></textarea>
+                </div>
+                <button type="submit" class="send-btn"><a href="">Submit</a> </button>
+              </form>
+            </div> -->
+
+          <div class="form-section">
+            <form action="/indexContactForm/" method="POST" id="contactForm" novalidate>
+              {% csrf_token %}
+              <div class="row mb-3">
+                <div class="col-lg-6 d-grid gap-3">
+                  <input type="text" class="form-control " name="name" id="name" placeholder="Name" onkeyup="keyupFunction()">
+                  <div id="name-error"></div>
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                  <div id="error"></div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-lg-6 d-grid gap-3">
+                  <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+                  <div id="error"></div>
+                </div>
+                <div class="col-lg-6">
+                  <select class="form-select" name="services" id="services" required>
+                    <option value="" disabled selected>Services</option>
+                    <option value="Development">Development</option>
+                    <option value="Implementation Services">Implementation Services</option>
+                    <option value="IT Infrastructure Consulting">IT Infrastructure Consulting</option>
+                    <option value="Datacenter Infra Design & Deployment">Datacenter Infra Design & Deployment</option>
+                    <option value="Networking And Security">Networking And Security</option>
+                    <option value="Mobility And Cloud">Mobility And Cloud</option>
+                    <option value="Intranet">Intranet</option>
+                    <option value="FMS And AMC Support">FMS And AMC Support</option>
+                    <option value="Web Design">Web Design</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Messages" required></textarea>
+              </div>
+              <button type="submit" class="send-btn" id="submit">Submit</button>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Slider Section -->
+
+
+  <section class="ourslider border border-2 rounded-3">
+    <div class="container">
+      <div class="row text-center">
+
+        <!-- First Carousel (left-to-right) -->
+        <div class="col-lg-6">
+          <h2 class="mb-4">Our Associations</h2>
+          <div class="owl-carousel owl-theme owl-left mb-4">
+            <div class="item"> <img src="/static/images/ClientsImg/airtel.png" alt="Airtel"></div>
+            <div class="item"><img src="/static/images/ClientsImg/amity.png" alt="Amity"></div>
+            <div class="item"><img src="/static/images/PatnersImg/arista.png" alt="Arista"></div>
+            <div class="item"><img src="/static/images/PatnersImg/cisco.png" alt="Background Image"></div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+
+        <!-- Second Carousel (right-to-left) -->
+        <div class="col-lg-6">
+          <h2 class="mb-4">Our Partners</h2>
+          <div class="owl-carousel owl-theme owl-right mb-4">
+            <div class="item"><img src="/static/images/ClientsImg/airtel.png" alt="Airtel"></div>
+            <div class="item"><img src="/static/images/ClientsImg/amity.png" alt="Amity"></div>
+            <div class="item"><img src="/static/images/PatnersImg/arista.png" alt="Arista"></div>
+            <div class="item"><img src="/static/images/PatnersImg/cisco.png" alt="Background Image"></div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- --Footer Section-- -->
+
+  <footer class="footer-sec bg-dark text-light pt-lg-5 mt-lg-4 py-3">
+    <div class="container  text-md-left">
+      <div class="row d-flex text-start">
+
+        <!-- Logo and Description -->
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <div class="footer-logosec">
+            <img src="/static/images/logo.png" alt="" class="img-fluid ">
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-3 col-lg-3  mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Get in Touch</h6>
+          <p class="my-lg-4"><i class="fas fa-map-marker-alt mr-2"></i> D 14/30, 2nd Floor, Sector 52, Ardeecity
+            Gurugram, Haryana
+            -122003, India</p>
+          <p><i class="fas fa-envelope mr-2"></i> info@grandortus.com</p>
+          <p><i class="fas fa-phone mr-2"></i> 01244233760, +919899950003</p>
+        </div>
+
+        <!-- Service Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
+          <h6 class="text-uppercase font-weight-bold">Service</h6>
+          <p><a href="#" class="text-light pb-1">IT Infrastructure Consulting</a></p>
+          <p><a href="#" class="text-light pb-1">Networking</a></p>
+          <p><a href="#" class="text-light pb-1">Mobility & Cloud</a></p>
+          <p><a href="#" class="text-light pb-1">Web Design</a></p>
+          <p><a href="#" class="text-light pb-1">Development</a></p>
+          <p><a href="#" class="text-light pb-1">SEO</a></p>
+        </div>
+
+        <!-- Company Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
+          <h6 class=" text-uppercase font-weight-bold">Company</h6>
+          <p><a href="/About.html" class="text-light pb-1">About Us</a></p>
+          <p><a href="#" class="text-light pb-1">Our Services</a></p>
+          <p><a href="#" class="text-light pb-1">Privacy Policy</a></p>
+          <p><a href="#" class="text-light pb-1">Case studies</a></p>
+          <p><a href="#" class="text-light pb-1">Blogs</a></p>
+          <p><a href="#" class="text-light pb-1">Contact Us</a></p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
+          <h6 class="text-uppercase font-weight-bold">Follow Us</h6>
+          <a href="https://www.facebook.com/Grandortus.Official" target="_blank"
+            class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/grandortus/mycompany/verification/" target="_blank"
+            class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/grandortus.official/" target="_blank"
+            class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="mb-0">&copy;2024 Copyright Grand Ortus</p>
+        <p class="mb-0 me-0">ISO/IEC 27001:2022 ISO 9001:2015</p>
+      </div>
+  </footer>
+
+
+  <!-- --Slider-- -->
+  <script>
+
+    $(document).ready(function () {
+      // Initialize the first carousel (left-to-right)
+      $(".owl-left").owlCarousel({
+        loop: true,
+        margin: 10,
+        // nav: true,
+        smartSpeed: 3000,
+        autoplayHoverPause: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        slideTransition: 'linear',
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+
+      // Initialize the second carousel (right-to-left)
+      $(".owl-right").owlCarousel({
+        loop: true,
+        margin: 10,
+        // nav: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        dots: false,
+        smartSpeed: 3000,
+        autoplayTimeout: 1000,
+        slideTransition: 'linear',
+        rtl: true, // Right-to-left direction
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    });
+
+
+  </script>
+
+
+  <!-- <script src="/JS/FormValidation.js"></script> -->
+
+  <!-- <script>
+
+    let isValid = true;
+    const services = document.getElementById('services');
+    const message = document.getElementById('message');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      name.addEventListener('input', () => {
+        console.log('Name entered', name.value);
+      })
+      phone.addEventListener('input', () => {
+        console.log('Phone No entered', phone.value);
+        phoneValue = phone.value;
+        console.log('phoneValue:', phoneValue);
+        const phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phone.value)) {
+          isValid = false;
+          alert('Please enter a valid 10-digit phone number.');
+        }
+      })
+
+      // Name Validation
+      if (name.value.trim() === '') {
+        isValid = false;
+        alert('Please enter your name.');
+      }
+
+      // Email Validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email.value)) {
+        isValid = false;
+        alert('Please enter a valid email address.');
+      }
+
+      // Phone Validation
+      // const phonePattern = /^[0-9]{10}$/;
+      if (!phonePattern || phonePattern.length !== 10 || isNaN(phonePattern)) {
+        isValid = false;
+        alert('Please enter a valid 10-digit phone number.');
+      }
+
+
+      // Services Validation
+      if (services.value === '') {
+        isValid = false;
+        alert('Please select a service.');
+      }
+
+      // Message Validation
+      if (message.value.trim() === '') {
+        isValid = false;
+        alert('Please enter a message.');
+      }
+
+      if (isValid) {
+        alert('Form submitted successfully!');
+
+      }
+    });
+  </script>
+ -->
+
+
+
+  <!-- Clients Feedback -->
+  <script>
+
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        autoPlay: 5000, //Set AutoPlay to 5 seconds
+        autoplay: true,
+        // smartSpeed:2000, // Default is 250
+        items: 4, //Set Testimonial items
+        loop: true,
+        margin: 30,
+        singleItem: true,
+        touchDrag: true,
+        mouseDrag: true,
+        pagination: true,
+        nav: true,
+        dots: false,
+        navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            autoplay: true,
+          },
+          321: {
+            items: 1,
+            autoplay: true,
+          },
+          480: {
+            items: 1,
+            autoplay: true,
+          },
+          568: {
+            items: 1,
+            autoplay: true,
+          },
+          768: {
+            items: 1,
+          },
+          992: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          }
+        }
+      });
+    });
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      var delay = 5000; // Delay time in ms
+
+      $('.nav-item.dropdown').hover(
+        function () {
+          var $this = $(this);
+          setTimeout(function () {
+            $this.find('.dropdown-menu').addClass('show');
+          }, delay);
+        },
+        function () {
+          var $this = $(this);
+          $this.find('.dropdown-menu').removeClass('show');
+        }
+      );
+    });
+  </script>
+
+
+  <!-- About /Setinterval -->
+
+  <script>
+    function animateCounter(id, target) {
+      let count = 0; // Start from 0
+      const element = document.getElementById(id);
+      const targetValue = target * 1000000; // Convert 1.69 to 1.69M
+      const incrementValue = targetValue / 100; // Adjust this to control the speed
+
+      const interval = setInterval(() => {
+        count += incrementValue;
+        if (count >= targetValue) {
+          count = targetValue; // Ensure it stops exactly at target
+          clearInterval(interval);
+        }
+
+        // Format to show as "1.69M"
+        element.innerHTML = (count / 1000000).toFixed(2) + "M";
+      }, 30); // Adjust the interval time for speed
+    }
+
+    // Start the counter animation
+    animateCounter('earningsCounter', 1.69);
+
+
+
+  </script>
+
+  <script>
+
+    let setTime = 0;
+    const output = setInterval(() => {
+      setTime = setTime + 1;
+      if (setTime === 300) {
+        clearInterval(output)
+      }
+      document.getElementById('setInterval').innerHTML = setTime + "+"
+      document.getElementById('setInter').innerHTML = setTime + "+"
+    }, 10)
+
+  </script>
+
+
+  <!-- Sticky Navbar -->
+  <script src="/static/js/stickyNav.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/owl.carousel.min.js"></script>
+
+ 
+
+</body>
+
+</html>

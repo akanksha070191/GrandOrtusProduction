@@ -1,0 +1,204 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/Contact.css">
+{% endblock csslink %}
+
+
+<body>
+    {% block content %}
+    <!-- hero section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row justify-content-center text-center pt-4">
+                <div class="col-lg-7 col-md-12 col-12">
+                    <div class="left-item align-items-center">
+                        <div class="heading-sec ">
+                            <h1>Contact Us</h1>
+                            <p>We'd love to hear from you. Reach out to us with your queries or feedback.</p>
+
+                        </div>
+                        <!-- <button class="learn-more-btn mt-lg-5">
+                            <a href="#" class="learn-more-link">Learn More</a>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- contact-add-card section -->
+
+    <div class="container my-5">
+        <div class="row gy-4">
+            <!-- India Office -->
+            <div class="col-md-4">
+                <div class="location-box india">
+                    <h5>India Office</h5>
+                    <p><i class="bi bi-geo-alt icon"></i> D 14/30, 2nd Floor, Sector 52, Ardee City Gurugram, Haryana
+                        -122003, INDIA</p>
+                    <p><i class="bi bi-telephone icon"></i> 01244233760</p>
+                    <p><i class="bi bi-envelope icon"></i> <a href="mailto:info@grandortus.com"
+                            style="color: #00d4ff;">info@grandortus.com</a></p>
+                </div>
+            </div>
+            <!-- Australia Office -->
+            <div class="col-md-4">
+                <div class="location-box australia">
+                    <h5>Australia Office</h5>
+                    <p><i class="bi bi-geo-alt icon"></i> 23 Rosetta Street, Schofields 2762, NSW, Australia. ABN 6767
+                        500 2605</p>
+                    <p><i class="bi bi-telephone icon"></i> +61 468 464 703</p>
+                    <p><i class="bi bi-envelope icon"></i> <a href="mailto:info@grandortus.com.au"
+                            style="color: #00d4ff;">info@grandortus.com.au</a></p>
+                </div>
+            </div>
+            <!-- UK Office -->
+            <div class="col-md-4">
+                <div class="location-box uk">
+                    <h5>UK Office</h5>
+                    <p><i class="bi bi-geo-alt icon"></i> 9 Primrose Court, Chiltern Road, Dunstable LU6 1HH</p>
+                    <p><i class="bi bi-telephone icon"></i> +91 98580 14222</p>
+                    <p><i class="bi bi-envelope icon"></i> <a href="mailto:saquib@grandortus.com"
+                            style="color: #00d4ff;">saquib@grandortus.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ----Contact Us Section---- -->
+
+    <section class="Contact-section py-lg-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h4 class="contact-title mb-4">Contact Us</h4>
+                    <h1 class="mb-4">Let's connect with us</h1>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur. Sem amet a integer potenti tempor. Orci eu turpis justo lacus posuere sed.</p> -->
+
+                    <div class="contact-info">
+
+                        <div class="d-flex align-items-center mb">
+                            <div class="contact-icon me-3">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0 ">Email</h5>
+                                <p>suresh@grandortus.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb">
+                            <div class="contact-icon me-3">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0 ">Phone</h5>
+                                <p>
+                                    +9179780 42115</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb">
+                            <div class="contact-icon me-3">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0 ">Location</h5>
+                                <p>D 14/30, 2nd Floor, Sector 52, Ardeecity Gurugram, Haryana -122003, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- form-section -->
+
+                <div class="col-lg-6">
+                    <div class="form-section">
+                        <form id="contactForm" novalidate>
+                            <div class="row mb-3">
+                                <div class="col-lg-6 d-grid gap-3">
+                                    <input type="text" class="form-control " id="name" placeholder="Name"
+                                        onkeyup="keyupFunction()">
+                                    <div id="name-error"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <div id="error"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-6 d-grid gap-3">
+                                    <input type="phone" class="form-control" id="phone" placeholder="Phone"
+                                        pattern="[0-9]{10}" required>
+                                    <div id="error"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <select class="form-select" id="services" required>
+                                        <option value="" disabled selected>Services</option>
+                                        <option value="1">Development</option>
+                                        <option value="2">Implementation Services</option>
+                                        <option value="3">IT Infrastructure Consulting</option>
+                                        <option value="4">Datacenter Infra Design & Deployment</option>
+                                        <option value="5">Networking And Security</option>
+                                        <option value="6">Mobility And Cloud</option>
+                                        <option value="7">Intranet</option>
+                                        <option value="8">FMS And AMC Support</option>
+                                        <option value="9">Web Design</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="4" placeholder="Messages"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="send-btn" id="submit"><a href="#Submit">Submit</a> </button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Map Section -->
+    <section class="py-5 section-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4 class="text-center mb-0 mad-header">India Office</h4>
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14033.653068826698!2d77.0766042!3d28.436956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19dd7ebac4c9%3A0xa8db413059a8181e!2sGrand%20Ortus%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1733547142871!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="map-embed">
+                        <h4 class="text-center mb-0 mad-header">Australia Office</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.113792283053!2d150.86713497428806!3d-33.706004310642875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129ea489d029b3%3A0x572e90fdfcb8f2dd!2s23%20Rosetta%20St%2C%20Schofields%20NSW%202762%2C%20Australia!5e0!3m2!1sen!2sin!4v1733548900902!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="map-embed">
+                        <h4 class="text-center mb-0 mad-header">UK Office</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.55260955574!2d-0.5340409246948888!3d51.887378682875664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764fa967daf141%3A0xd90b90a7442962e5!2sChiltern%20Rd%2C%20Dunstable%2C%20UK!5e0!3m2!1sen!2sin!4v1734065784030!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% endblock content %}
+
+
+</body>
+
+</html>

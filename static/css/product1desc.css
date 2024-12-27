@@ -1,0 +1,162 @@
+:root {
+
+    --primary-color: #0090d2;
+    --secondary-color: #000;
+    --text-color: #555;
+    --color: #fff;
+
+    --primary-size: 40px;
+    --secondary-size: 20px;
+
+    --btn-size: 16px;
+    --btn-radius: 10px;
+    --btn-padding: 10px 20px;
+    --btn-transform: uppercase;
+    --btn-weight: 500;
+
+}
+p,
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+.heading-sec h1 {
+    font-size: var(--primary-size);
+    color: var(--color);
+    font-weight: 500;
+}
+
+.heading-sec p {
+    font-size: var(--secondary-size);
+    color: #cfcccc;
+
+}
+.hero {
+    /* background-image: url(/images/freepik-export-20241126055721newr.png); */
+    background: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000048;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero h1,
+.hero p,
+.learn-more-btn {
+    position: relative;
+    z-index: 1;
+    color: var(--color);
+}
+h1{
+    font-size: var(--primary-size);
+    color: var(--primary-color);
+    text-transform: capitalize;
+
+}
+.product-text{
+    font-size: 16px;
+    text-align: justify;
+    /* line-height: 30px; */
+}
+.product-img img{
+    width: 450px;
+    height: 400px;
+}
+
+.product-img::after {
+    content: "";
+    border: 6px solid var(--primary-color);
+    width: 382px;
+    height: 370px;
+    position: absolute;
+    top: 55px;
+    right: 70px;
+    z-index: -1;
+}
+
+/* Product Feature Section */
+.product1-feature {
+    padding: 50px 0;
+}
+
+.product1-feature h1 {
+    text-align: center; /* Centered for better alignment */
+    margin-bottom: 30px;
+}
+
+/* Feature Card Styling */
+.feature-style {
+    position: relative;
+    text-align: center;
+    background-color: var(--color, #f9f9f9); /* Fallback */
+    border: 1px solid var(--primary-color, #007bff); /* Fallback */
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* Feature Image */
+.feature-img img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Feature Heading */
+.feature-heading h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: var(--text-color, #333); /* Fallback */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Feature Description (Overlay) */
+.feature-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color, #007bff); /* Fallback */
+    color: #fff;
+    padding: 15px;
+    opacity: 0;
+    pointer-events: none; /* Prevents interaction when hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.feature-style:hover .feature-img img {
+    opacity: 0; 
+}
+
+.feature-style:hover .feature-desc {
+    opacity: 1; 
+    pointer-events: auto;
+}
+
+.feature-style:hover .feature-heading h4 {
+    color: var(--primary-color, #007bff);
+}

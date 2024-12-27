@@ -1,0 +1,100 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/JobOpeningForm.css">
+<script src="/static/js/JobOpeningForm.js" defer></script>
+{% endblock csslink %}
+
+
+  
+<body>
+  {% block content %}
+  <section class="job-section">
+    <div class="container">
+        <div class="row p-lg-3">
+            <!-- Job Description Section -->
+            <div class="col-lg-6">
+                <div class="jobDescription-sec mt-5">
+                    <h2 class="job-title">Job Description</h2>
+                    <p>What to do:-</p>
+                    <ul>
+                        <li>Cleaning and maintaining the office premises, including dusting, sweeping, mopping, and
+                            vacuuming.</li>
+                        <li>Ensuring the cleanliness and tidiness of all office areas, including restrooms, pantry,
+                            and meeting rooms.</li>
+                        <li>Assisting in setting up meeting rooms and preparing them for meetings, including
+                            arranging chairs, tables, and audio-visual equipment.</li>
+                    </ul>
+                    <div class="container mt-5">
+                        <div class="job-details">
+                            <p><i class="bi bi-briefcase"></i> <strong>Job Category:</strong> Office Boy</p>
+                            <p><i class="bi bi-arrow-right-circle"></i> <strong>Job Type:</strong> Full Time</p>
+                            <p><i class="bi bi-geo-alt"></i> <strong>Job Location:</strong> Gurugram</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Apply Form Section -->
+            <div class="col-lg-6">
+                <div class="container mt-5">
+                    <div class="form-container">
+                        <h2>Apply For This Position</h2>
+                        <form id="applyForm" novalidate>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label required">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName"
+                                    pattern="[A-Za-z\s]{3,50}"
+                                    title="Full Name should only contain letters and spaces, and be between 3 and 50 characters long."
+                                    required>
+                                <div class="invalid-feedback">Please enter a valid name (only letters, 3-50
+                                    characters).</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label required">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    title="Please enter a valid email address." required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label required">Phone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}"
+                                    title="Phone number should be 10 digits." required>
+                                <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="coverLetter" class="form-label required">Cover Letter</label>
+                                <textarea class="form-control" id="coverLetter" name="coverLetter" rows="5"
+                                    minlength="20" title="Cover letter must be at least 10 characters long."
+                                    required></textarea>
+                                <div class="invalid-feedback">Please write a cover letter with at least 20
+                                    characters.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="resume" class="form-label required">Upload CV/Resume</label>
+                                <input type="file" class="form-control" id="resume" name="resume"
+                                    accept=".pdf, .doc, .docx" required>
+                                <small class="text-muted">Allowed Type(s): .pdf, .doc, .docx</small>
+                                <div class="invalid-feedback">Please upload a valid CV/Resume in .pdf, .doc, or
+                                    .docx format.</div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                                <label class="form-check-label required" for="terms">
+                                    By using this form you agree with the storage and handling of your data by this
+                                    website.
+                                </label>
+                                <div class="invalid-feedback">You must agree to the terms and conditions to proceed.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  {% endblock content %}     
+</body>
+</html>

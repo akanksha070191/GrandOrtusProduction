@@ -1,0 +1,234 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/casestudyHealthCareView.css">
+{% endblock csslink %}
+<body>
+
+{% block content %}
+<!-- Hero Section -->
+
+<section class="hero">
+  <div class="container">
+      <div class="row justify-content-center text-center pt-4">
+          <div class="col-lg-7 col-md-12 col-12">
+              <div class="left-item align-items-center">
+                  <div class="heading-sec ">
+                      <h1>Case Study of a Healthcare Intitute</h1>
+                      <p>Implementing Zero Trust principles to protect data, secure access, and enhance regulatory compliance within their healthcare environment.</p>
+                  </div>
+                  <!-- <button class="learn-more-btn mt-lg-5">
+                  <a href="#" class="learn-more-link">Learn More</a>
+              </button> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Overview Section -->
+
+<section class="institute-overview py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+              <div class="overview">
+                  <h5>Healthcare Institute Overview</h5>
+                  <p>This research institute is for cancer treatment and  dedicated to offering comprehensive cancer care while advancing research in the field.
+                      With a commitment to safeguarding patient data and ensuring seamless, secure access to clinical and administrative applications, 
+                      Institute has implemented a Zero Trust security framework. This case study explores Institute’s approach to implementing Zero Trust principles to protect data, secure access, 
+                      and enhance regulatory compliance within their healthcare environment.</p>
+              </div>
+          </div>
+          <div class="col-lg-4 image-health-container d-flex justify-content-center position-relative">
+              <img src="/static/images/casestudyhealth.jpg" alt="" class="img-fluid">
+          </div>
+          
+      </div>
+  </div>
+</section>
+
+<!-- Challenges Section -->
+
+<section class="challenges-overview py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 challenge-desc">
+              <h5>Challenges</h5>
+              <p>Healthcare sector’s high susceptibility to cyber threats, this institute faced specific challenges in securing its network and data.<br>
+                  The Institute struggled with inefficient processes, outdated technology, and a lack of scalability, which hindered its ability to grow 
+                  and remain competitive. Additionally, ensuring data security and regulatory compliance was a persistent challenge, requiring a comprehensive solution.<br>
+                  Other challenges like 1. Strategic Challenge, 2.Customer/User Challenge, 3.Financial Challenge, 4.Operational Challenge
+              </p>
+              <div class="challenge-desc-image d-flex justify-content-center position-relative">
+                  <img src="/static/images/challenges.jpg" alt="" class="img-fluid mt-5">
+              </div>
+              
+          </div>
+          <div class="col-lg-6 challenge-card">
+            
+                  <div class="row g-2">
+                      <div class="col-lg-6">
+                          <div class="card-desc p-2">
+                              <img src="/static/images/dataprotection.png" alt="" class="img-fluid m-2">
+                              <h5>Protection of Sensitive Data</h5>
+                              <p>Safeguarding confidential patient records, treatment histories, and research data from unauthorized access and potential breaches.</p>
+
+                          </div>
+                          
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="card-desc p-2">
+                              <img src="/static/images/accessmanagement-50.png" alt="" class="img-fluid m-2">
+                              <h5>Complex Access Management</h5>
+                              <p>Managing access across a workforce of 2,500 users, including healthcare professionals, researchers, administrative staff, and remote telemedicine providers.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="card-desc p-2">
+                              <img src="/static/images/compliance.png" alt="" class="img-fluid m-2">
+                              <h5>Compliance and Regulatory Requirements</h5>
+                              <p>Adhering to stringent healthcare regulations around data security and privacy, such as the Health Insurance Portability and Accountability Act (HIPAA) and India's Information Technology Act.</p>
+                          </div>
+                          
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="card-desc p-2">
+                              <img src="/static/images/iot.png" alt="" class="img-fluid m-2">
+                              <h5>Vulnerabilities from IoT and Medical Devices</h5>
+                              <p>Securing a wide range of connected medical devices that increase the network’s attack surface. To address these challenges, Institute collaborated with security experts and deployed industry-leading security solutions to build a Zero Trust framework.</p>
+                          </div>
+                          
+                      </div>
+                  </div>
+              
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Solution Section -->
+
+<section class="solution-overview py-5">
+  <div class="container">
+      <div class="row g-3">
+          <h5>Zero Trust Network Implementation</h5>
+          <div class="col-lg-4">
+              <div class="solution-card p-2">
+                  <h6>Identity and Access Management (IAM)</h6>
+                  <p><strong>Solution</strong>: <br>Institute deployed Arcon PIM/PAM and Identity Management (IM) for robust control over user identities, access rights, and authentication processes.<br>
+                      <strong>Functionality</strong>:<br>
+                              1. Privileged Access Control: Arcon’s PIM/PAM provides visibility and control over privileged accounts, which are often targeted by cyber attackers. This ensures that only authorized users with specific, legitimate reasons can access sensitive information.<br>
+                              2. Role-Based Access Control (RBAC): By using Identity Management, Institute applies RBAC to restrict access based on user roles, ensuring that each user only has the access necessary for their job functions.<br>
+                      <strong>Benefits</strong>: <br>Enhanced security for privileged accounts, reduced risk of insider threats, and improved compliance with access control requirements.
+
+                  </p>
+
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class=" solution-card p-2">
+                  <h6>Network Access Control (NAC)</h6>
+                  <p><strong>Solution</strong>:<br> Aruba ClearPass was deployed to manage device access and enforce Zero Trust policies across Institute's network.<br>
+                      <strong>Functionality</strong>:<br>
+                              1. Device Identification and Profiling: Aruba ClearPass identifies and profiles all devices connecting to the network, including IoT devices, medical equipment, and user endpoints, ensuring that only compliant devices gain access.<br>
+                              2. Policy Enforcement: Dynamic policy enforcement ensures that access privileges adapt based on device type, user role, and compliance status, denying access to non-compliant or high-risk devices.<br>
+                      <strong>Benefits</strong>:<br> Improved network visibility and control, reduced risk of unauthorized device access, and robust management of medical and IoT devices.
+
+                  </p>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="solution-card p-2">
+                  <h6>Secure SD-WAN and Gateway-Level Security</h6>
+                  <p><strong>Solution</strong>:<br> Fortinet Firewalls were implemented as part of an SD-WAN solution and gateway security for Institute.
+                      <strong>Functionality</strong>:<br>
+                              1. Secure Remote Connectivity: Fortinet’s SD-WAN facilitates secure connections for telemedicine services, enabling remote healthcare providers to securely access Institute's applications and data.<br>
+                              2. Unified Threat Protection: Gateway security features include intrusion prevention, antivirus, and web filtering, protecting against external threats and data leaks.<br>
+                      <strong>Benefits</strong>:<br> Enhanced secure access for remote locations, secure connectivity for telemedicine, and comprehensive perimeter protection.
+
+                  </p>
+              </div>
+          </div>
+
+          <div class="col-lg-4">
+              <div class="solution-card p-2">
+                  <h6>Server Load Balancing and Web Application Firewall (WAF)</h6>
+                  <p><strong>Solution</strong>:<br>F5 was deployed to manage server load balancing and to act as a Web Application Firewall.<br>
+                      <strong>Functionality</strong>:<br>
+                              1. Application Performance Optimization: F5’s load balancing distributes network traffic across multiple servers, ensuring high availability and optimized performance for mission-critical applications, such as electronic health records (EHR) and patient portals.<br>
+                              2. Web Application Security: The WAF functionality protects web applications from common attacks, such as SQL injections and cross-site scripting, ensuring safe access to patient and clinician portals.<br>
+                      <strong>Benefits</strong>:<br> Improved reliability and performance of applications, enhanced security for patient-facing applications, and secure online access to healthcare data.
+
+                  </p>
+              </div>
+          </div>
+                                      
+          <div class="col-lg-4">
+              <div class="solution-card p-2">
+                  <h6>Endpoint and Server Security</h6>
+                  <p><strong>Solution</strong>: <br>SentinelOne for comprehensive endpoint protection.<br>
+                      <strong>Functionality</strong>:<br>
+                              1. Real-Time Threat Detection: SentinelOne’s AI-driven detection identifies and mitigates endpoint threats, including malware, ransomware, and zero-day attacks.<br>
+                              2. Automated Response: Endpoint threats are automatically isolated and remediated, reducing the likelihood of infection spread.<br>
+                              3. Real-Time Server Protection: Trend Micro’s server security defends against sophisticated threats, minimizing the risk of breaches and ensuring regulatory compliance.<br>
+                      <strong>Server Security</strong>:<br> Trend Micro provides layered security for Institute’s critical servers.<br>
+
+                      <strong>Benefits</strong>:<br> Comprehensive protection against endpoint threats, rapid response to incidents, and real-time server protection.
+
+                  </p>
+              </div>
+          </div>
+          
+          <div class="col-lg-4">
+              <div class="solution-card p-2">
+                  <h6>Email and Data-in-Transit Security</h6>
+                  <p><strong>Solution</strong>:<br> Trend Micro Email Security and Trend Micro Endpoint Encryption for protecting data in transit.<br>
+                      <strong>Functionality</strong>:<br>
+                              1. Email Threat Protection: Trend Micro Email Security defends against phishing, spam, and email-based malware, protecting one of the most common attack vectors in healthcare.<br>
+                              2. Data Encryption: Trend Micro Endpoint Encryption encrypts data in transit, safeguarding sensitive information shared over the network, ensuring patient privacy, and enhancing compliance.<br>
+                      <strong>Benefits</strong>:<br> Reduced risk of email-based attacks, secure data sharing across the network, and compliance with data protection standards.
+
+                  </p>
+              </div>
+          </div>
+                                      
+          <div class="col-lg-4">
+              <div class="solution-card p-2">
+                  <h6>Monitoring and Threat Detection</h6>
+                  <p><strong>Solution</strong>:<br> Security Hardening and Continuous Monitoring.<br>
+                      <strong>Functionality</strong>:<br>
+                              1. Server Hardening: Institute implemented security hardening best practices to minimize configuration vulnerabilities across servers.<br>
+                              2. Continuous Threat Monitoring: Monitoring tools provide ongoing visibility into network and device health, enabling early detection of suspicious behaviour.<br>
+                      <strong>Benefits</strong>:<br> Proactive identification and response to security incidents, minimized vulnerabilities, and enhanced operational resilience.<br>
+
+                  </p>
+              </div>
+          </div>
+          
+          
+      </div>
+  </div>
+</section>
+
+<!-- Conclusion Section-->
+
+<section class="conclusion-overview py-5">
+  <div class="container">
+      <div class="row">
+          <h5>Conclusion</h5>
+          <p>The implementation of a Zero Trust security framework at HealthCare Institute and Research Center, 
+              supported by Aruba ClearPass, Arcon, Fortinet, F5, Sentinel One, and Trend Micro, has established a secure, resilient, 
+              and scalable network infrastructure. This approach not only strengthens data protection but also enables secure, reliable 
+              access to healthcare applications, ensuring Institute can maintain high standards of patient care and research excellence while 
+              meeting the demands of evolving healthcare security standards
+          </p>
+      </div>
+  </div>
+</section>
+{% endblock content %}
+    
+
+
+</body>
+
+</html>

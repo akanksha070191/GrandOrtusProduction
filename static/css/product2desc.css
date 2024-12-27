@@ -1,0 +1,75 @@
+:root {
+
+    --primary-color: #0090d2;
+    --secondary-color: #000;
+    --text-color: #555;
+    --color: #fff;
+
+    --primary-size: 40px;
+    --secondary-size: 20px;
+
+    --btn-size: 16px;
+    --btn-radius: 10px;
+    --btn-padding: 10px 20px;
+    --btn-transform: uppercase;
+    --btn-weight: 500;
+
+}
+p,
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+.heading-sec h1 {
+    font-size: var(--primary-size);
+    color: var(--color);
+    font-weight: 500;
+}
+
+.heading-sec p {
+    font-size: var(--secondary-size);
+    color: #cfcccc;
+
+}
+.hero {
+    /* background-image: url(/images/freepik-export-20241126055721newr.png); */
+    background: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000048;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero h1,
+.hero p,
+.learn-more-btn {
+    position: relative;
+    z-index: 1;
+    color: var(--color);
+}
+h1{
+    font-size: var(--primary-size);
+    color: var(--primary-color);
+    text-transform: capitalize;
+
+}
+.product-text{
+    font-size: 16px;
+    text-align: justify;
+    /* line-height: 30px; */
+}

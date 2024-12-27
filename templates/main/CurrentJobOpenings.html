@@ -1,0 +1,130 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/CurrentJobOpenings.css">
+{% endblock csslink %}
+
+
+  
+<body>
+
+  {% block content %}
+   <!-- Job hero  Section -->
+   <section class="hero">
+    <div class="container">
+        <div class="row justify-content-center text-center pt-4">
+            <div class="col-lg-7 col-md-12 col-12">
+                <div class="left-item align-items-center">
+                    <div class="heading-sec ">
+                      <h1>Current Job Openings</h1>
+                      <p>Join our team at Grand Ortus and build an exciting career. Explore the opportunities below.</p>         
+                    </div>
+                    <!-- <button class="learn-more-btn mt-lg-5">
+                        <a href="#" class="learn-more-link">Learn More</a>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+    <!-- Job Listings Section -->
+
+    <section class="job-listings">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Job Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="job-card p-4">
+              <h4>Senior Software Engineer</h4>
+              <p><strong>Location:</strong> New York, NY</p>
+              <p><strong>Experience:</strong> 5+ years</p>
+              <p><strong>Skills:</strong> Java, Spring Boot, AWS</p>
+              <div class="text-end">
+                <a href="{% url "JobOpeningForm" %}" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Job Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="job-card p-4">
+              <h4>UI/UX Designer</h4>
+              <p><strong>Location:</strong> Remote</p>
+              <p><strong>Experience:</strong> 3+ years</p>
+              <p><strong>Skills:</strong> Figma, Adobe XD, HTML/CSS</p>
+              <div class="text-end">
+                <a href="#" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Job Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="job-card p-4">
+              <h4>Data Analyst</h4>
+              <p><strong>Location:</strong> San Francisco, CA</p>
+              <p><strong>Experience:</strong> 2+ years</p>
+              <p><strong>Skills:</strong> Python, SQL, Tableau</p>
+              <div class="text-end">
+                <a href="#" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Additional Job Cards Can Go Here -->
+        </div>
+      </div>
+    </section>
+  
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                aria-expanded="true" aria-controls="collapse1">
+                What is the application process?
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Our application process includes an online submission of your resume, followed by an interview if selected.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                aria-expanded="false" aria-controls="collapse2">
+                Are remote positions available?
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, we offer remote opportunities for specific roles. Check the job listings for details.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                aria-expanded="false" aria-controls="collapse3">
+                How do I prepare for an interview?
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Review the job description, prepare relevant examples from your experience, and learn about our company culture.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {% endblock content %}
+
+   
+
+      
+</body>
+</html>

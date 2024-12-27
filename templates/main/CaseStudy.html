@@ -1,0 +1,88 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/CaseStudy.css">
+{% endblock csslink %}
+<body>
+
+
+{% block content %}
+<!-- Hero Section -->
+
+<section class="hero">
+  <div class="container">
+      <div class="row justify-content-center text-center pt-4">
+          <div class="col-lg-7 col-md-12 col-12">
+              <div class="left-item align-items-center">
+                  <div class="heading-sec ">
+                      <h1>Case Study</h1>
+                      <p>Enhancing Business Results through Smart Technology Solutions</p>
+                  </div>
+                  <!-- <button class="learn-more-btn mt-lg-5">
+                  <a href="#" class="learn-more-link">Learn More</a>
+              </button> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Overview Section -->
+
+<section class="overview py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+              <div class="table-responsive">
+                  <table class="table table-bordered table-spacing">
+                      <thead class="table-head-design">
+                          <tr>
+                              <th>Title</th>
+                              <th>View</th>
+                          </tr>
+                      </thead>
+                      <tbody class="table-body">
+                          <tr>
+                              <td>
+                                  
+                                      <h5>Implementing a Zero Trust Network at Healthcare Institute</h5>
+                                      <ul>
+                                          <li><strong>Problems</strong>:<p>Healthcare sectors are highly susceptibile to cyber threats like Protection of Sensitive Data, 
+                                              Complex Access Management, Compliance and Regulatory Requirements, Vulnerabilities from IoT and Medical Devices.  </p>
+                                          </li>
+                                          <li><strong>Solutions</strong>:<p>We worked on Zero Trust Network Implementation, which was achieved by following steps 1.Identity and Access Management (IAM), 2.Network Access Control (NAC), 
+                                              3.Secure SD-WAN and Gateway-Level Security, 4.Server Load Balancing and Web Application Firewall (WAF), 5.Endpoint and Server Security.</p></li>
+                                          <li><strong>Tool</strong>:<p>Arcon PIM/PAM and Identity Management (IM) for robust control, Aruba ClearPass to manage device access,
+                                              Fortinet Firewalls were implemented as part of an SD-WAN, SentinelOne for comprehensive endpoint protection.
+                                          </p></li>
+                                          <li><strong>Time Line</strong>:<p>90 Days</p></li>
+                                      </ul>
+                                  
+                              </td>
+                              <td>
+                                  <a href="{% url "casestudyHealthCareView" %}" class="text-decoration-none text-primary">
+                                      <h6>View</h6>
+                                  </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                      
+                      
+                  </table>
+              </div>
+          </div>
+          <div class="col-lg-4 image-container d-flex justify-content-center position-relative">
+              <img src="/static/images/casestudyNew.jpg" alt="" class="img-fluid">
+          </div>
+
+      </div>
+      
+  </div>
+</section>
+
+{% endblock content %}
+    
+
+</body>
+
+</html>

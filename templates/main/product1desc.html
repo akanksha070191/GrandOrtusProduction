@@ -1,0 +1,158 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/product1desc.css">
+{% endblock csslink %}
+<body>
+{% block content %}
+    <!-- hero section -->
+    <section class="hero">
+      <div class="container">
+          <div class="row justify-content-center text-center pt-4">
+              <div class="col-lg-7 col-md-12 col-12">
+                  <div class="left-item align-items-center">
+                      <div class="heading-sec ">
+                          <h1>G-Ortus NetGuardian ProX Network Policy Manager</h1>
+                          <p>Tailored Solution for Uno Minda</p>
+                      </div>
+                      <!-- <button class="learn-more-btn mt-lg-5">
+                          <a href="#" class="learn-more-link">Learn More</a>
+                      </button> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- product description-->
+  <section class="product1desc">
+    <div class="container my-lg-5">
+      <h1>Network Policy Manager</h1>
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-6">
+          <div class="product-text">
+            <p>
+              G-Ortus NetGuardian ProX Network Policy Manager stands at the forefront of innovative network access and security solutions, 
+              specifically designed to meet the dynamic needs of modern enterprises like Uno Minda.<br>
+              NetGuardian ProX offers unparalleled flexibility, security, and operational efficiency, 
+              making it the ideal choice for securing Uno Minda's corporate LAN/WiFi environments.<br>
+              G-Ortus NgNPM software is meticulously designed to cater to specific needs and demands, ensuring 
+              that it operates with utmost efficiency while being lightweight and highly scalable. <br><br>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="product-img d-flex justify-content-center position-relative">
+            <img src="/static/images/npm1.png" class="img-fluid" alt="">
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- product feature -->
+  <section class="product1-feature bg-light py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">Key Features</h1>
+      <div class="row g-4"> <!-- Bootstrap row with spacing -->
+        
+        <!-- Feature 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="feature-style">
+            <div class="feature-img mb-3">
+              <img src="/static/images/npm-devicemanager.png" alt="Device Administration">
+            </div>
+            <div class="feature-heading">
+              <h4>Device Administration</h4>
+            </div>
+            <div class="feature-desc">
+              <p>Utilizes the RADIUS security protocol to manage network devices, allowing precise control over access 
+                and settings adjustments. Network devices can authenticate and authorize device administrator actions via NgNPM, 
+                with accounting messages logged for tracking.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Feature 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="feature-style">
+            <div class="feature-img mb-3">
+              <img src="/static/images/npm-secure.png" alt="Guest and Secure Wireless">
+            </div>
+            <div class="feature-heading">
+              <h4>Guest and Secure Wireless</h4>
+            </div>
+            <div class="feature-desc">
+              <p>Enables secure network access for visitors, contractors, consultants, and customers through web-based and mobile portals. 
+                Access privileges for different guest types can be defined, and sponsors assigned to manage guest accounts.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Feature 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="feature-style">
+            <div class="feature-img mb-3">
+              <img src="/static/images/npm-owndevice.png" alt="BYOD">
+            </div>
+            <div class="feature-heading">
+              <h4>Bring Your Own Device (BYOD)</h4>
+            </div>
+            <div class="feature-desc">
+              <p>Allows employees and guests to securely connect their personal devices to the enterprise network. 
+                End users can add their devices via configured pathways and provision predefined authentications.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Feature 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="feature-style">
+            <div class="feature-img mb-3">
+              <img src="/static/images/npm-asset.png" alt="BYOD">
+            </div>
+            <div class="feature-heading">
+              <h4>Asset Visibility</h4>
+            </div>
+            <div class="feature-desc">
+              <p>Provides continuous visibility and control over network users and devices across wireless, wired, and VPN connections.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="feature-style">
+            <div class="feature-img mb-3">
+              <img src="/static/images/npm-secureaccess.png" alt="BYOD">
+            </div>
+            <div class="feature-heading">
+              <h4>Secure Access</h4>
+            </div>
+            <div class="feature-desc">
+              <p>Utilizes various authentication protocols such as 802.1X, RADIUS, and MAB to ensure secure network access for devices and endpoints.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="feature-style">
+            <div class="feature-img mb-3">
+              <img src="/static/images/npm-device.png" alt="BYOD">
+            </div>
+            <div class="feature-heading">
+              <h4>Universal Device Compatibility</h4>
+            </div>
+            <div class="feature-desc">
+              <p>Supports compatibility with all 802.1X-compliant devices, including PCs (Windows or Linux), Macs, smartphones, and tablets. Additionally,
+                facilitates MAC-based authentication for IoT devices and other non-802.1X capable devices.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+</body>
+</html>

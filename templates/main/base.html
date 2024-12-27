@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Ortus</title>
+  <link rel="icon" href="/static/images/favicon-50x50.png">
+
+  <!-- Bootstrap CDN Link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS Link -->
+
+  {% block csslink %}{% endblock csslink %}
+  <link rel="stylesheet" href="/static/css/Style.css" />
+  <!-- responsive link -->
+  <link rel="stylesheet" href="/static/css/responsive.css">
+
+  <script src="https://code.jquery.com/jquery-1.11.3.js"> </script>
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- jQuery -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <script src="/static/js/dropdown.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Owl Carousel JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- JavaScript animate-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+  <!-- Header Section -->
+
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-item.dropdown">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/static/images/Grand Ortus _BG.png" alt="Grand Ortus Logo" />
+          <span class="trademark">&trade;</span>
+        </a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto  mb-lg-0">
+            <li class="nav-item me-3 py-2 ">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+
+            <!-- Resources Dropdown -->
+
+            <li class="nav-item me-3 py-2 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+              <ul class="dropdown-menu triangle mt-4" aria-labelledby="resourcesDropdown">
+                <li><a class="dropdown-item" href="{% url "About" %}">About Us</a></li>
+                <li><a class="dropdown-item" href="{% url "Team" %}">Team</a></li>
+                <li><a class="dropdown-item" href="{% url "Blog" %}">Blogs</a></li>
+                <li><a class="dropdown-item" href="{% url "CaseStudy" %}">Case Studies</a></li>
+                <li><a class="dropdown-item" href="{% url "AwardsCertifications" %}">Awards & Certifications</a></li>
+
+                <!-- Career Dropdown within Resources -->
+
+                <li class="dropdown dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#" id="careerDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">Career</a>
+                  <ul class="dropdown-menu submenu " aria-labelledby="careerDropdown">
+                    <li><a class="dropdown-item" href="{% url "LifeGrandOrtus" %}">Life Grand Ortus</a></li>
+                    <li><a class="dropdown-item" href="{% url "CurrentJobOpening" %}">Current Openings</a></li>
+                    <li><a class="dropdown-item" href="{% url "CSR" %}">Corporate social
+                        responsibility</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="{% url "Contact" %}">Contact Us</a></li>
+              </ul>
+            </li>
+
+            <!-- Associations Dropdown -->
+
+            <li class="nav-item me-3 py-2 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="associationsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Associations</a>
+              <ul class="dropdown-menu triangle mt-4" aria-labelledby="associationsDropdown">
+                <li><a class="dropdown-item" href="{% url "Partners" %}">Partners</a></li>
+                <li><a class="dropdown-item" href="{% url "Clients" %}">Clients</a></li>
+              </ul>
+            </li>
+
+            <!-- Products Dropdown -->
+
+            <li class="nav-item me-3 py-2 dropdown">
+              <a class="nav-link dropdown-toggle" href="#Products" id="productsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu triangle mt-4" aria-labelledby="productsDropdown">
+
+                <li><a class="dropdown-item" href="{% url "product1desc" %}">Product I Description</a></li>
+                <li><a class="dropdown-item" href="{% url "product2desc" %}">Product II Description</a></li>
+              </ul>
+            </li>
+
+            <!-- Solutions Dropdown -->
+
+            <li class="nav-item dropdown me-3 py-2 position-static">
+              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Solutions
+              </a>
+              <div class="dropdown-menu p-3 megamenu dropdown-wide" aria-labelledby="solutionsDropdown">
+                <div class="d-flex">
+                  <!-- Company Size Section -->
+                  <div class="dropdown-column">
+                    <h6 class="dropdown-header">Company Size</h6>
+                    <a class="dropdown-item" href="#Startups">Startups</a>
+                    <a class="dropdown-item" href="#MSMES">MSMES</a>
+                    <a class="dropdown-item" href="#Enterprises">Enterprises</a>
+                  </div>
+
+                  <!-- Services Section -->
+                  <div class="dropdown-column">
+                    <h6 class="dropdown-header">Services</h6>
+                    <a class="dropdown-item" href="{% url "ServiceList" %}">Service List</a>
+                    <a class="dropdown-item" href="{% url "ImplementationServices" %}">Implementation Services</a>
+                    <a class="dropdown-item" href="{% url "Infrastructure" %}">IT Infrastructure Consulting</a>
+                    <a class="dropdown-item" href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
+                    <a class="dropdown-item" href="{% url "Networking" %}">Networking and Security</a>
+                    <a class="dropdown-item" href="{% url "MobilityAndCloud" %}">Mobility and Cloud</a>
+                    <a class="dropdown-item" href="{% url "Internet" %}">Intranet</a>
+                    <a class="dropdown-item" href="{% url "FMSAndAMCSupport" %}">FMS and AMC Support</a>
+                  </div>
+                  
+                  <!-- By Industries Section -->
+                  <div class="dropdown-column">
+                    <h6 class="dropdown-header">By Industries</h6>
+                    <a class="dropdown-item" href="{% url "ITES" %}">IT & ITES</a>
+                    <a class="dropdown-item" href="{% url "Hospitality" %}">Hospitality Industry</a>
+                    <a class="dropdown-item" href="{% url "Telecom" %}">Telecom Industry</a>
+                    <a class="dropdown-item" href="{% url "FMCG" %}">FMCG Industry</a>
+                    <a class="dropdown-item" href="{% url "Healthcare" %}">Healthcare Industry</a>
+                    <a class="dropdown-item" href="{% url "Manufacturing" %}">Manufacturing Industry</a>
+                    <a class="dropdown-item" href="{% url "Gaming" %}">Real Money Gaming Industry</a>
+                    <a class="dropdown-item" href="{% url "Retail" %}">Retail Industry</a>
+                    <a class="dropdown-item" href="{% url "Staffing" %}">Staffing and Recruitment</a>
+                    <a class="dropdown-item" href="{% url "OnDemand" %}">On Demand Economy</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Get a Quote Button -->
+          <form class="d-flex">
+            <button class="btn shadow-none" type="submit">
+              <a href="#GetAQuote">Get a Quote</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+{% block content %}{% endblock content %}
+  
+  
+
+  <!-- --Footer Section-- -->
+
+  <footer class="footer-sec bg-dark text-light pt-lg-5 mt-lg-4 py-3">
+    <div class="container  text-md-left">
+      <div class="row d-flex text-start">
+
+        <!-- Logo and Description -->
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <div class="footer-logosec">
+            <img src="/static/images/logo.png" alt="" class="img-fluid ">
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-3 col-lg-3  mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Get in Touch</h6>
+          <p class="my-lg-4"><i class="fas fa-map-marker-alt mr-2"></i> D 14/30, 2nd Floor, Sector 52, Ardeecity
+            Gurugram, Haryana
+            -122003, India</p>
+          <p><i class="fas fa-envelope mr-2"></i> info@grandortus.com</p>
+          <p><i class="fas fa-phone mr-2"></i> 01244233760, +919899950003</p>
+        </div>
+
+        <!-- Service Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
+          <h6 class="text-uppercase font-weight-bold">Service</h6>
+          <p><a href="#" class="text-light pb-1">IT Infrastructure Consulting</a></p>
+          <p><a href="#" class="text-light pb-1">Networking</a></p>
+          <p><a href="#" class="text-light pb-1">Mobility & Cloud</a></p>
+          <p><a href="#" class="text-light pb-1">Web Design</a></p>
+          <p><a href="#" class="text-light pb-1">Development</a></p>
+          <p><a href="#" class="text-light pb-1">SEO</a></p>
+        </div>
+
+        <!-- Company Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
+          <h6 class=" text-uppercase font-weight-bold">Company</h6>
+          <p><a href="/About.html" class="text-light pb-1">About Us</a></p>
+          <p><a href="#" class="text-light pb-1">Our Services</a></p>
+          <p><a href="#" class="text-light pb-1">Privacy Policy</a></p>
+          <p><a href="#" class="text-light pb-1">Case studies</a></p>
+          <p><a href="#" class="text-light pb-1">Blogs</a></p>
+          <p><a href="#" class="text-light pb-1">Contact Us</a></p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
+          <h6 class="text-uppercase font-weight-bold">Follow Us</h6>
+          <a href="https://www.facebook.com/Grandortus.Official" target="_blank"
+            class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/grandortus/mycompany/verification/" target="_blank"
+            class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/grandortus.official/" target="_blank"
+            class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="mb-0">&copy;2024 Copyright Grand Ortus</p>
+        <p class="mb-0 me-0">ISO/IEC 27001:2022 ISO 9001:2015</p>
+      </div>
+  </footer>
+
+
+  <!-- Sticky Navbar -->
+  <script src="/static/js/stickyNav.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/owl.carousel.min.js"></script>
+
+ 
+
+</body>
+
+</html>

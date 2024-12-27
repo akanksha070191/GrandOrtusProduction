@@ -1,0 +1,126 @@
+.hero {
+    /* background-image: url(/images/freepik-export-20241126055721newr.png); */
+    background: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000048;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero h1,
+.hero p,
+.learn-more-btn {
+    position: relative;
+    z-index: 1;
+    color:var(--color);
+}
+
+.content-section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.feature-icon {
+    font-size: 22px;
+    color: #0090d2;
+    margin-bottom: 15px;
+    font-style: normal;
+  }
+
+  .text-ites li {
+    list-style-type: none;
+  }
+
+  .beyond-section {
+    background: linear-gradient(to right, #e3f2fd, #f9fafc);
+  }
+
+  .beyond-section h4 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  .beyond-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  .beyond-section .highlight-text {
+    font-weight: 600;
+    color: #333;
+  }
+
+
+  /* Hospitality Industry CSS  Section*/
+
+  .feature-item .icon {
+    font-size: 2.5rem;
+    color:var(--primary-color);
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.feature-item h5 {
+    color: var(--primary-color);
+}
+
+.feature-item p {
+    margin: 0;
+}
+
+.feature-item li{
+    padding:20px;
+}
+
+
+/* Gaming css section */
+
+.section-titlehead h2{
+font-size: 25px;
+margin-bottom: 10px;
+}
+.section-title {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  font-size: 20px;
+
+}
+.feature-list p{
+  font-size: 16px;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+.feature-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+.feature-list li::before {
+  content: '\25C6';
+  color:var(--primary-color);
+  margin-right: 10px;
+}

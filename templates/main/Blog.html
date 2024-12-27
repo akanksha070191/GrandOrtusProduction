@@ -1,0 +1,129 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/Blog.css">
+{% endblock csslink %}
+
+<body>
+
+  {% block content %}
+
+  <!--Blog Hero Section -->
+
+
+  <section class="hero">
+    <div class="container">
+      <div class="row justify-content-center text-center pt-4">
+        <div class="col-lg-7 col-md-12 col-12">
+          <div class="left-item align-items-center">
+            <div class="heading-sec ">
+              <h1>Grand Ortus Blog</h1>
+              <p>Insights, Trends, and Innovations in Networking and Software</p>
+              <div class="search-box">
+                <input type="text" class="form-control w-50" placeholder="Search blog posts...">
+                <button class="btn btn-primary ms-2">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Blog Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row row-cols-2 row-cols-lg-3 g-4 ">
+
+        <!-- Blog Post 1 -->
+
+        <div class="col">
+          <div class="artical-card blog-card">
+            <img src="/static/images/Windows vs. Linux.png" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h5 class="card-title">Windows vs. Linux: Unraveling the Battle of Operating Systems</h5>
+              <button class="read-more-btn mt-3"> <a href="{% url "Windows" %}">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+
+        <div class="col">
+          <div class="artical-card blog-card">
+            <img src="/static/images/Exploring.png" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h5 class="card-title">Exploring the Future of Technology: A Glimpse into Tomorrow</h5>
+              <!-- <p class="card-text">Stay ahead of the curve with these key networking trends and 
+                                technologies.</p>-->
+              <button class="read-more-btn mt-3"> <a href="{% url "Exploring" %}">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+
+        <div class="col">
+          <div class="artical-card blog-card">
+            <img src="/static/images/Transformative.png" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h5 class="card-title">The Transformative Power of IoT in Industries: A Journey Beyond
+                Connectivity</h5>
+              <!-- <p class="card-text">Learn how SD-WAN can enhance your organization's connectivity and
+                                security.</p> -->
+              <button class="read-more-btn mt-3"> <a href="{% url "Transformative" %}">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+
+        <div class="col">
+          <div class="artical-card blog-card">
+            <img src="/static/images/Ecosystem.jpg" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h5 class="card-title">The IT Industry Ecosystem</h5>
+              <!-- <p class="card-text">Learn how SD-WAN can enhance your organization's connectivity and
+                                security.</p> -->
+              <button class="read-more-btn mt-3"> <a href="{% url "Ecosystem" %}">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Post 5 -->
+
+        <div class="col">
+          <div class="artical-card blog-card">
+            <img src="/static/images/IT-services.jpg" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h5 class="card-title">How can IT services help reduce costs for companies?</h5>
+              <!-- <p class="card-text">Learn how SD-WAN can enhance your organization's connectivity and
+                                security.</p> -->
+              <button class="read-more-btn mt-3"> <a href="{% url "ITservices" %}">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+
+        <div class="col">
+          <div class="artical-card blog-card">
+            <img src="/static/images/Cybersecurity.jpg" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity: The Importance of Protecting Your Data</h5>
+              <!-- <p class="card-text">Learn how SD-WAN can enhance your organization's connectivity and
+                                security.</p> -->
+              <button class="read-more-btn mt-3"> <a href="{% url "Cybersecurity" %}">Read More</a> </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {% endblock content %}
+  
+</body>
+
+</html>
