@@ -85,7 +85,7 @@ def telecom(request):
     return render(request, 'byIndustries/Telecom.html')
 
 def dataCenter(request):
-    return render(request, 'services/dataCenter.html')
+    return render(request, 'services/Datacenter.html')
 
 def fmsAndamc(request):
     return render(request, 'services/FMSAndAMCSupport.html')

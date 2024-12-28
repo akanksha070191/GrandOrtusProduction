@@ -82,14 +82,6 @@ DATABASES = {
     }
 }
 
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.grandortus.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'akanksha@grandortus.com'
-EMAIL_HOST_PASSWORD = 'Avyansh@2020'
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 

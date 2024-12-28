@@ -44,4 +44,5 @@ urlpatterns = [
     path('Transformative', views.transformative, name='Transformative'),
     path('JobOpeningForm', views.jobOpeningForm, name='JobOpeningForm'),
     path('indexContactForm/', views.indexContactForm, name='indexContactForm'),
+    
 ]
