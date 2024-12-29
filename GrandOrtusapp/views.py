@@ -3,6 +3,8 @@ from django.http import HttpResponse
 import ssl
 import smtplib
 import os
+from django.conf import settings
+
 
 
 
@@ -152,8 +154,9 @@ def indexContactForm(request):
         {message}
         """
         print('emailbody: ', email_body)
-        sender_email = os.getenv("SENDER_EMAIL", "info@grandortus.com")
-        sender_password = os.getenv("SENDER_PASSWORD", "Gospl@2024")
+       
+        sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
+        sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
         recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
 
         try:
@@ -196,8 +199,8 @@ def jobForm(request):
         """
 
         # Sender and recipient email
-        sender_email = os.getenv("SENDER_EMAIL", "info@grandortus.com")
-        sender_password = os.getenv("SENDER_PASSWORD", "Gospl@2024")
+        sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
+        sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
         recipient_email = "akanksha@grandortus.com"
 
         try:
