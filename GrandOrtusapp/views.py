@@ -126,8 +126,14 @@ def itService(request):
 def transformative(request):
     return render(request, 'blogsArticle/Transformative.html')
 
-def jobOpeningForm(request):
-    return render(request, 'main/JobOpeningForm.html')
+def sseJobOpeningForm(request):
+    return render(request, 'main/SSEJobOpeningForm.html')
+
+def uiuxJobOpeningForm(request):
+    return render(request, 'main/UIUXJobOpeningForm.html')
+
+def daJobOpeningForm(request):
+    return render(request, 'main/DAJobOpeningForm.html')
 
 def indexContactForm(request):
     if request.method == 'POST':
@@ -162,6 +168,90 @@ def indexContactForm(request):
                     f"Subject: {services}\n\n{email_body}"
                 )
             return redirect('index')
+        except Exception as e:
+            return HttpResponse(f"Failed to send email. Error: {str(e)}")
+
+    return render(request, 'main/index.html')
+
+def jobForm(request):
+    if request.method == 'POST':
+        # Extract form data
+        name = request.POST.get('fullName', '').strip()
+        email = request.POST.get('email', '').strip()
+        phoneNo = request.POST.get('phone', '').strip()
+        coverLetter = request.POST.get('coverLetter', '').strip()
+        resume = request.FILES.get('resume')
+        jobPosition = request.POST.get('jobPosition', '').strip()
+        print('resume', resume)
+
+        # Email content
+        subject = f"New Job Application from {name}"
+        email_body = f"""
+        Name: {name}
+        Email: {email}
+        Phone No: {phoneNo}
+        Job Position: {jobPosition}
+        Cover Letter:
+        {coverLetter}
+        """
+
+        # Sender and recipient email
+        sender_email = os.getenv("SENDER_EMAIL", "akanksha@grandortus.com")
+        sender_password = os.getenv("SENDER_PASSWORD", "Avyansh@2020")
+        recipient_email = "akanksha@grandortus.com"
+
+        try:
+            # Create email message with attachment (if provided)
+            context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
+            with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                server.starttls(context=context)
+                server.login(sender_email, sender_password)
+                
+                # Prepare the email
+                message = f"Subject: {subject}\n\n{email_body}"
+                
+                # Attach the resume if available
+                if resume:
+                    from email.mime.multipart import MIMEMultipart
+                    from email.mime.text import MIMEText
+                    from email.mime.base import MIMEBase
+                    from email import encoders
+
+                    # MIME structure
+                    msg = MIMEMultipart()
+                    msg['From'] = sender_email
+                    msg['To'] = recipient_email
+                    msg['Subject'] = subject
+                    
+                    # Attach email body
+                    msg.attach(MIMEText(email_body, 'plain'))
+                    
+                    # Attach resume
+                    part = MIMEBase('application', 'octet-stream')
+                    part.set_payload(resume.read())
+                    encoders.encode_base64(part)
+                    part.add_header(
+                        "Content-Disposition",
+                        f"attachment; filename={resume.name}",
+                    )
+                    msg.attach(part)
+                    
+                    # Send email with attachment
+                    server.sendmail(
+                        sender_email,
+                        [recipient_email],
+                        msg.as_string()
+                    )
+                else:
+                    # Send email without attachment
+                    server.sendmail(
+                        sender_email,
+                        [recipient_email],
+                        message
+                    )
+
+            return redirect('index')
+
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 

@@ -42,7 +42,10 @@ urlpatterns = [
     path('Exploring', views.exploring, name='Exploring'),
     path('ITservices', views.itService, name='ITservices'),
     path('Transformative', views.transformative, name='Transformative'),
-    path('JobOpeningForm', views.jobOpeningForm, name='JobOpeningForm'),
+    path('SSEJobOpeningForm', views.sseJobOpeningForm, name='SSEJobOpeningForm'),
+    path('UIUXJobOpeningForm', views.uiuxJobOpeningForm, name='UIUXJobOpeningForm'),
+    path('DAJobOpeningForm', views.daJobOpeningForm, name='DAJobOpeningForm'),
     path('indexContactForm/', views.indexContactForm, name='indexContactForm'),
+    path('jobForm/', views.jobForm, name='jobForm'),
     
 ]
