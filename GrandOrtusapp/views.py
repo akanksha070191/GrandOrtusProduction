@@ -152,9 +152,9 @@ def indexContactForm(request):
         {message}
         """
         print('emailbody: ', email_body)
-        sender_email = os.getenv("SENDER_EMAIL", "akanksha@grandortus.com")
-        sender_password = os.getenv("SENDER_PASSWORD", "Avyansh@2020")
-        recipient_email = "rv@grandortus.com"  # Replace with your recipient address
+        sender_email = os.getenv("SENDER_EMAIL", "info@grandortus.com")
+        sender_password = os.getenv("SENDER_PASSWORD", "Gospl@2024")
+        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
 
         try:
             # Email sending
@@ -196,8 +196,8 @@ def jobForm(request):
         """
 
         # Sender and recipient email
-        sender_email = os.getenv("SENDER_EMAIL", "akanksha@grandortus.com")
-        sender_password = os.getenv("SENDER_PASSWORD", "Avyansh@2020")
+        sender_email = os.getenv("SENDER_EMAIL", "info@grandortus.com")
+        sender_password = os.getenv("SENDER_PASSWORD", "Gospl@2024")
         recipient_email = "akanksha@grandortus.com"
 
         try:
