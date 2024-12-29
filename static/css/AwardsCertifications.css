@@ -17,6 +17,35 @@
 }
 
 
+section.hero {
+  background: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+section.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00000048;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero h1,
+.hero p,
+.learn-more-btn {
+  position: relative;
+  z-index: 1;
+  color: var(--color);
+}
+
 /* General Section Styling */
 #awards-certifications {
   background: linear-gradient(135deg, #ebe0f5 0%, #e0e8f8 100%);

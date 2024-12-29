@@ -940,6 +940,11 @@ list-style-type:none;
     margin-bottom: 24px;
 }
 
+.error-message{
+    color: red;
+    font-size: 12px;
+}
+
 .contact-info h5 {
     /* margin-bottom: 0.5rem; */
     margin-top: 20px;

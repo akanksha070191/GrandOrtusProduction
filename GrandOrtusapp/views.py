@@ -148,7 +148,7 @@ def indexContactForm(request):
         print('emailbody: ', email_body)
         sender_email = os.getenv("SENDER_EMAIL", "akanksha@grandortus.com")
         sender_password = os.getenv("SENDER_PASSWORD", "Avyansh@2020")
-        recipient_email = "piyush.r@grandortus.com"  # Replace with your recipient address
+        recipient_email = "rv@grandortus.com"  # Replace with your recipient address
 
         try:
             # Email sending
