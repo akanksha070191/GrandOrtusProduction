@@ -768,6 +768,9 @@ color: var(--primary-color);
     color: #555;
     text-transform: capitalize;
 }
+.feed_div{
+    text-align: justify;
+}
 
 /* Carousel Navigation Buttons */
 

@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/Blog.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 
 <body>
@@ -18,8 +19,8 @@
               <h1>Grand Ortus Blog</h1>
               <p>Insights, Trends, and Innovations in Networking and Software</p>
               <div class="search-box">
-                <input type="text" class="form-control w-50" placeholder="Search blog posts...">
-                <button class="btn btn-primary ms-2">Search</button>
+                <input type="text" id="searchBox" class="form-control w-50" placeholder="Search..." onkeyup="searchContent()" />
+                <button class="btn btn-primary ms-2" onclick="searchContent()">Search</button>
               </div>
             </div>
           </div>
@@ -35,7 +36,7 @@
 
         <!-- Blog Post 1 -->
 
-        <div class="col">
+        <div class="col" data-search>
           <div class="artical-card blog-card">
             <img src="/static/images/Windows vs. Linux.png" class="card-img-top" alt="Blog Image">
             <div class="card-body">
@@ -47,7 +48,7 @@
 
         <!-- Blog Post 2 -->
 
-        <div class="col">
+        <div class="col" data-search>
           <div class="artical-card blog-card">
             <img src="/static/images/Exploring.png" class="card-img-top" alt="Blog Image">
             <div class="card-body">
@@ -61,7 +62,7 @@
 
         <!-- Blog Post 3 -->
 
-        <div class="col">
+        <div class="col" data-search>
           <div class="artical-card blog-card">
             <img src="/static/images/Transformative.png" class="card-img-top" alt="Blog Image">
             <div class="card-body">
@@ -76,7 +77,7 @@
 
         <!-- Blog Post 4 -->
 
-        <div class="col">
+        <div class="col" data-search>
           <div class="artical-card blog-card">
             <img src="/static/images/Ecosystem.jpg" class="card-img-top" alt="Blog Image">
             <div class="card-body">
@@ -89,7 +90,7 @@
         </div>
         <!-- Blog Post 5 -->
 
-        <div class="col">
+        <div class="col" data-search>
           <div class="artical-card blog-card">
             <img src="/static/images/IT-services.jpg" class="card-img-top" alt="Blog Image">
             <div class="card-body">
@@ -103,7 +104,7 @@
 
         <!-- Blog Post 6 -->
 
-        <div class="col">
+        <div class="col" data-search>
           <div class="artical-card blog-card">
             <img src="/static/images/Cybersecurity.jpg" class="card-img-top" alt="Blog Image">
             <div class="card-body">
