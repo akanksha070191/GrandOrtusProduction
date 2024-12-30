@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+h1,h2,h3,h4,h4{
+    color: var(--secondary-color);
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -75,13 +79,13 @@ h3 {
 }
 
 /* .btn:hover {
-    background-color: #ffffff !important; 
+    background-color: #262061 !important; 
   } */
 
-.navbar .btn:hover a {
+/* .navbar .btn:hover a {
     color: var(--secondary-color) !important;
 
-}
+} */
 
 .navbar-light .navbar-nav .nav-link {
     color: var(--secondary-color);
@@ -417,7 +421,12 @@ list-style-type:none;
     height: 100%;
     background: var(--color);
 }
-
+.service h4{
+color: var(--primary-color);
+}
+.service h1{
+    color: var(--secondary-color);
+}
 .service-card:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -524,6 +533,9 @@ list-style-type:none;
 .client-feedback h4 {
     margin: 0;
 }
+.client-feedback p{
+    color: var(--secondary-color);
+}
 
 .client-feedback .fw-bold {
     font-size: 24px !important;
@@ -548,6 +560,7 @@ list-style-type:none;
     text-transform: capitalize;
     font-weight: 500;
     line-height: 40px;
+    color: var(--secondary-color);
 }
 
 /* .icon-box {
@@ -617,6 +630,10 @@ list-style-type:none;
 .reting {
     display: flex;
     gap: 15px;
+}
+
+.reting h1{
+    color: var(--secondary-color);
 }
 
 .feedback-section {
@@ -724,6 +741,10 @@ list-style-type:none;
 
 .feedback-card .feed_cont img {
     border-radius: 20px;
+}
+
+.feed-div{
+    text-align: justify;
 }
 
 .feedback-card h3 {
@@ -1000,12 +1021,11 @@ list-style-type:none;
 }
 
 .send-btn {
-    background-color: #ffc107;
     color:var(--color);
     border: 1px solid var(--primary-color);
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 10px;
-    background: #0090d2;
+    background: var(--primary-color);
 }
 
 .send-btn a {
@@ -1016,6 +1036,7 @@ list-style-type:none;
 .send-btn:hover {
     background-color: var(--color);
     border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 
 }
 
@@ -1037,7 +1058,8 @@ list-style-type:none;
 }
 
 .ourslider {
-    background: repeating-linear-gradient(557deg, #084866, #0090d2 44px);
+    background: linear-gradient(557deg, #084866, #0090d2 44px);
+    padding: 20px 0px 20px 0px;
 }
 
 .ourslider h2 {

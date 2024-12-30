@@ -17,7 +17,7 @@ body {
 :root {
 
     --primary-color: #0090d2;
-    --secondary-color: #000;
+    --secondary-color: #575757;
     --text-color: #555;
     --color: #fff;
 
@@ -316,6 +316,7 @@ h3 {
 .card-title{
     font-size: 30px;
     font-weight: 600;
+    color:  #575757 ;
 
 }
 

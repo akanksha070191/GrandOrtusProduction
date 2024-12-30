@@ -153,8 +153,57 @@
   .maincard{
     width: auto;
   }
+  .feedback-card{
+    display: flex;
+    flex-direction: column;
+  }
+  .feedback-card .feed_cont img{
+    height: 200px;
+  }
 
+  
+/* Responsive Design work flow chart */
+ 
+@media (max-width: 768px) {
+    .workflow-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
+    .workflow-line {
+      top: auto;
+      left: 50%;
+      height: 100%;
+      width: 3px;
+      background: #0078ff;
+      transform: translateX(-50%);
+    }
+
+    .workflow-step {
+      text-align: left;
+      flex: none;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    .workflow-step .workflow-circle {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .workflow-step h6,
+    .workflow-step p {
+      margin-left: 90px;
+    }
+
+    .workflow-step .workflow-icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 
 
 }
