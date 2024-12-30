@@ -1,0 +1,31 @@
+
+
+
+
+  ul.list-group-item {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  ul.list-group-item strong {
+    color: #007bff;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  .text-center p {
+    font-size: 17px;
+    color: #6c757d;
+    margin-top: 20px;
+  }
+
+  .Key-sec{
+    background-color: #0090d2;
+    color: #fff;
+  }
+
+  .Key-sec ul li{
+    padding-top: 10px;
+  }
