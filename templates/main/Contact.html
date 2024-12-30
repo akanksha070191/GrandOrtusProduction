@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/Contact.css">
+<script src="/static/js/FormValidation.js" defer></script>
 {% endblock csslink %}
 
 
@@ -117,45 +118,43 @@
 
                 <div class="col-lg-6">
                     <div class="form-section">
-                        <form id="contactForm" novalidate>
+                        <form action="/indexContactForm/" method="POST" id="contactForm" novalidate>
+                            {% csrf_token %}
                             <div class="row mb-3">
-                                <div class="col-lg-6 d-grid gap-3">
-                                    <input type="text" class="form-control " id="name" placeholder="Name"
-                                        onkeyup="keyupFunction()">
-                                    <div id="name-error"></div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                    <div id="error"></div>
-                                </div>
+                              <div class="col-lg-6 d-grid gap-3">
+                                <input type="text" class="form-control " name="name" id="name" placeholder="Name" onblur="validateName()">
+                                <div id="name-error" class="error-message"></div>
+                              </div>
+                              <div class="col-lg-6">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
+                                <div id="email-error" class="error-message"></div>
+                              </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-lg-6 d-grid gap-3">
-                                    <input type="phone" class="form-control" id="phone" placeholder="Phone"
-                                        pattern="[0-9]{10}" required>
-                                    <div id="error"></div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <select class="form-select" id="services" required>
-                                        <option value="" disabled selected>Services</option>
-                                        <option value="1">Development</option>
-                                        <option value="2">Implementation Services</option>
-                                        <option value="3">IT Infrastructure Consulting</option>
-                                        <option value="4">Datacenter Infra Design & Deployment</option>
-                                        <option value="5">Networking And Security</option>
-                                        <option value="6">Mobility And Cloud</option>
-                                        <option value="7">Intranet</option>
-                                        <option value="8">FMS And AMC Support</option>
-                                        <option value="9">Web Design</option>
-                                    </select>
-                                </div>
+                              <div class="col-lg-6 d-grid gap-3">
+                                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" onblur="validatePhone()" pattern="[0-9]{10}" required>
+                                <div id="phone-error" class="error-message"></div>
+                              </div>
+                              <div class="col-lg-6">
+                                <select class="form-select" name="services" id="services" required >
+                                  <option value="" disabled selected>Services</option>
+                                  <option value="Development">Development</option>
+                                  <option value="Implementation Services">Implementation Services</option>
+                                  <option value="IT Infrastructure Consulting">IT Infrastructure Consulting</option>
+                                  <option value="Datacenter Infra Design & Deployment">Datacenter Infra Design & Deployment</option>
+                                  <option value="Networking And Security">Networking And Security</option>
+                                  <option value="Mobility And Cloud">Mobility And Cloud</option>
+                                  <option value="Intranet">Intranet</option>
+                                  <option value="FMS And AMC Support">FMS And AMC Support</option>
+                                  <option value="Web Design">Web Design</option>
+                                </select>
+                              </div>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" id="message" rows="4" placeholder="Messages"
-                                    required></textarea>
+                              <textarea class="form-control" name="message" id="message" rows="4" placeholder="Messages" required></textarea>
                             </div>
-                            <button type="submit" class="send-btn" id="submit"><a href="#Submit">Submit</a> </button>
-                        </form>
+                            <button type="submit" class="send-btn" id="submit">Submit</button>
+                          </form>
                     </div>
 
 

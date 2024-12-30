@@ -49,8 +49,8 @@
   <header class="header" id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-item.dropdown">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">
-          <img src="/static/images/Grand Ortus _BG.png" alt="Grand Ortus Logo" />
+        <a class="navbar-brand" href="{% url "index" %}">
+          <img src="/static/images/Grand Ortus _BG.png" alt="Grand Ortus Logo" title="https://grandortus.com"/>
           <span class="trademark">&trade;</span>
         </a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
@@ -167,7 +167,7 @@
           <!-- Get a Quote Button -->
           <form class="d-flex">
             <button class="btn shadow-none" type="submit">
-              <a href="#GetAQuote">Get a Quote</a>
+              <a href="{% url "Contact" %}">Get a Quote</a>
             </button>
           </form>
         </div>
@@ -207,23 +207,23 @@
         <!-- Service Links -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
           <h6 class="text-uppercase font-weight-bold">Service</h6>
-          <p><a href="#" class="text-light pb-1">IT Infrastructure Consulting</a></p>
-          <p><a href="#" class="text-light pb-1">Networking</a></p>
-          <p><a href="#" class="text-light pb-1">Mobility & Cloud</a></p>
-          <p><a href="#" class="text-light pb-1">Web Design</a></p>
-          <p><a href="#" class="text-light pb-1">Development</a></p>
-          <p><a href="#" class="text-light pb-1">SEO</a></p>
+          <p><a href="{% url "Infrastructure" %}" class="text-light pb-1">IT Infrastructure Consulting</a></p>
+          <p><a href="{% url "Networking" %}" class="text-light pb-1">Networking & Security</a></p>
+          <p><a href="{% url "MobilityAndCloud" %}" class="text-light pb-1">Mobility & Cloud</a></p>
+          <p><a href="{% url "ImplementationServices" %}" class="text-light pb-1">Implementation Services</a></p>
+          <p><a href="{% url "Internet" %}" class="text-light pb-1">Intranet</a></p>
+          <p><a href="{% url "FMSAndAMCSupport" %}" class="text-light pb-1">FMS & AMC Support</a></p>
         </div>
 
         <!-- Company Links -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
           <h6 class=" text-uppercase font-weight-bold">Company</h6>
-          <p><a href="/About.html" class="text-light pb-1">About Us</a></p>
-          <p><a href="#" class="text-light pb-1">Our Services</a></p>
-          <p><a href="#" class="text-light pb-1">Privacy Policy</a></p>
-          <p><a href="#" class="text-light pb-1">Case studies</a></p>
-          <p><a href="#" class="text-light pb-1">Blogs</a></p>
-          <p><a href="#" class="text-light pb-1">Contact Us</a></p>
+          <p><a href="{% url "About" %}" class="text-light pb-1">About Us</a></p>
+          <p><a href="{% url "Blog" %}" class="text-light pb-1">Blogs</a></p>
+          <p><a href="{% url "LifeGrandOrtus" %}" class="text-light pb-1">Life @ GrandOrtus</a></p>
+          <p><a href="{% url "CaseStudy" %}" class="text-light pb-1">Case Studies</a></p>
+          <p><a href="{% url "Healthcare" %}" class="text-light pb-1">Healthcare Industry</a></p>
+          <p><a href="{% url "Contact" %}" class="text-light pb-1">Contact Us</a></p>
         </div>
 
         <!-- Social Media Links -->

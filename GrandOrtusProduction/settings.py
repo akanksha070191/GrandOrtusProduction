@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,6 +28,9 @@ SECRET_KEY = 'django-insecure-&@nwe7vcxbc+!(z%sc@%mvla2_p!wpzoh3l+^8ui&7jg$t=8h+
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+EMAIL_ID = config('emailID')
+EMAIL_PASSWORD = config('emailPassword')
 
 
 # Application definition

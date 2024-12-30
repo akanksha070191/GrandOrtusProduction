@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- CSS Link -->
-
+  
   <link rel="stylesheet" href="/static/css/Style.css?v=1.1" />
   <!-- responsive link -->
   <link rel="stylesheet" href="/static/css/responsive.css">
@@ -23,11 +23,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
   <!-- jQuery -->
+  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-  <script src="static/js/dropdown.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/js/FormValidation.js" defer></script>
+  <script src="/static/js/dropdown.js" defer></script>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet"
@@ -48,8 +51,8 @@
   <header class="header" id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-item.dropdown">
       <div class="container">
-        <a class="navbar-brand" href="{% url "index" %}" >
-          <img src="/static/images/Grand Ortus _BG.png" alt="Grand Ortus Logo" />
+        <a class="navbar-brand" href="{% url "index" %}">
+          <img src="/static/images/Grand Ortus _BG.png" alt="Grand Ortus Logo" title="https://grandortus.com"/>
           <span class="trademark">&trade;</span>
         </a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
@@ -166,7 +169,7 @@
           <!-- Get a Quote Button -->
           <form class="d-flex">
             <button class="btn shadow-none" type="submit">
-              <a href="#GetAQuote">Get a Quote</a>
+              <a href="{% url "Contact" %}">Get a Quote</a>
             </button>
           </form>
         </div>
@@ -186,7 +189,7 @@
               <p>We are an IT system integrator</p>
             </div>
             <button class="learn-more-btn mt-lg-5">
-              <a href="#" class="learn-more-link">Learn More</a>
+              <a href="{% url "Transformative" %}" class="learn-more-link">Learn More</a>
             </button>
           </div>
         </div>
@@ -224,7 +227,7 @@
               </div>
             </div>
             <button class="read-more">
-              <a href="#">Read More</a>
+              <a href="{% url "About" %}">Read More</a>
             </button>
           </div>
         </div>
@@ -391,7 +394,7 @@
                   Fortifying Your Digital Fortress. </p>
               </div>
             </div>
-            <button class="btn btn-contact "> <a href="">Contact Us </a> </button>
+            <button class="btn btn-contact "> <a href="{% url "Contact" %}">Contact Us </a> </button>
 
           </div>
         </div>
@@ -600,14 +603,14 @@
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="flowchart-item">
-                    <img src="images/Design-100x100.png" alt="Design Icon">
+                    <img src="static/images/Design-100x100.png" alt="Design Icon">
                     <h5>Design</h5>
                     <p>Secure smooth and available as per business need.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="flowchart-item">
-                    <img src="images/airtel.png" alt="Deployment Icon">
+                    <img src="/static/images/airtel.png" alt="Deployment Icon">
                     <h5>Deployment</h5>
                     <p>Delivery end-to-end integration with expert deployment teams.</p>
                 </div>
@@ -673,62 +676,27 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <!-- <div class="form-section">
-              <form id="contactForm" novalidate>
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Name" id="name" placeholder="Name" required>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" class="form-control" placeholder="Email" id="email" placeholder="Name" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Phone" id="phone" placeholder="Name" pattern="[0-9]{10}" required>
-                  </div>
-                  <div class="col-md-6">
-                    <select class="form-select" id="services" required>
-                      <option value="" disabled selected>Services</option>
-                      <option value="1">Development</option>
-                      <option value="2">Implementation Services</option>
-                      <option value="3">IT Infrastructure Consulting</option>
-                      <option value="4">Datacenter Infra Design & Deployment</option>
-                      <option value="5">Networking And Security</option>
-                      <option value="6">Mobility And Cloud</option>
-                      <option value="7">Intranet</option>
-                      <option value="8">FMS And AMC Support</option>
-                      <option value="9">Web Design</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <textarea class="form-control" rows="4" placeholder="Messages" required></textarea>
-                </div>
-                <button type="submit" class="send-btn"><a href="">Submit</a> </button>
-              </form>
-            </div> -->
-
-          <div class="form-section">
+          
+        <div class="form-section">
             <form action="/indexContactForm/" method="POST" id="contactForm" novalidate>
               {% csrf_token %}
               <div class="row mb-3">
                 <div class="col-lg-6 d-grid gap-3">
-                  <input type="text" class="form-control " name="name" id="name" placeholder="Name" onkeyup="keyupFunction()">
-                  <div id="name-error"></div>
+                  <input type="text" class="form-control " name="name" id="name" placeholder="Name" onblur="validateName()">
+                  <div id="name-error" class="error-message"></div>
                 </div>
                 <div class="col-lg-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                  <div id="error"></div>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
+                  <div id="email-error" class="error-message"></div>
                 </div>
               </div>
               <div class="row mb-3">
                 <div class="col-lg-6 d-grid gap-3">
-                  <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" pattern="[0-9]{10}" required>
-                  <div id="error"></div>
+                  <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" onblur="validatePhone()" pattern="[0-9]{10}" required>
+                  <div id="phone-error" class="error-message"></div>
                 </div>
                 <div class="col-lg-6">
-                  <select class="form-select" name="services" id="services" required>
+                  <select class="form-select" name="services" id="services" required >
                     <option value="" disabled selected>Services</option>
                     <option value="Development">Development</option>
                     <option value="Implementation Services">Implementation Services</option>
@@ -769,8 +737,8 @@
           <div class="owl-carousel owl-theme owl-left mb-4">
             <div class="item"> <img src="/static/images/ClientsImg/airtel.png" alt="Airtel"></div>
             <div class="item"><img src="/static/images/ClientsImg/amity.png" alt="Amity"></div>
-            <div class="item"><img src="/static/images/PatnersImg/arista.png" alt="Arista"></div>
-            <div class="item"><img src="/static/images/PatnersImg/cisco.png" alt="Background Image"></div>
+            <div class="item"><img src="/static/images/PartnersImg/arista.png" alt="Arista"></div>
+            <div class="item"><img src="/static/images/PartnersImg/cisco.png" alt="Background Image"></div>
             <!-- Add more items as needed -->
           </div>
         </div>
@@ -781,8 +749,8 @@
           <div class="owl-carousel owl-theme owl-right mb-4">
             <div class="item"><img src="/static/images/ClientsImg/airtel.png" alt="Airtel"></div>
             <div class="item"><img src="/static/images/ClientsImg/amity.png" alt="Amity"></div>
-            <div class="item"><img src="/static/images/PatnersImg/arista.png" alt="Arista"></div>
-            <div class="item"><img src="/static/images/PatnersImg/cisco.png" alt="Background Image"></div>
+            <div class="item"><img src="/static/images/PartnersImg/arista.png" alt="Arista"></div>
+            <div class="item"><img src="/static/images/PartnersImg/cisco.png" alt="Background Image"></div>
             <!-- Add more items as needed -->
           </div>
         </div>
@@ -818,23 +786,23 @@
         <!-- Service Links -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
           <h6 class="text-uppercase font-weight-bold">Service</h6>
-          <p><a href="#" class="text-light pb-1">IT Infrastructure Consulting</a></p>
-          <p><a href="#" class="text-light pb-1">Networking</a></p>
-          <p><a href="#" class="text-light pb-1">Mobility & Cloud</a></p>
-          <p><a href="#" class="text-light pb-1">Web Design</a></p>
-          <p><a href="#" class="text-light pb-1">Development</a></p>
-          <p><a href="#" class="text-light pb-1">SEO</a></p>
+          <p><a href="{% url "Infrastructure" %}" class="text-light pb-1">IT Infrastructure Consulting</a></p>
+          <p><a href="{% url "Networking" %}" class="text-light pb-1">Networking & Security</a></p>
+          <p><a href="{% url "MobilityAndCloud" %}" class="text-light pb-1">Mobility & Cloud</a></p>
+          <p><a href="{% url "ImplementationServices" %}" class="text-light pb-1">Implementation Services</a></p>
+          <p><a href="{% url "Internet" %}" class="text-light pb-1"></a>Intranet</p>
+          <p><a href="{% url "FMSAndAMCSupport" %}" class="text-light pb-1">FMS & AMC Support</a></p>
         </div>
 
         <!-- Company Links -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-service">
           <h6 class=" text-uppercase font-weight-bold">Company</h6>
-          <p><a href="/About.html" class="text-light pb-1">About Us</a></p>
-          <p><a href="#" class="text-light pb-1">Our Services</a></p>
-          <p><a href="#" class="text-light pb-1">Privacy Policy</a></p>
-          <p><a href="#" class="text-light pb-1">Case studies</a></p>
-          <p><a href="#" class="text-light pb-1">Blogs</a></p>
-          <p><a href="#" class="text-light pb-1">Contact Us</a></p>
+          <p><a href="{% url "About" %}" class="text-light pb-1">About Us</a></p>
+          <p><a href="{% url "Blog" %}" class="text-light pb-1">Blogs</a></p>
+          <p><a href="{% url "LifeGrandOrtus" %}" class="text-light pb-1">Life @ GrandOrtus</a></p>
+          <p><a href="{% url "CaseStudy" %}" class="text-light pb-1">Case Studies</a></p>
+          <p><a href="{% url "Healthcare" %}" class="text-light pb-1">Healthcare Industry</a></p>
+          <p><a href="{% url "Contact" %}" class="text-light pb-1">Contact Us</a></p>
         </div>
 
         <!-- Social Media Links -->
@@ -1100,11 +1068,12 @@
 
 
   <!-- Sticky Navbar -->
+  
   <script src="/static/js/stickyNav.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="JS/owl.carousel.min.js"></script>
-
+  <script src="static/js/owl.carousel.min.js"></script>
+  
  
 
 </body>

@@ -15,18 +15,29 @@
             <div class="col-lg-6">
                 <div class="jobDescription-sec mt-5">
                     <h2 class="job-title">Job Description</h2>
-                    <p>What to do:-</p>
+                    <p>Technical Skills:-</p>
                     <ul>
-                        <li>Cleaning and maintaining the office premises, including dusting, sweeping, mopping, and
-                            vacuuming.</li>
-                        <li>Ensuring the cleanliness and tidiness of all office areas, including restrooms, pantry,
-                            and meeting rooms.</li>
-                        <li>Assisting in setting up meeting rooms and preparing them for meetings, including
-                            arranging chairs, tables, and audio-visual equipment.</li>
+                        <li>Proficiency in data analysis tools and programming languages (e.g., SQL, Python, R).</li>
+                        <li>Experience with data visualization tools such as Tableau, Power BI, or similar.</li>
+                        <li>Strong statistical analysis skills and familiarity with machine learning techniques (optional but a plus).</li>
+                        <li>Expertise in Excel or Google Sheets, including advanced functions and pivot tables.</li>
+                        <li>Familiarity with data cleaning and preprocessing techniques.</li>
+                    </ul>
+                    <p>Soft Skills:-</p>
+                    <ul>
+                        <li>Excellent problem-solving skills and attention to detail.</li>
+                        <li>Strong communication skills with the ability to explain complex data findings to non-technical stakeholders.</li>
+                        <li>Ability to work independently and manage multiple tasks effectively.</li>
+                    </ul>
+                    <p>Optional but Desirable Skills:-</p>
+                    <ul>
+                        <li>Knowledge of big data technologies (Hadoop, Spark, etc.) is a plus.</li>
+                        <li>Experience with business intelligence tools and data warehousing solutions.</li>
+                        <li>Familiarity with cloud-based data storage and processing platforms (AWS, Google Cloud, Azure).</li>
                     </ul>
                     <div class="container mt-5">
                         <div class="job-details">
-                            <p><i class="bi bi-briefcase"></i> <strong>Job Category:</strong> Office Boy</p>
+                            <p><i class="bi bi-briefcase"></i> <strong>Job Category:</strong> Data Analyst</p>
                             <p><i class="bi bi-arrow-right-circle"></i> <strong>Job Type:</strong> Full Time</p>
                             <p><i class="bi bi-geo-alt"></i> <strong>Job Location:</strong> Gurugram</p>
                         </div>
@@ -38,9 +49,11 @@
             <div class="col-lg-6">
                 <div class="container mt-5">
                     <div class="form-container">
-                        <h2>Apply For This Position</h2>
-                        <form id="applyForm" novalidate>
+                        <h2>Apply For Data Analyst</h2>
+                        <form id="applyForm" action="/jobForm/" method="POST" enctype="multipart/form-data" novalidate>
+                            {% csrf_token %}
                             <div class="mb-3">
+                                <input type="hidden" name="jobPosition" value="Data Analyst">
                                 <label for="fullName" class="form-label required">Full Name</label>
                                 <input type="text" class="form-control" id="fullName" name="fullName"
                                     pattern="[A-Za-z\s]{3,50}"
