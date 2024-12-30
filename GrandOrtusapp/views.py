@@ -259,3 +259,12 @@ def jobForm(request):
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 
     return render(request, 'main/index.html')
+
+def startUp(request):
+    return render(request, 'companySize/startUp.html')
+
+def enterprices(request):
+    return render(request, 'companySize/enterprise.html')
+
+def msme(request):
+    return render(request, 'companySize/msme.html')

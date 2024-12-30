@@ -47,5 +47,7 @@ urlpatterns = [
     path('DAJobOpeningForm', views.daJobOpeningForm, name='DAJobOpeningForm'),
     path('indexContactForm/', views.indexContactForm, name='indexContactForm'),
     path('jobForm/', views.jobForm, name='jobForm'),
-    
+    path('/Solutions/startUp/', views.startUp, name='startUp'),
+    path('/Solutions/enterprise/', views.enterprices, name='enterprise'),
+    path('/Solutions/msme/', views.msme, name='msme'),
 ]
