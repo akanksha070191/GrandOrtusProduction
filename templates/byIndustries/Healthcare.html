@@ -29,12 +29,12 @@
     <div class="container mt-3">
         <section class="content-section ">
             <div class="row">
-                <div class="col-lg-5"><img src="/static/images/Healthcare Industry.jpg" alt="Technology Concept"
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1500"><img src="/static/images/Healthcare Industry.jpg" alt="Technology Concept"
                         class="img-fluid rounded">
                 </div>
                 <div class="col-lg-2"></div>
 
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1500">
                     <div class="content-text">
                         <p>Information Technology: Transforming the Healthcare Landscape
                             Care, IT is making healthcare more efficient, accessible, and personalized than ever before.
@@ -122,6 +122,10 @@
           </p>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     {% endblock content %}
     
 </body>

@@ -31,11 +31,11 @@
     <div class="container mt-3">
         <section class="content-section ">
             <div class="row">
-                <div class="col-lg-6"><img src="/static/images/Telecom Industry.jpg" alt="Technology Concept"
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500"><img src="/static/images/Telecom Industry.jpg" alt="Technology Concept"
                         class="img-fluid rounded">
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1500">
                     <div class="content-text">
                         <p><strong>A Telecom Industry Game Changer:</strong> As a leading IT Consultancy and services company, we can confidently say that information technology has revolutionized the telecom industry. It has transformed every aspect, from core infrastructure to customer experience, creating a dynamic and ever- evolving landscape. Here’s how IT is powering the telecom revolution:
                         </p>
@@ -123,6 +123,11 @@
             </div>
         </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     {% endblock content %}
 </body>
