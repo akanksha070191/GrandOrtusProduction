@@ -758,6 +758,7 @@ h1{
 
 .feedback-card .feed_cont img {
     border-radius: 20px;
+    background-color: #000000;
 }
 
 .feed-div {
@@ -1076,6 +1077,7 @@ h1{
 /* -- --Slider-- -- */
 .owl-carousel .item img {
     object-fit: contain;
+  
 
 }
 
