@@ -1,7 +1,4 @@
-
-@media screen and (min-width:769px) {
-
-}
+@media screen and (min-width:769px) {}
 
 @media screen and (max-width:992px) {
     .dropend:hover>.dropdown-menu {
@@ -11,6 +8,9 @@
 
     }
 
+    .soludro {
+        flex-direction: column;
+    }
 
     .hero {
         height: 50vh;
@@ -38,6 +38,7 @@
         top: 63px;
         left: 0;
     }
+
     .status {
         width: auto;
         display: flex;
@@ -117,93 +118,97 @@
     .contact-title {
         text-align: center;
     }
-   .Contact-section h1{
-    text-align: center;
-   }
 
-
-
-
-   
-
-   .blog-section .row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .blog-section .col-lg-3,
-  .blog-section .col-md-3,
-  .blog-section .col-sm-1 {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .blog-section h4 {
-    font-size: 1.3rem;
-  }
-
-  .blog-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-  .maincard{
-    width: auto;
-  }
-  .feedback-card{
-    display: flex;
-    flex-direction: column;
-  }
-  .feedback-card .feed_cont img{
-    height: 200px;
-  }
-
-  
-/* Responsive Design work flow chart */
- 
-@media (max-width: 768px) {
-    .workflow-container {
-      flex-direction: column;
-      align-items: flex-start;
+    .Contact-section h1 {
+        text-align: center;
     }
 
-    .workflow-line {
-      top: auto;
-      left: 50%;
-      height: 100%;
-      width: 3px;
-      background: #0078ff;
-      transform: translateX(-50%);
+
+
+
+
+
+    .blog-section .row {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .workflow-step {
-      text-align: left;
-      flex: none;
-      margin-bottom: 40px;
-      width: 100%;
+    .blog-section .col-lg-3,
+    .blog-section .col-md-3,
+    .blog-section .col-sm-1 {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
-    .workflow-step .workflow-circle {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .blog-section h4 {
+        font-size: 1.3rem;
     }
 
-    .workflow-step h6,
-    .workflow-step p {
-      margin-left: 90px;
+    .blog-section h1 {
+        font-size: 1.8rem;
     }
 
-    .workflow-step .workflow-icon {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+    .card-title {
+        font-size: 1rem;
     }
-  }
+
+    .maincard {
+        width: auto;
+    }
+
+    .feedback-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback-card .feed_cont img {
+        height: 200px;
+    }
+
+
+    /* Responsive Design work flow chart */
+
+    @media (max-width: 768px) {
+        .workflow-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .workflow-line {
+            top: auto;
+            left: 50%;
+            height: 100%;
+            width: 3px;
+            background: #0078ff;
+            transform: translateX(-50%);
+        }
+
+        .workflow-step {
+            text-align: left;
+            flex: none;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .workflow-step .workflow-circle {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .workflow-step h6,
+        .workflow-step p {
+            margin-left: 90px;
+        }
+
+        .workflow-step .workflow-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 
 
 }

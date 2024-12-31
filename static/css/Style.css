@@ -7,9 +7,7 @@
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h4{
-    color: var(--secondary-color);
-}
+
 
 body {
     font-family: "Roboto", sans-serif;
@@ -36,6 +34,14 @@ body {
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h4 {
+    color: var(--secondary-color);
+}
+
 p,
 h1,
 h2,
@@ -44,6 +50,9 @@ h3 {
     margin: 0;
 }
 
+h1{
+    font-size: var(--primary-size);
+}
 .navbar-brand img {
     width: 190px;
 }
@@ -136,8 +145,9 @@ h3 {
     margin-top: 10px;
 
 }
-.dropdown-menu li{
-list-style-type:none;
+
+.dropdown-menu li {
+    list-style-type: none;
 }
 
 /* .dropdown-menu {
@@ -175,12 +185,13 @@ list-style-type:none;
     color: var(--primary-color) !important;
 }
 
-.megamenu{
-     left: 45% ; 
-     top: 64px;
-   
+.megamenu {
+    left: 45%;
+    top: 64px;
+
 
 }
+
 .megamenu::before {
     content: "";
     position: absolute;
@@ -193,17 +204,19 @@ list-style-type:none;
     border-bottom: 10px solid #fff;
     z-index: 1;
 }
-.dropdown-header{
+
+.dropdown-header {
     font-size: 17px;
     color: var(--primary-color);
 }
-.dropdown-item{
+
+.dropdown-item {
     color: var(--secondary-color) !important;
     font-size: 14px;
 }
 
 .dropdown-menu .dropdown-item:hover {
-    color: var(--primary-color)!important;
+    color: var(--primary-color) !important;
 }
 
 /* main-hero Section */
@@ -421,12 +434,15 @@ list-style-type:none;
     height: 100%;
     background: var(--color);
 }
-.service h4{
-color: var(--primary-color);
+
+.service h4 {
+    color: var(--primary-color);
 }
-.service h1{
+
+.service h1 {
     color: var(--secondary-color);
 }
+
 .service-card:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -533,7 +549,8 @@ color: var(--primary-color);
 .client-feedback h4 {
     margin: 0;
 }
-.client-feedback p{
+
+.client-feedback p {
     color: var(--secondary-color);
 }
 
@@ -632,7 +649,7 @@ color: var(--primary-color);
     gap: 15px;
 }
 
-.reting h1{
+.reting h1 {
     color: var(--secondary-color);
 }
 
@@ -743,7 +760,7 @@ color: var(--primary-color);
     border-radius: 20px;
 }
 
-.feed-div{
+.feed-div {
     text-align: justify;
 }
 
@@ -768,7 +785,8 @@ color: var(--primary-color);
     color: #555;
     text-transform: capitalize;
 }
-.feed_div{
+
+.feed_div {
     text-align: justify;
 }
 
@@ -816,7 +834,7 @@ color: var(--primary-color);
 
 .blog-section h1 {
     text-transform: capitalize;
-    font-size: 48px;
+    font-size: var(--primary-size);
     font-weight: 500;
 }
 
@@ -876,25 +894,25 @@ color: var(--primary-color);
 .workflow-section {
     /* padding: 50px 20px; */
     position: relative;
-  }
+}
 
-  .workflow-title {
+.workflow-title {
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 50px;
     color: var(--secondary-color);
-  }
+}
 
-  .workflow-container {
+.workflow-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-  }
+}
 
-  /* Main Line */
-  .workflow-line {
+/* Main Line */
+.workflow-line {
     position: absolute;
     top: 50%;
     left: 0;
@@ -903,17 +921,17 @@ color: var(--primary-color);
     background: var(--primary-color);
     z-index: 1;
     margin-top: 10px;
-  }
+}
 
-  /* Workflow Step */
-  .workflow-step {
+/* Workflow Step */
+.workflow-step {
     position: relative;
     z-index: 2;
     text-align: center;
     flex: 1;
-  }
+}
 
-  .workflow-step .workflow-icon {
+.workflow-step .workflow-icon {
     background: var(--primary-color);
     color: var(--color);
     font-size: 1.5rem;
@@ -925,27 +943,27 @@ color: var(--primary-color);
     border-radius: 50%;
     margin: 0 auto 25px;
     transition: all 0.3s;
-  }
+}
 
-  .workflow-step:hover .workflow-icon {
+.workflow-step:hover .workflow-icon {
     background: #00c6ff;
     transform: scale(1.1);
-  }
+}
 
-  .workflow-step h6 {
+.workflow-step h6 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
     color: var(--secondary-color);
-  }
+}
 
-  .workflow-step p {
+.workflow-step p {
     font-size: 0.9rem;
     color: var(--secondary-color);
-  }
+}
 
-  /* Connector Circle */
-  .workflow-circle {
+/* Connector Circle */
+.workflow-circle {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -955,24 +973,25 @@ color: var(--primary-color);
     border-radius: 50%;
     z-index: 3;
     margin-top: 10px;
-  }
+}
 
-  .workflow-step:hover .workflow-circle {
+.workflow-step:hover .workflow-circle {
     background: #00c6ff;
-  }
+}
 
-  .workflow-step:first-child .workflow-circle {
+.workflow-step:first-child .workflow-circle {
     left: 0;
-  }
+}
 
-  .workflow-step:last-child .workflow-circle {
-    right:45%;
-  }
+.workflow-step:last-child .workflow-circle {
+    right: 45%;
+}
 
-  .workflow-step:not(:first-child):not(:last-child) .workflow-circle {
+.workflow-step:not(:first-child):not(:last-child) .workflow-circle {
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+
 /* ---Contact us Section---- */
 
 .contact-info {
@@ -980,18 +999,18 @@ color: var(--primary-color);
     margin-bottom: 24px;
 }
 
-.error-message{
+.error-message {
     color: red;
     font-size: 12px;
 }
 
 .contact-info h5 {
-    /* margin-bottom: 0.5rem; */
     margin-top: 20px;
+    color: var(--primary-size);
 }
 
 .form-section {
-    background-color:var(--color);
+    background-color: var(--color);
     padding: 32px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1024,7 +1043,7 @@ color: var(--primary-color);
 }
 
 .send-btn {
-    color:var(--color);
+    color: var(--color);
     border: 1px solid var(--primary-color);
     padding: 10px 30px;
     border-radius: 10px;
