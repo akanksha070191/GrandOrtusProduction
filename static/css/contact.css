@@ -76,15 +76,15 @@
 }
 
 .location-box.india::after {
-    background: url('/images/Flag_India.png') no-repeat center center/cover;
+    background: url('/static/images/Flag_India.png') no-repeat center center/cover;
 }
 
 .location-box.australia::after {
-    background: url('/images/Flag_Australia.png') no-repeat center center/cover;
+    background: url('/static/images/Flag_Australia.png') no-repeat center center/cover;
 }
 
 .location-box.uk::after {
-    background: url('/images/Flag_UK.png') no-repeat center center/cover;
+    background: url('/static/images/Flag_UK.png') no-repeat center center/cover;
 }
 
 
