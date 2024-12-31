@@ -1101,6 +1101,20 @@
 
   </script>
 
+   <script>
+
+    let setTime = 0;
+    const output = setInterval(() => {
+      setTime = setTime + 1;
+      if (setTime === 300) {
+        clearInterval(output)
+      }
+      document.getElementById('setInterval').innerHTML = setTime + "+"
+      document.getElementById('setInter').innerHTML = setTime + "+"
+    }, 10)
+
+  </script>
+
 
   <!-- Sticky Navbar -->
   
