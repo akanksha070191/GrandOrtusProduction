@@ -218,11 +218,11 @@
                 <p>Projects Completed</p>
               </div>
               <div class="stat-item position-relative">
-                <h3 id="earningsCounter">1.69M</h3>
+                <h3 id="earningsCounter">500M</h3>
                 <p>Earned to Worldwide</p>
               </div>
               <div class="stat-item">
-                <h3 id="setInter">300+</h3>
+                <h3 id="setInter">120+</h3>
                 <p>Professional Members</p>
               </div>
             </div>
@@ -244,7 +244,7 @@
     </div>
   </section>
 
-  <!-- ---- Services Section---- -->
+  <!--  Services Section -->
 
   <section class="service py-5">
     <div class="container text-center mb-5">
@@ -362,7 +362,7 @@
   
 
 
-  <!-- --Why Choose-- -->
+  <!-- Why Choose -->
 
   <section class="choose py-lg-5">
     <div class="container">
@@ -651,7 +651,7 @@
             <i class="fas fa-check-circle"></i>
           </div>
           <div class="workflow-circle"></div>
-          <h6>Testing</h6>
+          <h6>Audit</h6>
           <p>Ensure high quality.</p>
         </div>
 
@@ -686,7 +686,7 @@
               </div>
               <div>
                 <h5 class="mb-0 ">Email</h5>
-                <p>suresh@grandortus.com</p>
+                <p>salil@grandortus.com</p>
               </div>
             </div>
             <div class="d-flex align-items-center mb">
@@ -696,7 +696,7 @@
               <div>
                 <h5 class="mb-0 ">Phone</h5>
                 <p>
-                  +9179780 42115</p>
+                  +61473123937</p>
               </div>
             </div>
             <div class="d-flex align-items-center mb">
@@ -705,7 +705,7 @@
               </div>
               <div>
                 <h5 class="mb-0 ">Location</h5>
-                <p>D 14/30, 2nd Floor, Sector 52, Ardeecity Gurugram, Haryana -122003, India</p>
+                <p>23 Rosetta Street, Schofields 2762, NSW, Australia.</p>
               </div>
             </div>
           </div>
@@ -794,7 +794,7 @@
   </section>
 
 
-  <!-- --Footer Section-- -->
+  <!-- Footer Section-- -->
 
   <footer class="footer-sec bg-dark text-light pt-lg-5 mt-lg-4 py-3">
     <div class="container  text-md-left">
@@ -811,11 +811,9 @@
         <!-- Contact Information -->
         <div class="col-md-3 col-lg-3  mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">Get in Touch</h6>
-          <p class="my-lg-4"><i class="fas fa-map-marker-alt mr-2"></i> D 14/30, 2nd Floor, Sector 52, Ardeecity
-            Gurugram, Haryana
-            -122003, India</p>
+          <p class="my-lg-4"><i class="fas fa-map-marker-alt mr-2"></i> 23 Rosetta Street, Schofields 2762, NSW, Australia.</p>
           <p><i class="fas fa-envelope mr-2"></i> info@grandortus.com</p>
-          <p><i class="fas fa-phone mr-2"></i> 01244233760, +919899950003</p>
+          <p><i class="fas fa-phone mr-2"></i> +61473123937, +919899950003</p>
         </div>
 
         <!-- Service Links -->
@@ -825,7 +823,7 @@
           <p><a href="{% url "Networking" %}" class="text-light pb-1">Networking & Security</a></p>
           <p><a href="{% url "MobilityAndCloud" %}" class="text-light pb-1">Mobility & Cloud</a></p>
           <p><a href="{% url "ImplementationServices" %}" class="text-light pb-1">Implementation Services</a></p>
-          <p><a href="{% url "Internet" %}" class="text-light pb-1"></a>Intranet</p>
+          <p><a href="{% url "Internet" %}" class="text-light pb-1">Intranet</a></p>
           <p><a href="{% url "FMSAndAMCSupport" %}" class="text-light pb-1">FMS & AMC Support</a></p>
         </div>
 
@@ -836,7 +834,7 @@
           <p><a href="{% url "Blog" %}" class="text-light pb-1">Blogs</a></p>
           <p><a href="{% url "LifeGrandOrtus" %}" class="text-light pb-1">Life @ GrandOrtus</a></p>
           <p><a href="{% url "CaseStudy" %}" class="text-light pb-1">Case Studies</a></p>
-          <p><a href="{% url "Healthcare" %}" class="text-light pb-1">Healthcare Industry</a></p>
+          <p><a href="{% url "ITES" %}" class="text-light pb-1">Industries</a></p>
           <p><a href="{% url "Contact" %}" class="text-light pb-1">Contact Us</a></p>
         </div>
 
@@ -915,77 +913,6 @@
 
 
   </script>
-
-
-   <script src="/JS/FormValidation.js"></script> 
-
-  <script>
-
-    let isValid = true;
-    const services = document.getElementById('services');
-    const message = document.getElementById('message');
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
-
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      name.addEventListener('input', () => {
-        console.log('Name entered', name.value);
-      })
-      phone.addEventListener('input', () => {
-        console.log('Phone No entered', phone.value);
-        phoneValue = phone.value;
-        console.log('phoneValue:', phoneValue);
-        const phonePattern = /^[0-9]{10}$/;
-        if (!phonePattern.test(phone.value)) {
-          isValid = false;
-          alert('Please enter a valid 10-digit phone number.');
-        }
-      })
-
-      // Name Validation
-      if (name.value.trim() === '') {
-        isValid = false;
-        alert('Please enter your name.');
-      }
-
-      // Email Validation
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email.value)) {
-        isValid = false;
-        alert('Please enter a valid email address.');
-      }
-
-      // Phone Validation
-      // const phonePattern = /^[0-9]{10}$/;
-      if (!phonePattern || phonePattern.length !== 10 || isNaN(phonePattern)) {
-        isValid = false;
-        alert('Please enter a valid 10-digit phone number.');
-      }
-
-
-      // Services Validation
-      if (services.value === '') {
-        isValid = false;
-        alert('Please select a service.');
-      }
-
-      // Message Validation
-      if (message.value.trim() === '') {
-        isValid = false;
-        alert('Please enter a message.');
-      }
-
-      if (isValid) {
-        alert('Form submitted successfully!');
-
-      }
-    });
-  </script>
- 
-
 
 
   <!-- Clients Feedback -->
@@ -1076,12 +1003,12 @@
         }
 
         // Format to show as "1.69M"
-        element.innerHTML = (count / 1000000).toFixed(2) + "M";
+        element.innerHTML = (count / 1000000)+"M";
       }, 30); // Adjust the interval time for speed
     }
 
     // Start the counter animation
-    animateCounter('earningsCounter', 1.69);
+    animateCounter('earningsCounter', 500);
 
 
 
@@ -1090,13 +1017,23 @@
   <script>
 
     let setTime = 0;
-    const output = setInterval(() => {
+    let setTime1 = 0;
+    const output1 = setInterval(() => {
       setTime = setTime + 1;
       if (setTime === 300) {
-        clearInterval(output)
+        clearInterval(output1)
       }
       document.getElementById('setInterval').innerHTML = setTime + "+"
-      document.getElementById('setInter').innerHTML = setTime + "+"
+      
+    }, 10)
+
+    const output2 = setInterval(() => {
+      setTime1 = setTime1 + 1;
+      if (setTime1 === 120) {
+        clearInterval(output2)
+      }
+      
+      document.getElementById('setInter').innerHTML = setTime1 + "+"
     }, 10)
 
   </script>
@@ -1121,7 +1058,7 @@
   <script src="/static/js/stickyNav.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="/static/js/owl.carousel.min.js"></script>
   
  
 
