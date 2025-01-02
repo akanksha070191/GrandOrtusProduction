@@ -177,6 +177,13 @@
     </nav>
   </header>
 
+  <!-- Success Message at the Top -->
+  {% if success_message %}
+  <div style="text-align: center; color: green; font-weight: bold; margin: 20px 0;">
+      {{ success_message }}
+  </div>
+  {% endif %}
+
   <!-- Hero Section -->
 
   <section class="main-hero">
@@ -750,6 +757,7 @@
               </div>
               <button type="submit" class="send-btn" id="submit">Submit</button>
             </form>
+            
           </div>
 
 

@@ -137,6 +137,17 @@ def uiuxJobOpeningForm(request):
 def daJobOpeningForm(request):
     return render(request, 'main/DAJobOpeningForm.html')
 
+def accountJobOpeningForm(request):
+    return render(request, 'main/accountJobOpeningForm.html')
+
+def networkJobOpeningForm(request):
+    return render(request, 'main/networkJobOpeningForm.html')
+
+def systemEngJobOpeningForm(request):
+    return render(request, 'main/systemEngJobOpeningForm.html')
+
+
+
 def indexContactForm(request):
     if request.method == 'POST':
         name = request.POST.get('name', '').strip()
@@ -170,7 +181,9 @@ def indexContactForm(request):
                     [recipient_email],
                     f"Subject: {services}\n\n{email_body}"
                 )
-            return redirect('index')
+
+            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})
+            
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 
@@ -253,7 +266,7 @@ def jobForm(request):
                         message
                     )
 
-            return redirect('index')
+            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})
 
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")

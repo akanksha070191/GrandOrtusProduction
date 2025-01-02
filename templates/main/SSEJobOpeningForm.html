@@ -42,7 +42,7 @@
                         <div class="job-details">
                             <p><i class="bi bi-briefcase"></i> <strong>Job Category:</strong> Senior Software Manager</p>
                             <p><i class="bi bi-arrow-right-circle"></i> <strong>Job Type:</strong> Full Time</p>
-                            <p><i class="bi bi-geo-alt"></i> <strong>Job Location:</strong> Gurugram</p>
+                            <p><i class="bi bi-geo-alt"></i> <strong>Job Location:</strong> Remote</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                 <div class="container mt-5">
                     <div class="form-container">
                         <h2>Apply For Senior Software Manager</h2>
-                        <form id="applyForm" action="/jobForm/" method="POST" enctype="multipart/form-data" novalidate>
+                        <form class="my-4" id="applyForm" action="/jobForm/" method="POST" enctype="multipart/form-data" novalidate>
                             {% csrf_token %}
                             <div class="mb-3">
                                 <input type="hidden" name="jobPosition" value="Senior Software Manager">
