@@ -133,3 +133,7 @@
 .feature li{
   margin-bottom: 10px;
 }
+.content-text p{
+  margin-top: 20px;
+  text-align: justify;
+}

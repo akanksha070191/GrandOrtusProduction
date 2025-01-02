@@ -87,14 +87,15 @@ h1{
     font-weight: var(--btn-weight);
 }
 
-/* .btn:hover {
-    background-color: #262061 !important; 
-  } */
+ .btn:hover {
+    background-color: var(--color) !important; 
+    border: 1px solid var(--primary-color);
+  }
 
-/* .navbar .btn:hover a {
-    color: var(--secondary-color) !important;
+.navbar .btn:hover a {
+    color: var(--primary-color) !important;
 
-} */
+}
 
 .navbar-light .navbar-nav .nav-link {
     color: var(--secondary-color);
