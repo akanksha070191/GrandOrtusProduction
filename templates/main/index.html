@@ -460,7 +460,7 @@
         <!-- Left Part (Text) -->
         <div class="col-lg-6 text-start">
           <div class="feedbacks-text mb-lg-3">
-            <h1 class="feedbacks-heading my-lg-3">What Our Happy Customers Are Saying</h1>
+            <h1 class="feedbacks-heading mb-3">What Our Happy Customers Are Saying</h1>
             <p class="feedbacks-description">
               We value your opinion and strive to continuously improve our services to meet your needs.
               Your feedback is essential in helping us understand what we’re doing right and where we can improve.
@@ -573,8 +573,8 @@
     <div class="container text-center">
       <h4 blog-title>Blogs and News</h4>
       <h1 class="blog-heading mb-3">our last blog and news</h1>
-      <div class="row d-flex align-items-stretch justify-content-center gap-lg-5 flex-wrap">
-        <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="row">
+        <div class="col-lg-4 ">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Windows vs. Linux.png" class="card-img-top" alt="Image 1">
             <div class="card-body">
@@ -586,7 +586,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-lg-3 col-md- col-sm-6">
+        <div class="col-lg-4 ">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Exploring.png" class="card-img-top" alt="Image 2">
             <div class="card-body">
@@ -598,7 +598,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 ">
+        <div class="col-lg-4 ">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Transformative.png" class="card-img-top" alt="Image 2">
             <div class="card-body">
@@ -616,7 +616,7 @@
   <!--Working Flowchart-->
   
   <section class="workflow-section">
-    <h2 class="workflow-title">Working Flowchart</h2>
+    <h2 class="workflow-title pt-4">Working Flowchart</h2>
     <div class="container">
       <div class="workflow-container">
         <!-- Main Line -->
@@ -717,52 +717,58 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          
-        <div class="form-section">
-            <form action="/indexContactForm/" method="POST" id="contactForm" novalidate>
-              {% csrf_token %}
-              <div class="row mb-3">
-                <div class="col-lg-6 d-grid gap-3">
-                  <input type="text" class="form-control " name="name" id="name" placeholder="Name" onblur="validateName()">
-                  <div id="name-error" class="error-message"></div>
-                </div>
-                <div class="col-lg-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
-                  <div id="email-error" class="error-message"></div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-lg-6 d-grid gap-3">
-                  <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" onblur="validatePhone()" pattern="[0-9]{10}" required>
-                  <div id="phone-error" class="error-message"></div>
-                </div>
-                <div class="col-lg-6">
-                  <select class="form-select" name="services" id="services" required >
-                    <option value="" disabled selected>Services</option>
-                    <option value="Development">Development</option>
-                    <option value="Implementation Services">Implementation Services</option>
-                    <option value="IT Infrastructure Consulting">IT Infrastructure Consulting</option>
-                    <option value="Datacenter Infra Design & Deployment">Datacenter Infra Design & Deployment</option>
-                    <option value="Networking And Security">Networking And Security</option>
-                    <option value="Mobility And Cloud">Mobility And Cloud</option>
-                    <option value="Intranet">Intranet</option>
-                    <option value="FMS And AMC Support">FMS And AMC Support</option>
-                    <option value="Web Design">Web Design</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Messages" required></textarea>
-              </div>
-              <button type="submit" class="send-btn" id="submit">Submit</button>
-            </form>
-            
+
+        <div class="col-lg-6">   
+          <div class="form-section">
+              <form action="/indexContactForm/" method="POST" id="contactForm" novalidate>
+                
+                  <div class="row mb-3">
+                      <div class="col-lg-6 d-grid gap-3">
+                          <input type="text" class="form-control" name="name" id="name" placeholder="Name" onblur="validateName()">
+                          <div id="name-error" class="error-message"></div>
+                      </div>
+                      <div class="col-lg-6">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
+                          <div id="email-error" class="error-message"></div>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-lg-6 d-grid gap-3">
+                          <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone" onblur="validatePhone()" pattern="[0-9]{10}" required>
+                          <div id="phone-error" class="error-message"></div>
+                      </div>
+                      <div class="col-lg-6">
+                          <select class="form-select" name="services" id="services" required>
+                              <option value="" disabled selected>Services</option>
+                              <option value="Development">Development</option>
+                              <option value="Implementation Services">Implementation Services</option>
+                              <option value="IT Infrastructure Consulting">IT Infrastructure Consulting</option>
+                              <option value="Datacenter Infra Design & Deployment">Datacenter Infra Design & Deployment</option>
+                              <option value="Networking And Security">Networking And Security</option>
+                              <option value="Mobility And Cloud">Mobility And Cloud</option>
+                              <option value="Intranet">Intranet</option>
+                              <option value="FMS And AMC Support">FMS And AMC Support</option>
+                              <option value="Web Design">Web Design</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <textarea class="form-control" name="message" id="message" rows="4" placeholder="Messages" required></textarea>
+                  </div>
+                  <div class="captcha">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                          <span id="captcha-code" class="captcha-code"></span>
+                          <button type="button" onclick="generateCaptcha()" class="refresh">↻</button>
+                      </div>
+                      <input type="text" id="captcha-input" class="cpfill mt-2" placeholder="Enter CAPTCHA" required>
+                      <div id="captcha-message" class="error-message mt-2"></div>
+                  </div>
+                  <button type="submit" class="send-btn" id="submit" onclick="return validateCaptcha()">Submit</button>
+              </form>
           </div>
-
-
-        </div>
       </div>
+      
+
     </div>
 
   </section>
@@ -1067,6 +1073,42 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/static/js/owl.carousel.min.js"></script>
+
+  
+  <!-- Captcha Link -->
+    <script>
+      const captchaCodeElement = document.querySelector('.captcha-code');
+      const captchaInput = document.getElementById('captcha-input');
+      const captchaMessage = document.getElementById('captcha-message');
+
+      function generateCaptcha() {
+          const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+          let captcha = '';
+          for (let i = 0; i < 6; i++) {
+              const randomIndex = Math.floor(Math.random() * characters.length);
+              captcha += characters[randomIndex];
+          }
+          captchaCodeElement.textContent = captcha;
+          captchaInput.value = '';
+          captchaMessage.textContent = '';
+      }
+
+      function validateCaptcha() {
+          const userInput = captchaInput.value.trim();
+          if (userInput === captchaCodeElement.textContent) {
+              captchaMessage.style.color = 'green';
+              captchaMessage.textContent = 'CAPTCHA Verified Successfully!';
+          } else {
+              captchaMessage.style.color = 'red';
+              captchaMessage.textContent = 'Incorrect CAPTCHA. Please try again.';
+          }
+      }
+
+      // Generate the initial CAPTCHA when the page loads
+      generateCaptcha();
+
+  
+  </script>
   
  
 

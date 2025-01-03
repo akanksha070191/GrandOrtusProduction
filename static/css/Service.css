@@ -48,7 +48,7 @@
 
 .service-list li {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 15px;
     font-size: 1rem;
     color: #555;
@@ -57,7 +57,7 @@
 .service-list li i {
     color: var(--primary-color);
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .service-image img {

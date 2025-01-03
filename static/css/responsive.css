@@ -18,7 +18,7 @@
     }
 
     .heading-sec h1 {
-        font-size: 30px;
+        font-size: 29px;
         text-align: center;
     }
 
@@ -177,7 +177,7 @@
 
         .workflow-line {
             top: auto;
-            left: 50%;
+            left: 75%;
             height: 100%;
             width: 3px;
             background: #0078ff;
@@ -193,7 +193,7 @@
 
         .workflow-step .workflow-circle {
             top: 50%;
-            left: 50%;
+            left: 75%;
             transform: translate(-50%, -50%);
         }
 
@@ -207,6 +207,11 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
+        }
+
+        .workflow-step:not(:first-child):not(:last-child) .workflow-circle {
+            left: 75%;
+        
         }
     }
 

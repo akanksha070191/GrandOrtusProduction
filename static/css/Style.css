@@ -50,9 +50,10 @@ h3 {
     margin: 0;
 }
 
-h1{
+h1 {
     font-size: var(--primary-size);
 }
+
 .navbar-brand img {
     width: 190px;
 }
@@ -87,10 +88,10 @@ h1{
     font-weight: var(--btn-weight);
 }
 
- .btn:hover {
-    background-color: var(--color) !important; 
+.btn:hover {
+    background-color: var(--color) !important;
     border: 1px solid var(--primary-color);
-  }
+}
 
 .navbar .btn:hover a {
     color: var(--primary-color) !important;
@@ -186,18 +187,22 @@ h1{
     color: var(--primary-color) !important;
 }
 
-.megamenu {
+.dropdown-wide {
+    right: 0;
+    left: auto;
+    top: 61px;
+}
+
+/* .megamenu {
     left: 45%;
     top: 64px;
-
-
-}
+} */
 
 .megamenu::before {
     content: "";
     position: absolute;
     top: -10px;
-    left: 40%;
+    left: 35%;
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -867,6 +872,10 @@ h1{
 
 .card-body {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .read-more-btn {
@@ -1052,9 +1061,37 @@ h1{
     background: var(--primary-color);
 }
 
+.captcha-code {
+    font-size: 18px;
+    font-weight: 200;
+    background: #e8e8e8;
+    padding: 4px 20px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+}
+
+.refresh {
+    font-size: 20px;
+    font-weight: 100;
+    background: #0090d2;
+    padding: 2px 16px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    border: none;
+    color: var(--color);
+}
+
 .send-btn a {
     text-decoration: none;
     color: #fff;
+}
+
+.cpfill {
+    padding: 8px;
+    width: 43%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .send-btn:hover {
@@ -1078,7 +1115,7 @@ h1{
 /* -- --Slider-- -- */
 .owl-carousel .item img {
     object-fit: contain;
-  
+
 
 }
 
