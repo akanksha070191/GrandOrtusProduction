@@ -5,6 +5,7 @@ import smtplib
 import os
 from django.conf import settings
 from email.message import EmailMessage
+from django.http import JsonResponse
 
 
 
@@ -156,6 +157,13 @@ def indexContactForm(request):
         phoneNo = request.POST.get('phone', '').strip()
         services = request.POST.get('services', '').strip()
         message = request.POST.get('message', '').strip()
+        user_captcha = request.POST.get('captcha_input', '').strip()
+        generated_captcha = request.session.get('generated_captcha', '')
+
+        # CAPTCHA validation
+        if user_captcha != generated_captcha:
+            return JsonResponse({'error': 'Invalid CAPTCHA. Please try again.'}, status=400)
+
 
         email_body = f"""
         Name: {name}

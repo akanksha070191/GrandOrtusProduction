@@ -1,31 +1,25 @@
-
-const captchaCodeElement = document.querySelector('.captcha-code');
-const captchaInput = document.getElementById('captcha-input');
-const captchaMessage = document.getElementById('captcha-message');
+let generatedCaptcha;
 
 function generateCaptcha() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
-    let captcha = '';
-    for (let i = 0; i < 6; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        captcha += characters[randomIndex];
-    }
-    captchaCodeElement.textContent = captcha;
-    captchaInput.value = '';
-    captchaMessage.textContent = '';
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    generatedCaptcha = Array.from({ length: 6 }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join('');
+    document.getElementById('captcha-code').innerText = generatedCaptcha;
 }
 
 function validateCaptcha() {
-    const userInput = captchaInput.value.trim();
-    if (userInput === captchaCodeElement.textContent) {
-        captchaMessage.style.color = 'green';
-        captchaMessage.textContent = 'CAPTCHA Verified Successfully!';
+    const userCaptcha = document.getElementById('captcha-input').value.trim();
+    const errorMessage = document.getElementById('captcha-message');
+
+    if (userCaptcha !== generatedCaptcha) {
+        errorMessage.textContent = "CAPTCHA is incorrect. Please try again.";
+        generateCaptcha(); // Refresh the CAPTCHA
+        document.getElementById('captcha-input').value = ""; // Clear the input field
+        return false; // Prevent form submission
     } else {
-        captchaMessage.style.color = 'red';
-        captchaMessage.textContent = 'Incorrect CAPTCHA. Please try again.';
+        errorMessage.textContent = "";
+        return true; // Allow form submission
     }
 }
 
-// Generate the initial CAPTCHA when the page loads
-generateCaptcha();
-
+// Generate CAPTCHA when the page loads
+document.addEventListener("DOMContentLoaded", generateCaptcha);

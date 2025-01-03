@@ -30,8 +30,10 @@
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
+
   <script src="/static/js/FormValidation.js" defer></script>
   <script src="/static/js/dropdown.js" defer></script>
+  <script src="/static/js/Captcha.js" defer></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
@@ -725,7 +727,7 @@
         <div class="col-lg-6">   
           <div class="form-section">
               <form action="/indexContactForm/" method="POST" id="contactForm" novalidate>
-                
+                {% csrf_token %}
                   <div class="row mb-3">
                       <div class="col-lg-6 d-grid gap-3">
                           <input type="text" class="form-control" name="name" id="name" placeholder="Name" onblur="validateName()">
@@ -764,6 +766,7 @@
                           <span id="captcha-code" class="captcha-code"></span>
                           <button type="button" onclick="generateCaptcha()" class="refresh">↻</button>
                       </div>
+                      <input type="hidden" name="generated_captcha" value="{{ captcha_code }}">
                       <input type="text" id="captcha-input" class="cpfill mt-2" placeholder="Enter CAPTCHA" required>
                       <div id="captcha-message" class="error-message mt-2"></div>
                   </div>
@@ -1077,42 +1080,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/static/js/owl.carousel.min.js"></script>
-
-  
-  <!-- Captcha Link -->
-    <script>
-      const captchaCodeElement = document.querySelector('.captcha-code');
-      const captchaInput = document.getElementById('captcha-input');
-      const captchaMessage = document.getElementById('captcha-message');
-
-      function generateCaptcha() {
-          const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
-          let captcha = '';
-          for (let i = 0; i < 6; i++) {
-              const randomIndex = Math.floor(Math.random() * characters.length);
-              captcha += characters[randomIndex];
-          }
-          captchaCodeElement.textContent = captcha;
-          captchaInput.value = '';
-          captchaMessage.textContent = '';
-      }
-
-      function validateCaptcha() {
-          const userInput = captchaInput.value.trim();
-          if (userInput === captchaCodeElement.textContent) {
-              captchaMessage.style.color = 'green';
-              captchaMessage.textContent = 'CAPTCHA Verified Successfully!';
-          } else {
-              captchaMessage.style.color = 'red';
-              captchaMessage.textContent = 'Incorrect CAPTCHA. Please try again.';
-          }
-      }
-
-      // Generate the initial CAPTCHA when the page loads
-      generateCaptcha();
-
-  
-  </script>
   
  
 
