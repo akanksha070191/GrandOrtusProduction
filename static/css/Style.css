@@ -88,7 +88,7 @@ h1 {
     font-weight: var(--btn-weight);
 }
 
-.btn:hover {
+.navbar .btn:hover {
     background-color: var(--color) !important;
     border: 1px solid var(--primary-color);
 }
@@ -226,6 +226,10 @@ h1 {
 }
 
 /* main-hero Section */
+
+section.hero{
+    height: 40vh !important;
+}
 
 .main-hero {
     background-image: url(/static/images/medium-shot-man-wearing-vr-glasses.jpg);
