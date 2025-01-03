@@ -4,6 +4,7 @@ import ssl
 import smtplib
 import os
 from django.conf import settings
+from email.message import EmailMessage
 
 
 
@@ -171,16 +172,24 @@ def indexContactForm(request):
         recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
 
         try:
+            # Create the email message
+            email_msg = EmailMessage()
+            email_msg['Subject'] = services
+            email_msg['From'] = sender_email
+            email_msg['To'] = recipient_email
+            email_msg.set_content(email_body)
+
             # Email sending
             context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
             with smtplib.SMTP("mail.grandortus.com", 587) as server:
                 server.starttls(context=context)
                 server.login(sender_email, sender_password)
-                server.sendmail(
-                    sender_email,
-                    [recipient_email],
-                    f"Subject: {services}\n\n{email_body}"
-                )
+                server.send_message(email_msg)
+                # server.sendmail(
+                #     sender_email,
+                #     [recipient_email],
+                #     f"Subject: {services}\n\n{email_body}"
+                # )
 
             return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})
             
