@@ -166,6 +166,22 @@
         height: 200px;
     }
 
+    .dropdown-wide {
+        max-height: 50vh;
+        /* Reduce height further for smaller devices */
+        overflow-y: scroll;
+        /* Enable scrolling */
+        left: 0 !important;
+        top: 40px;
+        width: 100% !important;
+      }
+      .dropdown-wide[data-bs-popper]{
+        left: 0 !important;
+        top: 40px !important;
+        width: 100% !important;
+       } 
+}
+
 
     /* Responsive Design work flow chart */
 
@@ -211,7 +227,7 @@
 
         .workflow-step:not(:first-child):not(:last-child) .workflow-circle {
             left: 75%;
-        
+
         }
     }
 

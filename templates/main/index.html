@@ -125,7 +125,7 @@
 
             <!-- Solutions Dropdown -->
 
-            <li class="nav-item dropdown me-3 py-2 position-static">
+            <li class="nav-item dropdown me-3 py-2 position-relative">
               <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Solutions
@@ -174,8 +174,8 @@
 
           <!-- Get a Quote Button -->
           <form class="d-flex">
-            <button class="btn shadow-none" type="submit">
-              <a href="{% url "Contact" %}">Get a Quote</a>
+            <button class="btn shadow-none" type="submit" id="getQuoteBtn">
+              <a href="">Get a Quote</a>
             </button>
           </form>
         </div>
@@ -877,6 +877,32 @@
       </div>
   </footer>
 
+   <!-- get in touch form start -->
+
+   <form id="getInTouchForm" class="form-section w-25 mx-auto my-4 get-in-touch-form" action="" method="POST">
+    <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Name" required>
+    <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Email" required>
+    <input type="tel" class="form-control mb-3" name="phone" id="phone" placeholder="Phone"
+      pattern="[0-9]{10}" required>
+    <select class="form-select mb-3" name="services" id="services" required>
+      <option value="" disabled selected>Services</option>
+      <option value="Development">Development</option>
+      <option value="Implementation Services">Implementation Services</option>
+      <option value="IT Infrastructure Consulting">IT Infrastructure Consulting</option>
+      <option value="Datacenter Infra Design & Deployment">Datacenter Infra Design & Deployment</option>
+      <option value="Networking And Security">Networking And Security</option>
+      <option value="Mobility And Cloud">Mobility And Cloud</option>
+      <option value="Intranet">Intranet</option>
+      <option value="FMS And AMC Support">FMS And AMC Support</option>
+      <option value="Web Design">Web Design</option>
+    </select>
+    <textarea class="form-control mb-3" name="message" id="message" rows="3" placeholder="Messages"
+      required></textarea>
+    <button type="submit" class="send-btn btn btn-primary">Submit</button>
+  </form>
+
+<!-- get in touch form end -->
+
 
   <!-- --Slider-- -->
   <script>
@@ -1072,10 +1098,10 @@
     }, 10)
 
   </script>
+ <!-- get in touch from hide and show js -->
 
-
+ <script src="/static/js/GetInTouch.js"></script>
   <!-- Sticky Navbar -->
-  
   <script src="/static/js/stickyNav.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
