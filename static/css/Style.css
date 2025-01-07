@@ -81,23 +81,30 @@ h1 {
     box-shadow: 0 0 18px 1px rgb(0 0 0 / 10%);
 }
 
-.navbar .btn a {
+.navbar button {
     text-decoration: none;
     color: var(--color);
     text-transform: var(--btn-transform);
     font-weight: var(--btn-weight);
 }
 
-.navbar .btn:hover {
+.navbar button:hover {
     background-color: var(--color) !important;
     border: 1px solid var(--primary-color);
 }
 
-.navbar .btn:hover a {
+.navbar button:hover  {
     color: var(--primary-color) !important;
 
 }
+.navbar-light .navbar-nav .nav-link:active{
+    color: var(--primary-color) !important;
+}
 
+.dropdown-item:active{
+    color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
+}
 .navbar-light .navbar-nav .nav-link {
     color: var(--secondary-color);
     padding: 0;
@@ -117,6 +124,9 @@ h1 {
     height: 2px;
     background-color: var(--primary-color);
     transition: width 0.3s ease;
+}
+.trademark{
+    color: var(--secondary-color);
 }
 
 .nav-link:hover::before {
@@ -240,7 +250,7 @@ h1 {
 /* main-hero Section */
 
 section.hero {
-    height: 30vh !important;
+    height: 30vh ;
 }
 
 .main-hero {
@@ -758,6 +768,7 @@ section.hero {
 }
 
 /* -- Right Part (Feedback Card) -- */
+
 .maincard {
     background-color: #f9f9f9;
     border-radius: 8px;

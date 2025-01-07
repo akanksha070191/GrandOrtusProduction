@@ -1,7 +1,5 @@
-
 const button = document.getElementById("getQuoteBtn");
 const form = document.getElementById("getInTouchForm");
-
 
 function toggleFormVisibility() {
   if (form.style.opacity === "1") {
@@ -10,7 +8,6 @@ function toggleFormVisibility() {
     showForm();
   }
 }
-
 
 function showForm() {
   form.style.opacity = "1";
@@ -22,12 +19,10 @@ function hideForm() {
   form.style.pointerEvents = "none";
 }
 
-
 button.addEventListener("click", (event) => {
-  event.stopPropagation(); 
+  event.preventDefault(); // Prevent default form submission
   toggleFormVisibility();
 });
-
 
 document.addEventListener("click", (event) => {
   if (!form.contains(event.target) && event.target !== button) {
