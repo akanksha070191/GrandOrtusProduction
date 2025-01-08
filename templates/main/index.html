@@ -34,6 +34,8 @@
   <script src="/static/js/FormValidation.js" defer></script>
   <script src="/static/js/dropdown.js" defer></script>
   <script src="/static/js/Captcha.js" defer></script>
+  <script src="/static/js/GetInTouch.js" defer></script>
+  <script src="/static/js/getInTouchFormValidation.js" defer></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
@@ -179,12 +181,12 @@
     </nav>
   </header>
 
-  <!-- Success Message at the Top -->
-  {% if success_message %}
-  <div style="text-align: center; color: green; font-weight: bold; margin: 20px 0;">
-      {{ success_message }}
-  </div>
-  {% endif %}
+ <!-- Success Message at the Top -->
+ {% if success_message %}
+ <div style="text-align: center; color: green; font-weight: bold; margin: 20px 0;">
+     {{ success_message }}
+ </div>
+ {% endif %} 
 
   <!-- Hero Section -->
 
@@ -744,7 +746,9 @@
                       <div id="captcha-message" class="error-message mt-2"></div>
                   </div>
                   <button type="submit" class="send-btn" id="submit" onclick="return validateCaptcha()">Submit</button>
+                  
               </form>
+              
           </div>
       </div>
       
@@ -876,11 +880,19 @@
    <!-- get in touch form start -->
 
    <div id="formContainer" class="form-container">
-    <form id="getInTouchForm" class="form-Getintouch">
-      <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Name" required>
-      <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Email" required>
-      <input type="tel" class="form-control mb-3" name="phone" id="phone" placeholder="Phone" pattern="[0-9]{10}" required>
-      <textarea class="form-control mb-3" name="message" id="message" rows="3" placeholder="Messages" required></textarea>
+    <form id="getInTouchForm" action="/getInTouchForm/" method="POST" class="form-Getintouch">
+      {% csrf_token %}
+      <input type="text" class="form-control mb-3" name="name" id="getname" placeholder="Name" onblur="validateGetName()">
+      <div id="getname-error" class="error-message"></div>
+  
+      <input type="email" class="form-control mb-3" name="email" id="getemail" placeholder="Email" onblur="validateGetEmail()">
+      <div id="getemail-error" class="error-message"></div>
+  
+      <input type="tel" class="form-control mb-3" name="phone" id="getphone" placeholder="Phone" onblur="validateGetPhone()">
+      <div id="getphone-error" class="error-message"></div>
+  
+      <textarea class="form-control mb-3" name="message" id="getmessage" rows="3" placeholder="Messages" required></textarea>
+  
       <button type="submit" class="send-btn btn btn-primary">Submit</button>
     </form>
   </div>
@@ -1084,7 +1096,7 @@
   </script>
  <!-- get in touch from hide and show js -->
 
- <script src="/static/js/GetInTouch.js"></script>
+ 
   <!-- Sticky Navbar -->
   <script src="/static/js/stickyNav.js"></script>
 

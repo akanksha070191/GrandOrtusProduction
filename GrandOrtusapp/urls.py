@@ -50,6 +50,7 @@ urlpatterns = [
     path('systemEngJobOpeningForm', views.systemEngJobOpeningForm, name='systemEngJobOpeningForm'),
     path('indexContactForm/', views.indexContactForm, name='indexContactForm'),
     path('jobForm/', views.jobForm, name='jobForm'),
+    path('getInTouchForm/', views.getInTouchForm, name='getInTouchForm'),
     path('/Solutions/startUp/', views.startUp, name='startUp'),
     path('/Solutions/enterprise/', views.enterprices, name='enterprise'),
     path('/Solutions/msme/', views.msme, name='msme'),

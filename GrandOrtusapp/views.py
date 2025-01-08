@@ -194,11 +194,6 @@ def indexContactForm(request):
                     server.starttls(context=context)
                     server.login(sender_email, sender_password)
                     server.send_message(email_msg)
-                    # server.sendmail(
-                    #     sender_email,
-                    #     [recipient_email],
-                    #     f"Subject: {services}\n\n{email_body}"
-                    # )
                     
             else:
                 context = context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
@@ -206,11 +201,7 @@ def indexContactForm(request):
                     server.starttls(context=context)
                     server.login(sender_email, sender_password)
                     server.send_message(email_msg)
-                    # server.sendmail(
-                    #     sender_email,
-                    #     [recipient_email],
-                    #     f"Subject: {services}\n\n{email_body}"
-                    # )
+
             return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})    
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
@@ -246,53 +237,104 @@ def jobForm(request):
 
         try:
             # Create email message with attachment (if provided)
-            context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
-            with smtplib.SMTP("mail.grandortus.com", 587) as server:
-                server.starttls(context=context)
-                server.login(sender_email, sender_password)
-                
-                # Prepare the email
-                message = f"Subject: {subject}\n\n{email_body}"
-                
-                # Attach the resume if available
-                if resume:
-                    from email.mime.multipart import MIMEMultipart
-                    from email.mime.text import MIMEText
-                    from email.mime.base import MIMEBase
-                    from email import encoders
 
-                    # MIME structure
-                    msg = MIMEMultipart()
-                    msg['From'] = sender_email
-                    msg['To'] = recipient_email
-                    msg['Subject'] = subject
+            if ssl._create_unverified_context():
+                context = ssl._create_unverified_context()
+                with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                    server.starttls(context=context)
+                    server.login(sender_email, sender_password)
                     
-                    # Attach email body
-                    msg.attach(MIMEText(email_body, 'plain'))
+                    # Prepare the email
+                    message = f"Subject: {subject}\n\n{email_body}"
                     
-                    # Attach resume
-                    part = MIMEBase('application', 'octet-stream')
-                    part.set_payload(resume.read())
-                    encoders.encode_base64(part)
-                    part.add_header(
-                        "Content-Disposition",
-                        f"attachment; filename={resume.name}",
-                    )
-                    msg.attach(part)
+                    # Attach the resume if available
+                    if resume:
+                        from email.mime.multipart import MIMEMultipart
+                        from email.mime.text import MIMEText
+                        from email.mime.base import MIMEBase
+                        from email import encoders
+
+                        # MIME structure
+                        msg = MIMEMultipart()
+                        msg['From'] = sender_email
+                        msg['To'] = recipient_email
+                        msg['Subject'] = subject
+                        
+                        # Attach email body
+                        msg.attach(MIMEText(email_body, 'plain'))
+                        
+                        # Attach resume
+                        part = MIMEBase('application', 'octet-stream')
+                        part.set_payload(resume.read())
+                        encoders.encode_base64(part)
+                        part.add_header(
+                            "Content-Disposition",
+                            f"attachment; filename={resume.name}",
+                        )
+                        msg.attach(part)
+                        
+                        # Send email with attachment
+                        server.sendmail(
+                            sender_email,
+                            [recipient_email],
+                            msg.as_string()
+                        )
+                    else:
+                        # Send email without attachment
+                        server.sendmail(
+                            sender_email,
+                            [recipient_email],
+                            message
+                        )
+
+            else:
+                context = context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
+                with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                    server.starttls(context=context)
+                    server.login(sender_email, sender_password)
                     
-                    # Send email with attachment
-                    server.sendmail(
-                        sender_email,
-                        [recipient_email],
-                        msg.as_string()
-                    )
-                else:
-                    # Send email without attachment
-                    server.sendmail(
-                        sender_email,
-                        [recipient_email],
-                        message
-                    )
+                    # Prepare the email
+                    message = f"Subject: {subject}\n\n{email_body}"
+                    
+                    # Attach the resume if available
+                    if resume:
+                        from email.mime.multipart import MIMEMultipart
+                        from email.mime.text import MIMEText
+                        from email.mime.base import MIMEBase
+                        from email import encoders
+
+                        # MIME structure
+                        msg = MIMEMultipart()
+                        msg['From'] = sender_email
+                        msg['To'] = recipient_email
+                        msg['Subject'] = subject
+                        
+                        # Attach email body
+                        msg.attach(MIMEText(email_body, 'plain'))
+                        
+                        # Attach resume
+                        part = MIMEBase('application', 'octet-stream')
+                        part.set_payload(resume.read())
+                        encoders.encode_base64(part)
+                        part.add_header(
+                            "Content-Disposition",
+                            f"attachment; filename={resume.name}",
+                        )
+                        msg.attach(part)
+                        
+                        # Send email with attachment
+                        server.sendmail(
+                            sender_email,
+                            [recipient_email],
+                            msg.as_string()
+                        )
+                    else:
+                        # Send email without attachment
+                        server.sendmail(
+                            sender_email,
+                            [recipient_email],
+                            message
+                        )
 
             return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})
 
@@ -309,3 +351,53 @@ def enterprices(request):
 
 def msme(request):
     return render(request, 'companySize/msme.html')
+
+def getInTouchForm(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        phoneNo = request.POST.get('phone', '').strip()
+        message = request.POST.get('message', '').strip()
+        
+        email_body = f"""
+        Name: {name}
+        Email: {email}
+        Phone No: {phoneNo}
+        Message: {message}
+        Message:
+        {message}
+        """
+        print('emailbody: ', email_body)
+       
+        sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
+        sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
+        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
+
+        try:
+            # Create the email message
+            email_msg = EmailMessage()
+            email_msg['Subject'] = message
+            email_msg['From'] = sender_email
+            email_msg['To'] = recipient_email
+            email_msg.set_content(email_body)
+
+            # Email sending
+            if ssl._create_unverified_context():
+                context = ssl._create_unverified_context()
+                with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                    server.starttls(context=context)
+                    server.login(sender_email, sender_password)
+                    server.send_message(email_msg)
+                    
+            else:
+                context = context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
+                with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                    server.starttls(context=context)
+                    server.login(sender_email, sender_password)
+                    server.send_message(email_msg)
+
+            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})    
+        except Exception as e:
+            return HttpResponse(f"Failed to send email. Error: {str(e)}")
+
+    return render(request, 'main/index.html')
