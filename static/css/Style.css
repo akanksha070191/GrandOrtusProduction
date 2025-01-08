@@ -93,18 +93,20 @@ h1 {
     border: 1px solid var(--primary-color);
 }
 
-.navbar button:hover  {
+.navbar button:hover {
     color: var(--primary-color) !important;
 
 }
-.navbar-light .navbar-nav .nav-link:active{
+
+.navbar-light .navbar-nav .nav-link:active {
     color: var(--primary-color) !important;
 }
 
-.dropdown-item:active{
+.dropdown-item:active {
     color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
 }
+
 .navbar-light .navbar-nav .nav-link {
     color: var(--secondary-color);
     padding: 0;
@@ -125,7 +127,8 @@ h1 {
     background-color: var(--primary-color);
     transition: width 0.3s ease;
 }
-.trademark{
+
+.trademark {
     color: var(--secondary-color);
 }
 
@@ -133,15 +136,38 @@ h1 {
     width: 100%;
 }
 
-.get-in-touch-form {
-    position: fixed;
-    right: 10px;
-    top:54px;
-    overflow: hidden;
-    opacity: 0;
-    z-index: 9999;
-}
+/* Form container styling */
 
+.form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Form section styling */
+  .form-Getintouch {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 30%;
+  }
+  
+  
+  body.no-scroll {
+    overflow: hidden;
+  }
+  
+  
 
 .nav-item.dropdown .dropdown-menu {
     margin-top: 10px;
@@ -191,16 +217,17 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
-.dropdown-wide {    
+.dropdown-wide {
     display: none;
     left: -204px !important;
     position: absolute !important;
     top: 48px;
-   }
-   .dropdown-wide[data-bs-popper]{
+}
+
+.dropdown-wide[data-bs-popper] {
     left: -204px !important;
-    top:48px !important;
-   }
+    top: 48px !important;
+}
 
 .dropend:hover>.dropdown-menu {
     position: absolute;
@@ -250,7 +277,7 @@ h1 {
 /* main-hero Section */
 
 section.hero {
-    height: 30vh ;
+    height: 30vh;
 }
 
 .main-hero {
@@ -1090,7 +1117,7 @@ section.hero {
 
 .captcha-code {
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 400;
     background: #e8e8e8;
     padding: 4px 20px;
     border-radius: 5px;

@@ -188,19 +188,30 @@ def indexContactForm(request):
             email_msg.set_content(email_body)
 
             # Email sending
-            context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
-            with smtplib.SMTP("mail.grandortus.com", 587) as server:
-                server.starttls(context=context)
-                server.login(sender_email, sender_password)
-                server.send_message(email_msg)
-                # server.sendmail(
-                #     sender_email,
-                #     [recipient_email],
-                #     f"Subject: {services}\n\n{email_body}"
-                # )
-
-            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})
-            
+            if ssl._create_unverified_context():
+                context = ssl._create_unverified_context()
+                with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                    server.starttls(context=context)
+                    server.login(sender_email, sender_password)
+                    server.send_message(email_msg)
+                    # server.sendmail(
+                    #     sender_email,
+                    #     [recipient_email],
+                    #     f"Subject: {services}\n\n{email_body}"
+                    # )
+                    
+            else:
+                context = context = ssl.create_default_context(cafile="/opt/homebrew/etc/openssl@3/cert.pem")
+                with smtplib.SMTP("mail.grandortus.com", 587) as server:
+                    server.starttls(context=context)
+                    server.login(sender_email, sender_password)
+                    server.send_message(email_msg)
+                    # server.sendmail(
+                    #     sender_email,
+                    #     [recipient_email],
+                    #     f"Subject: {services}\n\n{email_body}"
+                    # )
+            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})    
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 

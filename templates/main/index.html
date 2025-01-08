@@ -173,11 +173,7 @@
           </ul>
 
           <!-- Get a Quote Button -->
-          <form class="d-flex">
-            <button class="btn shadow-none" type="submit" id="getQuoteBtn">
-              Get a Quote
-            </button>
-          </form>
+          <button class="btn shadow-none" type="button" id="getQuoteBtn">Get a Quote</button>
         </div>
       </div>
     </nav>
@@ -321,7 +317,7 @@
         <!-- Mobility & Cloud -->
         <div class="col">
           <div class="service-card">
-            <div class="service-icon">☁️</div>
+            <div class="service-icon"> <img src="images/cld.png" alt=""></div>
             <div class="service-title">
               <a href="/Services/MobilityAndCloud.html">Mobility & Cloud</a>
             </div>
@@ -558,36 +554,36 @@
       <h4 blog-title>Blogs and News</h4>
       <h1 class="blog-heading mb-3">our last blog and news</h1>
       <div class="row">
-        <div class="col-lg-4 ">
+        <div class="col-lg-4">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Windows vs. Linux.png" class="card-img-top" alt="Image 1">
             <div class="card-body">
               <h5 class="card-title">Windows vs. Linux: Unraveling the Battle of Operating Systems.</h5>
-              <p class="card-text">September 20, 2024</p>
+              <p class="card-text">October 20, 2024</p>
               <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Donec id urna dui erat diam vivamus.</p> -->
               <button class="read-more-btn mt-3"> <a href="{% url "Windows" %}">Read More</a> </button>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-lg-4 ">
+        <div class="col-lg-4">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Exploring.png" class="card-img-top" alt="Image 2">
             <div class="card-body">
               <h5 class="card-title">Exploring the Future of Technology: A Glimpse into Tomorrow</h5>
-              <p class="card-text">September 20, 2024</p>
+              <p class="card-text">October 20, 2024</p>
               <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Donec id urna dui erat diam vivamus.</p> -->
               <button class="read-more-btn mt-3"> <a href="{% url "Exploring" %}"> Read More</a></button>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-lg-4 ">
+        <div class="col-lg-4">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Transformative.png" class="card-img-top" alt="Image 2">
             <div class="card-body">
               <h5 class="card-title">The Transformative Power of IoT in Industries: A Journey Beyond Connectivity</h5>
-              <p class="card-text">September 20, 2024</p>
+              <p class="card-text">October 20, 2024</p>
               <!-- <p class="card-text">Lorem ipsum dolor sit amet consectetur. Donec id urna dui erat diam vivamus.</p> -->
               <button class="read-more-btn mt-3"> <a href="{% url "Transformative" %}"> Read More</a></button>
             </div>
@@ -667,7 +663,6 @@
         <div class="col-lg-6 mb-4">
           <h4 class="contact-title mb-4">Contact Us</h4>
           <h1 class="mb-4">Let's connect with us</h1>
-          <!-- <p>Lorem ipsum dolor sit amet consectetur. Sem amet a integer potenti tempor. Orci eu turpis justo lacus posuere sed.</p> -->
 
           <div class="contact-info">
 
@@ -857,16 +852,15 @@
 
    <!-- get in touch form start -->
 
-   <form id="getInTouchForm" class="form-section w-25 mx-auto my-4 get-in-touch-form" action="" method="POST">
-    <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Name" required>
-    <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Email" required>
-    <input type="tel" class="form-control mb-3" name="phone" id="phone" placeholder="Phone"
-      pattern="[0-9]{10}" required>
-
-    <textarea class="form-control mb-3" name="message" id="message" rows="3" placeholder="Messages"
-      required></textarea>
-    <button type="submit" class="send-btn btn btn-primary">Submit</button>
-  </form>
+   <div id="formContainer" class="form-container">
+    <form id="getInTouchForm" class="form-Getintouch">
+      <input type="text" class="form-control mb-3" name="name" id="name" placeholder="Name" required>
+      <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Email" required>
+      <input type="tel" class="form-control mb-3" name="phone" id="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+      <textarea class="form-control mb-3" name="message" id="message" rows="3" placeholder="Messages" required></textarea>
+      <button type="submit" class="send-btn btn btn-primary">Submit</button>
+    </form>
+  </div>
 
 <!-- get in touch form end -->
 

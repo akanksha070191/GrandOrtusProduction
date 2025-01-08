@@ -1,31 +1,27 @@
 const button = document.getElementById("getQuoteBtn");
-const form = document.getElementById("getInTouchForm");
+const formContainer = document.getElementById("formContainer");
 
-function toggleFormVisibility() {
-  if (form.style.opacity === "1") {
-    hideForm();
-  } else {
-    showForm();
-  }
-}
-
+ 
 function showForm() {
-  form.style.opacity = "1";
-  form.style.pointerEvents = "auto";
+  formContainer.style.display = "flex";  
+  document.body.classList.add("no-scroll");  
 }
+
 
 function hideForm() {
-  form.style.opacity = "0";
-  form.style.pointerEvents = "none";
+  formContainer.style.display = "none";  
+  document.body.classList.remove("no-scroll");  
 }
 
+
 button.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default form submission
-  toggleFormVisibility();
+  event.stopPropagation(); 
+  showForm();
 });
 
-document.addEventListener("click", (event) => {
-  if (!form.contains(event.target) && event.target !== button) {
-    hideForm();
+
+formContainer.addEventListener("click", (event) => {
+  if (event.target === formContainer) {
+    hideForm(); 
   }
 });
