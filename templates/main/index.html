@@ -149,10 +149,12 @@
                     <a class="dropdown-item" href="{% url "ImplementationServices" %}">Implementation Services</a>
                     <a class="dropdown-item" href="{% url "Infrastructure" %}">IT Infrastructure Consulting</a>
                     <a class="dropdown-item" href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
-                    <a class="dropdown-item" href="{% url "Networking" %}">Networking and Security</a>
+                    <a class="dropdown-item" href="{% url "Networking" %}">Networking and Intranet</a>
+                    <a class="dropdown-item" href="{% url "MobWebDev" %}">Mobile App & Web Development</a>
                     <a class="dropdown-item" href="{% url "MobilityAndCloud" %}">Mobility and Cloud</a>
-                    <a class="dropdown-item" href="{% url "Internet" %}">Intranet</a>
+                    <a class="dropdown-item" href="{% url "Security" %}">Cyber Security</a>
                     <a class="dropdown-item" href="{% url "FMSAndAMCSupport" %}">FMS and AMC Support</a>
+                    <a class="dropdown-item" href="{% url "ZeroTrustNetwork" %}">Zero Trust Network Framework</a>
                   </div>
                   
                   <!-- By Industries Section -->
@@ -269,7 +271,7 @@
           <div class="service-card">
             <div class="service-icon">📁</div>
             <div class="service-title">
-              <a href="/Services/ImplementationAndConsulting.html">Implementation Services & IT Infrastructure Consulting</a>
+              <a href="{% url "ImplementationServices" %}">Implementation Services & IT Infrastructure Consulting</a>
             </div>
             <div class="service-text">
               Expert integration, deployment, and strategic guidance to enhance your IT infrastructure and performance.
@@ -282,7 +284,7 @@
           <div class="service-card">
             <div class="service-icon">📱</div>
             <div class="service-title">
-              <a href="/Services/MobileAndWebDevelopment.html">Mobile App & Web Development</a>
+              <a href="{% url "MobWebDev" %}">Mobile App & Web Development</a>
             </div>
             <div class="service-text">
               Crafting innovative mobile and web applications tailored to your business needs.
@@ -295,7 +297,7 @@
           <div class="service-card">
             <div class="service-icon">🌐</div>
             <div class="service-title">
-              <a href="/Services/NetworkingAndIntranet.html">Networking & Intranet</a>
+              <a href="{% url "Networking" %}">Networking & Intranet</a>
             </div>
             <div class="service-text">
               Seamless integration of networking and intranet solutions to boost connectivity, collaboration, and efficiency.
@@ -308,7 +310,7 @@
           <div class="service-card">
             <div class="service-icon">⚙️</div>
             <div class="service-title">
-              <a href="/Services/FMSAndAMCSupport.html">FMS & AMC Support</a>
+              <a href="{% url "FMSAndAMCSupport" %}">FMS & AMC Support</a>
             </div>
             <div class="service-text">
               Unwavering support and service to keep your systems running smoothly, whenever you need it.
@@ -321,7 +323,7 @@
           <div class="service-card">
             <div class="service-icon"> <img src="/static/images/cld.png" class"img-fluid" alt=""></div>
             <div class="service-title">
-              <a href="/Services/MobilityAndCloud.html">Mobility & Cloud</a>
+              <a href="{% url "MobilityAndCloud" %}">Mobility & Cloud</a>
             </div>
             <div class="service-text">
               Tailored strategies for mobility and cloud adoption, empowering your business to thrive in the digital landscape.
@@ -334,7 +336,7 @@
           <div class="service-card">
             <div class="service-icon">🏢</div>
             <div class="service-title">
-              <a href="/Services/Datacenter.html">Datacenter Infra Design & Deployment</a>
+              <a href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
             </div>
             <div class="service-text">
               Robust datacenter infrastructure design and deployment for reliability and scalability.
@@ -347,7 +349,7 @@
           <div class="service-card">
             <div class="service-icon">🔒</div>
             <div class="service-title">
-              <a href="/Services/CyberSecurity.html">Cyber Security</a>
+              <a href="{% url "Security" %}">Cyber Security</a>
             </div>
             <div class="service-text">
               Fortified protection for your data and systems. Stay vigilant and prioritize cybersecurity to protect your business and its valuable assets.
@@ -359,7 +361,7 @@
           <div class="service-card">
             <div class="service-icon">🛡️</div>
             <div class="service-title">
-              <a href="/Services/ZeroTrust.html">Zero Trust Network Framework</a>
+              <a href="{% url "ZeroTrustNetwork" %}">Zero Trust Network Framework</a>
             </div>
             <div class="service-text">
               Merging robust Internet and Networking solutions with Zero Trust principles to enhance security and performance.
@@ -771,9 +773,9 @@
             <div class="item"><img src="/static/images/ClientsImg/dhani.png" alt="dhani"></div>
             <div class="item"><img src="/static/images/ClientsImg/evolving.png" alt="evolving"></div>
             <div class="item"><img src="/static/images/ClientsImg/greenko.png" alt="evolving"></div>
-            <div class="item"><img src="/static/images/ClientsImg/maagicbrickes(1).png" alt="evolving"></div>
+            <div class="item"><img src="/static/images/ClientsImg/maagicbrickes (1).png" alt="evolving"></div>
             <div class="item"><img src="/static/images/ClientsImg/nokia.png" alt="evolving"></div>
-            <div class="item"><img src="/static/images/ClientsImg/onmobile(1).png" alt="evolving"></div>
+            <div class="item"><img src="/static/images/ClientsImg/onmobile (1).png" alt="evolving"></div>
             <div class="item"><img src="/static/images/ClientsImg/pickrr.png" alt="evolving"></div>
             <div class="item"><img src="/static/images/ClientsImg/rgcirc.png" alt="evolving"></div>
             <div class="item"><img src="/static/images/ClientsImg/srf.png" alt="evolving"></div>
@@ -799,12 +801,11 @@
             <div class="item"><img src="/static/images/PartnersImg/f5.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/forcepoint.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/google.png" alt="cisco"></div>
-            <div class="item"><img src="/static/images/PartnersImg/hewlette.png" alt="cisco"></div>
+            <div class="item"><img src="/static/images/PartnersImg/hewlette-packard.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/ibm.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/juniper.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/lenavo.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/microsoft.png" alt="cisco"></div>
-            <div class="item"><img src="/static/images/PartnersImg/netapp.png" alt="cisco"></div>
             <div class="item"><img src="/static/images/PartnersImg/netapp.png" alt="cisco"></div>
 
             <!-- Add more items as needed -->

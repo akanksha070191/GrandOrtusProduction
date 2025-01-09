@@ -103,6 +103,15 @@ def infrastructure(request):
 def internet(request):
     return render(request, 'services/Internet.html')
 
+def security(request):
+    return render(request, 'services/Security.html')
+
+def zeroTrustNetwork(request):
+    return render(request, 'services/ZeroTrustNetwork.html')
+
+def mobWebDev(request):
+    return render(request, 'services/MobWebDev.html')
+
 def mobilityAndCloud(request):
     return render(request, 'services/MobilityAndCloud.html')
 
@@ -177,7 +186,7 @@ def indexContactForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
+        recipient_email = "test@grandortus.com"  # Replace with your recipient address
 
         try:
             # Create the email message
