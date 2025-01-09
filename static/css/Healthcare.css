@@ -1,3 +1,20 @@
+:root {
+
+  --primary-color: #0090d2;
+  --secondary-color: #575757;
+  --text-color: #555;
+  --color: #fff;
+
+  --primary-size: 30px;
+  --secondary-size: 20px;
+
+  --btn-size: 16px;
+  --btn-radius: 10px;
+  --btn-padding: 10px 20px;
+  --btn-transform: uppercase;
+  --btn-weight: 500;
+
+}
 
 .custom-section {
       background-color: var(--color);
@@ -26,7 +43,7 @@
       color: #004a78;
     }
     .list-item p {
-      margin: 0;
+      margin: 10px;
       color: #6c757d;
     }
     .custom-title {
@@ -38,6 +55,11 @@
       margin-bottom: 10px;
     }
     .custom-highlight {
-      color: #007bff;
+      color: var(--primary-color);
       font-weight: bold;
     }
+
+  ul{
+    list-style: none;
+  }
+

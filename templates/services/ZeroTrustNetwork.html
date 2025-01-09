@@ -1,0 +1,174 @@
+{% extends "main/base.html" %}
+{% block csslink %}
+<link rel="stylesheet" href="/static/css/Service.css">
+{% endblock csslink %}
+<body>
+
+<!-- Datacenter  Hero Section -->
+{% block content %}
+<section class="hero">
+  <div class="container">
+      <div class="row justify-content-center text-center pt-4">
+          <div class="col-lg-7 col-md-12 col-12">
+              <div class="left-item align-items-center">
+                  <div class="heading-sec">
+                      <h1>Welcome to Zero-Trust Network Services</h1>
+                      <p>Empowering your business with "never trust, always verify" security philosophy and cutting-edge technologies.</p>
+                  </div>
+                  <!-- <button class="learn-more-btn mt-lg-5">
+                      <a href="#" class="learn-more-link">Learn More</a>
+                  </button> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  
+    <!-- Zero-Trust Network Section -->
+
+    <section class="py-5">
+      <div class="container">
+          <div class="row align-items-center">
+              <!-- Left Content -->
+              <div class="col-md-6">
+                  <h2 class="section-heading py-3">Zero-Trust Network</h2>
+                  <ul class="list-unstyled feature-list service-list">
+                      <li><i class="fas fa-shield-alt"></i> The zero-trust philosophy is "never trust, always verify."</li>
+                      <li><i class="fas fa-shield-alt"></i> Networks are built around "microperimeters," each with its own authentication requirements.</li>
+                      <li><i class="fas fa-shield-alt"></i> Enhances security for remote work, cloud environments, and sensitive data.</li>
+                      <li><i class="fas fa-shield-alt"></i> Dynamically adapts to threats in real-time.</li>
+                  </ul>
+              </div>
+  
+              <!-- Right Image -->
+              <div class="col-md-6 text-center image-container">
+                  <img src="/static/images/ZeroTrust.jpg" alt="Zero Trust Network"
+                      class="img-fluid rounded shadow service-image">
+              </div>
+  
+          </div>
+      </div>
+  </section>
+
+
+
+    <!-- Service Section -->
+
+    <section class="service py-5">
+        <div class="container text-center mb-5">
+          <h4>Featured Services</h4>
+          <h1>Technology solutions that work for you</h1>
+      
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-4">
+            
+            <!-- Implementation Services & IT Infrastructure Consulting -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">📁</div>
+                <div class="service-title">
+                  <a href="{% url "ImplementationServices" %}">Implementation Services & IT Infrastructure Consulting</a>
+                </div>
+                <div class="service-text">
+                  Expert integration, deployment, and strategic guidance to enhance your IT infrastructure and performance.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Mobile App & Web Development -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">📱</div>
+                <div class="service-title">
+                  <a href="{% url "MobWebDev" %}">Mobile App & Web Development</a>
+                </div>
+                <div class="service-text">
+                  Crafting innovative mobile and web applications tailored to your business needs.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Networking & Intranet -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <div class="service-title">
+                  <a href="{% url "Networking" %}">Networking & Intranet</a>
+                </div>
+                <div class="service-text">
+                  Seamless integration of networking and intranet solutions to boost connectivity, collaboration, and efficiency.
+                </div>
+              </div>
+            </div>
+            
+            <!-- FMS & AMC Support -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <div class="service-title">
+                  <a href="{% url "FMSAndAMCSupport" %}">FMS & AMC Support</a>
+                </div>
+                <div class="service-text">
+                  Unwavering support and service to keep your systems running smoothly, whenever you need it.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Mobility & Cloud -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon"> <img src="/static/images/cld.png" class"img-fluid" alt=""></div>
+                <div class="service-title">
+                  <a href="{% url "MobilityAndCloud" %}">Mobility & Cloud</a>
+                </div>
+                <div class="service-text">
+                  Tailored strategies for mobility and cloud adoption, empowering your business to thrive in the digital landscape.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Datacenter Infra Design & Deployment -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <div class="service-title">
+                  <a href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
+                </div>
+                <div class="service-text">
+                  Robust datacenter infrastructure design and deployment for reliability and scalability.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Cyber Security -->
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <div class="service-title">
+                  <a href="{% url "Security" %}">Cyber Security</a>
+                </div>
+                <div class="service-text">
+                  Fortified protection for your data and systems. Stay vigilant and prioritize cybersecurity to protect your business and its valuable assets.
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <div class="service-title">
+                  <a href="{% url "ZeroTrustNetwork" %}">Zero Trust Network Framework</a>
+                </div>
+                <div class="service-text">
+                  Merging robust Internet and Networking solutions with Zero Trust principles to enhance security and performance.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    {% endblock content %}
+
+</body>
+
+</html>

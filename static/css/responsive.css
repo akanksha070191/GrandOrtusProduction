@@ -1,42 +1,67 @@
-@media screen and (min-width:769px) {}
-
 @media screen and (max-width:992px) {
-    .dropend:hover>.dropdown-menu {
-        position: absolute;
-        top: 0;
-        left: 100%;
 
-    }
-
-    .soludro {
-        flex-direction: column;
-    }
-
-    .hero {
-        height: 50vh;
-        background-position: center;
-    }
-
-    .heading-sec h1 {
-        font-size: 29px;
-        text-align: center;
-    }
-
-    .heading-sec p {
-        text-align: center;
-        font-size: 23px;
-        padding-bottom: 8px;
-    }
-
-    .learn-more-btn {
-        display: block;
-        margin: 0 auto;
+    :root {
+        --primary-size: 26px;
     }
 
     .dropend:hover>.dropdown-menu {
         position: absolute;
         top: 63px;
         left: 0;
+    }
+
+    .soludro {
+        flex-direction: column;
+    }
+
+    section.hero {
+        height: 50vh !important;
+    }
+
+    .Copyright {
+        justify-content: center !important;
+    }
+    .iso-iec{
+        display: none;
+    }
+
+
+    .main-hero {
+
+        height: 50vh;
+        background-position: center;
+    }
+
+    .heading-sec h1,
+    .about-text h1,
+    .chooseus-text h1,
+    .blog-section h1 {
+        font-size: var(--primary-size);
+        text-align: center;
+    }
+
+    .heading-sec p,
+    .chooseus-text,
+    .contact-title,
+    .Contact-section h1,
+    .feedbacks-section h4,
+    .feedbacks-heading {
+        text-align: center;
+    }
+
+    .heading-sec p {
+        font-size: 23px;
+        padding-bottom: 8px;
+    }
+
+    .chooseus-text h1 {
+        margin-bottom: 15px;
+        line-height: 27px;
+    }
+
+    .learn-more-btn {
+        display: block;
+        margin: 0 auto;
     }
 
     .status {
@@ -52,7 +77,7 @@
     }
 
     .about-img .first,
-    .second {
+    .about-img .second {
         display: none;
     }
 
@@ -68,23 +93,8 @@
         text-align: center;
     }
 
-    .about-text h1 {
-        font-size: 30px;
-    }
-
     .service h1 {
-        /* font-size: 30px; */
         margin-bottom: 15px;
-    }
-
-    .chooseus-text {
-        text-align: center;
-    }
-
-    .chooseus-text h1 {
-        font-size: 27px;
-        margin-bottom: 15px;
-        line-height: 27px;
     }
 
     .align-items-center {
@@ -94,39 +104,12 @@
     .client-feedback {
         flex-direction: column;
         text-align: center;
-        margin: 15px 0 15px 0;
+        margin: 15px 0;
     }
 
     .choose-img {
         margin-top: 15px;
     }
-
-    .feedbacks-section h4 {
-        text-align: center;
-    }
-
-    .feedbacks-heading {
-        font-size: 30px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    .blog-section h1 {
-        font-size: 30px;
-    }
-
-    .contact-title {
-        text-align: center;
-    }
-
-    .Contact-section h1 {
-        text-align: center;
-    }
-
-
-
-
-
 
     .blog-section .row {
         flex-direction: column;
@@ -143,10 +126,6 @@
 
     .blog-section h4 {
         font-size: 1.3rem;
-    }
-
-    .blog-section h1 {
-        font-size: 1.8rem;
     }
 
     .card-title {
@@ -166,54 +145,70 @@
         height: 200px;
     }
 
-
-    /* Responsive Design work flow chart */
-
-    @media (max-width: 768px) {
-        .workflow-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .workflow-line {
-            top: auto;
-            left: 75%;
-            height: 100%;
-            width: 3px;
-            background: #0078ff;
-            transform: translateX(-50%);
-        }
-
-        .workflow-step {
-            text-align: left;
-            flex: none;
-            margin-bottom: 40px;
-            width: 100%;
-        }
-
-        .workflow-step .workflow-circle {
-            top: 50%;
-            left: 75%;
-            transform: translate(-50%, -50%);
-        }
-
-        .workflow-step h6,
-        .workflow-step p {
-            margin-left: 90px;
-        }
-
-        .workflow-step .workflow-icon {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .workflow-step:not(:first-child):not(:last-child) .workflow-circle {
-            left: 75%;
-        
-        }
+    .dropdown-wide {
+        max-height: 50vh;
+        overflow-y: scroll;
+        left: 0 !important;
+        top: 40px;
+        width: 100% !important;
     }
 
+    .dropdown-wide[data-bs-popper] {
+        left: 0 !important;
+        top: 40px !important;
+        width: 100% !important;
+    }
+    /* *, ::after, ::before {
+        border: none !important;
+    }
+*/
+}
 
+
+/* Responsive Design work flow chart */
+
+@media (max-width: 768px) {
+    .workflow-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .workflow-line {
+        top: auto;
+        left: 75%;
+        height: 100%;
+        width: 3px;
+        background: #0078ff;
+        transform: translateX(-50%);
+    }
+
+    .workflow-step {
+        text-align: left;
+        flex: none;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .workflow-step .workflow-circle {
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .workflow-step h6,
+    .workflow-step p {
+        margin-left: 90px;
+    }
+
+    .workflow-step .workflow-icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .workflow-step:not(:first-child):not(:last-child) .workflow-circle {
+        left: 75%;
+
+    }
 }

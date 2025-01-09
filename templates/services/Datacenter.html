@@ -58,108 +58,119 @@
     <!-- Service Section -->
 
     <section class="service py-5">
-        <div class="container text-center mb-5">
-          <h4>Featured Services</h4>
-          <h1>Technology solutions that work for you</h1>
+      <div class="container text-center mb-5">
+        <h4>Featured Services</h4>
+        <h1>Technology solutions that work for you</h1>
     
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-4">
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">📁</div>
-                <div class="service-title">
-                  <a href="{% url "ImplementationServices" %}">Implementation Services</a>
-                </div>
-                <div class="service-text">
-                  We expertly integrate and deploy IT solutions, ensuring a smooth transition and optimal performance.
-                </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-4">
+          
+          <!-- Implementation Services & IT Infrastructure Consulting -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">📁</div>
+              <div class="service-title">
+                <a href="{% url "ImplementationServices" %}">Implementation Services & IT Infrastructure Consulting</a>
               </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <div class="service-title">
-                  <a href="{% url "Infrastructure" %}">IT Infrastructure Consulting</a>
-                </div>
-                <div class="service-text">
-                  Our experts provide strategic guidance to enhance your IT infrastructure, aligning it with your business
-                  goals.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">🖧</div>
-                <div class="service-title">
-                  <a href="{% url "FMSAndAMCSupport" %}">FMS & AMC Support</a>
-                </div>
-                <div class="service-text">
-                  Unwavering support and service to keep your systems running smoothly, whenever you need it.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">🌐</div>
-                <div class="service-title">
-                  <a href="{% url "Networking" %}">Networking</a>
-                </div>
-                <div class="service-text">
-                  Secure and efficient network design, implementation, and management.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">☁️</div>
-                <div class="service-title">
-                  <a href="{% url "MobilityAndCloud" %}">Mobility & Cloud</a>
-                </div>
-                <div class="service-text">
-                  Tailored strategies for mobility and cloud adoption, empowering your business to thrive in the digital
-                  landscape.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">📡</div>
-                <div class="service-title">
-                  <a href="{% url "Internet" %}">Intranet</a>
-                </div>
-                <div class="service-text">
-                  Custom-crafted intranet systems that enhance communication, collaboration, and productivity within your
-                  organization.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">🏢</div>
-                <div class="service-title">
-                  <a href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
-                </div>
-                <div class="service-text">
-                  Robust datacenter infrastructure design and deployment for reliability and scalability.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="service-card">
-                <div class="service-icon">🔒</div>
-                <div class="service-title">
-                  <a href="{% url "ServiceList" %}">Security</a>
-                </div>
-                <div class="service-text">
-                  Fortified protection for your data and systems. Stay vigilant and prioritize security to protect your
-                  business and its valuable assets.
-                </div>
+              <div class="service-text">
+                Expert integration, deployment, and strategic guidance to enhance your IT infrastructure and performance.
               </div>
             </div>
           </div>
-    
+          
+          <!-- Mobile App & Web Development -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">📱</div>
+              <div class="service-title">
+                <a href="{% url "MobWebDev" %}">Mobile App & Web Development</a>
+              </div>
+              <div class="service-text">
+                Crafting innovative mobile and web applications tailored to your business needs.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Networking & Intranet -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">🌐</div>
+              <div class="service-title">
+                <a href="{% url "Networking" %}">Networking & Intranet</a>
+              </div>
+              <div class="service-text">
+                Seamless integration of networking and intranet solutions to boost connectivity, collaboration, and efficiency.
+              </div>
+            </div>
+          </div>
+          
+          <!-- FMS & AMC Support -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">⚙️</div>
+              <div class="service-title">
+                <a href="{% url "FMSAndAMCSupport" %}">FMS & AMC Support</a>
+              </div>
+              <div class="service-text">
+                Unwavering support and service to keep your systems running smoothly, whenever you need it.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mobility & Cloud -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon"> <img src="/static/images/cld.png" class"img-fluid" alt=""></div>
+              <div class="service-title">
+                <a href="{% url "MobilityAndCloud" %}">Mobility & Cloud</a>
+              </div>
+              <div class="service-text">
+                Tailored strategies for mobility and cloud adoption, empowering your business to thrive in the digital landscape.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Datacenter Infra Design & Deployment -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">🏢</div>
+              <div class="service-title">
+                <a href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
+              </div>
+              <div class="service-text">
+                Robust datacenter infrastructure design and deployment for reliability and scalability.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cyber Security -->
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">🔒</div>
+              <div class="service-title">
+                <a href="{% url "Security" %}">Cyber Security</a>
+              </div>
+              <div class="service-text">
+                Fortified protection for your data and systems. Stay vigilant and prioritize cybersecurity to protect your business and its valuable assets.
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="service-card">
+              <div class="service-icon">🛡️</div>
+              <div class="service-title">
+                <a href="{% url "ZeroTrustNetwork" %}">Zero Trust Network Framework</a>
+              </div>
+              <div class="service-text">
+                Merging robust Internet and Networking solutions with Zero Trust principles to enhance security and performance.
+              </div>
+            </div>
+          </div>
+          
         </div>
-    
+      </div>
     </section>
+    
     
     {% endblock content %}
 

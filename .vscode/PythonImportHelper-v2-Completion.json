@@ -1,0 +1,911 @@
+[
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "ssl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ssl",
+        "description": "ssl",
+        "detail": "ssl",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "email.message",
+        "description": "email.message",
+        "isExtraImport": true,
+        "detail": "email.message",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "GrandortusappConfig",
+        "kind": 6,
+        "importPath": "GrandOrtusapp.apps",
+        "description": "GrandOrtusapp.apps",
+        "peekOfCode": "class GrandortusappConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'GrandOrtusapp'",
+        "detail": "GrandOrtusapp.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "GrandOrtusapp.urls",
+        "description": "GrandOrtusapp.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('index', views.home, name='index'),\n    path ('/Resources/About/', views.about, name='About'),\n    path('/Resources/Team/', views.team, name='Team'),\n    path('/Resources/Blog/', views.blog, name='Blog'),\n    path('/Resources/CaseStudy/', views.caseStudy, name='CaseStudy'),\n    path('/Resources/casestudyHealthCareView/', views.casestudyHealthCareView, name='casestudyHealthCareView'),\n    path('/Resources/AwardsCertifications/', views.awardsCertifications, name='AwardsCertifications'),\n    path('/Resources/Career/LifeGrandOrtus/', views.lifeGrandOrtus, name='LifeGrandOrtus'),",
+        "detail": "GrandOrtusapp.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def index(request):\n    return render(request, 'main/index.html')\ndef home(request):\n    return render(request, 'main/index.html')\ndef about(request):\n    return render(request, 'main/About.html')\ndef team(request):\n    return render(request, 'main/Team.html')\ndef blog(request):\n    return render(request, 'main/Blog.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def home(request):\n    return render(request, 'main/index.html')\ndef about(request):\n    return render(request, 'main/About.html')\ndef team(request):\n    return render(request, 'main/Team.html')\ndef blog(request):\n    return render(request, 'main/Blog.html')\ndef caseStudy(request):\n    return render(request, 'main/CaseStudy.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def about(request):\n    return render(request, 'main/About.html')\ndef team(request):\n    return render(request, 'main/Team.html')\ndef blog(request):\n    return render(request, 'main/Blog.html')\ndef caseStudy(request):\n    return render(request, 'main/CaseStudy.html')\ndef casestudyHealthCareView(request):\n    return render(request, 'main/casestudyHealthCareView.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "team",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def team(request):\n    return render(request, 'main/Team.html')\ndef blog(request):\n    return render(request, 'main/Blog.html')\ndef caseStudy(request):\n    return render(request, 'main/CaseStudy.html')\ndef casestudyHealthCareView(request):\n    return render(request, 'main/casestudyHealthCareView.html')\ndef awardsCertifications(request):\n    return render(request, 'main/AwardsCertifications.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "blog",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def blog(request):\n    return render(request, 'main/Blog.html')\ndef caseStudy(request):\n    return render(request, 'main/CaseStudy.html')\ndef casestudyHealthCareView(request):\n    return render(request, 'main/casestudyHealthCareView.html')\ndef awardsCertifications(request):\n    return render(request, 'main/AwardsCertifications.html')\ndef lifeGrandOrtus(request):\n    return render(request, 'main/LifeGrandOrtus.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "caseStudy",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def caseStudy(request):\n    return render(request, 'main/CaseStudy.html')\ndef casestudyHealthCareView(request):\n    return render(request, 'main/casestudyHealthCareView.html')\ndef awardsCertifications(request):\n    return render(request, 'main/AwardsCertifications.html')\ndef lifeGrandOrtus(request):\n    return render(request, 'main/LifeGrandOrtus.html')\ndef currentJobOpening(request):\n    return render(request, 'main/CurrentJobOpenings.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "casestudyHealthCareView",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def casestudyHealthCareView(request):\n    return render(request, 'main/casestudyHealthCareView.html')\ndef awardsCertifications(request):\n    return render(request, 'main/AwardsCertifications.html')\ndef lifeGrandOrtus(request):\n    return render(request, 'main/LifeGrandOrtus.html')\ndef currentJobOpening(request):\n    return render(request, 'main/CurrentJobOpenings.html')\ndef csr(request):\n    return render(request, 'main/CSR.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "awardsCertifications",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def awardsCertifications(request):\n    return render(request, 'main/AwardsCertifications.html')\ndef lifeGrandOrtus(request):\n    return render(request, 'main/LifeGrandOrtus.html')\ndef currentJobOpening(request):\n    return render(request, 'main/CurrentJobOpenings.html')\ndef csr(request):\n    return render(request, 'main/CSR.html')\ndef contactus(request):\n    return render(request, 'main/Contact.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "lifeGrandOrtus",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def lifeGrandOrtus(request):\n    return render(request, 'main/LifeGrandOrtus.html')\ndef currentJobOpening(request):\n    return render(request, 'main/CurrentJobOpenings.html')\ndef csr(request):\n    return render(request, 'main/CSR.html')\ndef contactus(request):\n    return render(request, 'main/Contact.html')\ndef partners(request):\n    return render(request, 'main/Partners.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "currentJobOpening",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def currentJobOpening(request):\n    return render(request, 'main/CurrentJobOpenings.html')\ndef csr(request):\n    return render(request, 'main/CSR.html')\ndef contactus(request):\n    return render(request, 'main/Contact.html')\ndef partners(request):\n    return render(request, 'main/Partners.html')\ndef clients(request):\n    return render(request, 'main/Clients.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "csr",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def csr(request):\n    return render(request, 'main/CSR.html')\ndef contactus(request):\n    return render(request, 'main/Contact.html')\ndef partners(request):\n    return render(request, 'main/Partners.html')\ndef clients(request):\n    return render(request, 'main/Clients.html')\ndef productDesc1(request):\n    return render(request, 'main/product1desc.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "contactus",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def contactus(request):\n    return render(request, 'main/Contact.html')\ndef partners(request):\n    return render(request, 'main/Partners.html')\ndef clients(request):\n    return render(request, 'main/Clients.html')\ndef productDesc1(request):\n    return render(request, 'main/product1desc.html')\ndef productDesc2(request):\n    return render(request, 'main/product2desc.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "partners",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def partners(request):\n    return render(request, 'main/Partners.html')\ndef clients(request):\n    return render(request, 'main/Clients.html')\ndef productDesc1(request):\n    return render(request, 'main/product1desc.html')\ndef productDesc2(request):\n    return render(request, 'main/product2desc.html')\ndef fmcg(request):\n    return render(request, 'byIndustries/FMCG.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "clients",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def clients(request):\n    return render(request, 'main/Clients.html')\ndef productDesc1(request):\n    return render(request, 'main/product1desc.html')\ndef productDesc2(request):\n    return render(request, 'main/product2desc.html')\ndef fmcg(request):\n    return render(request, 'byIndustries/FMCG.html')\ndef gaming(request):\n    return render(request, 'byIndustries/Gaming.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "productDesc1",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def productDesc1(request):\n    return render(request, 'main/product1desc.html')\ndef productDesc2(request):\n    return render(request, 'main/product2desc.html')\ndef fmcg(request):\n    return render(request, 'byIndustries/FMCG.html')\ndef gaming(request):\n    return render(request, 'byIndustries/Gaming.html')\ndef healthcare(request):\n    return render(request, 'byIndustries/Healthcare.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "productDesc2",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def productDesc2(request):\n    return render(request, 'main/product2desc.html')\ndef fmcg(request):\n    return render(request, 'byIndustries/FMCG.html')\ndef gaming(request):\n    return render(request, 'byIndustries/Gaming.html')\ndef healthcare(request):\n    return render(request, 'byIndustries/Healthcare.html')\ndef hospitality(request):\n    return render(request, 'byIndustries/Hospitality.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "fmcg",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def fmcg(request):\n    return render(request, 'byIndustries/FMCG.html')\ndef gaming(request):\n    return render(request, 'byIndustries/Gaming.html')\ndef healthcare(request):\n    return render(request, 'byIndustries/Healthcare.html')\ndef hospitality(request):\n    return render(request, 'byIndustries/Hospitality.html')\ndef ites(request):\n    return render(request, 'byIndustries/ITES.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "gaming",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def gaming(request):\n    return render(request, 'byIndustries/Gaming.html')\ndef healthcare(request):\n    return render(request, 'byIndustries/Healthcare.html')\ndef hospitality(request):\n    return render(request, 'byIndustries/Hospitality.html')\ndef ites(request):\n    return render(request, 'byIndustries/ITES.html')\ndef manufacturing(request):\n    return render(request, 'byIndustries/Manufacturing.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "healthcare",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def healthcare(request):\n    return render(request, 'byIndustries/Healthcare.html')\ndef hospitality(request):\n    return render(request, 'byIndustries/Hospitality.html')\ndef ites(request):\n    return render(request, 'byIndustries/ITES.html')\ndef manufacturing(request):\n    return render(request, 'byIndustries/Manufacturing.html')\ndef onDemand(request):\n    return render(request, 'byIndustries/OnDemand.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "hospitality",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def hospitality(request):\n    return render(request, 'byIndustries/Hospitality.html')\ndef ites(request):\n    return render(request, 'byIndustries/ITES.html')\ndef manufacturing(request):\n    return render(request, 'byIndustries/Manufacturing.html')\ndef onDemand(request):\n    return render(request, 'byIndustries/OnDemand.html')\ndef retail(request):\n    return render(request, 'byIndustries/Retail.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "ites",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def ites(request):\n    return render(request, 'byIndustries/ITES.html')\ndef manufacturing(request):\n    return render(request, 'byIndustries/Manufacturing.html')\ndef onDemand(request):\n    return render(request, 'byIndustries/OnDemand.html')\ndef retail(request):\n    return render(request, 'byIndustries/Retail.html')\ndef staffing(request):\n    return render(request, 'byIndustries/Staffing.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "manufacturing",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def manufacturing(request):\n    return render(request, 'byIndustries/Manufacturing.html')\ndef onDemand(request):\n    return render(request, 'byIndustries/OnDemand.html')\ndef retail(request):\n    return render(request, 'byIndustries/Retail.html')\ndef staffing(request):\n    return render(request, 'byIndustries/Staffing.html')\ndef telecom(request):\n    return render(request, 'byIndustries/Telecom.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "onDemand",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def onDemand(request):\n    return render(request, 'byIndustries/OnDemand.html')\ndef retail(request):\n    return render(request, 'byIndustries/Retail.html')\ndef staffing(request):\n    return render(request, 'byIndustries/Staffing.html')\ndef telecom(request):\n    return render(request, 'byIndustries/Telecom.html')\ndef dataCenter(request):\n    return render(request, 'services/Datacenter.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "retail",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def retail(request):\n    return render(request, 'byIndustries/Retail.html')\ndef staffing(request):\n    return render(request, 'byIndustries/Staffing.html')\ndef telecom(request):\n    return render(request, 'byIndustries/Telecom.html')\ndef dataCenter(request):\n    return render(request, 'services/Datacenter.html')\ndef fmsAndamc(request):\n    return render(request, 'services/FMSAndAMCSupport.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "staffing",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def staffing(request):\n    return render(request, 'byIndustries/Staffing.html')\ndef telecom(request):\n    return render(request, 'byIndustries/Telecom.html')\ndef dataCenter(request):\n    return render(request, 'services/Datacenter.html')\ndef fmsAndamc(request):\n    return render(request, 'services/FMSAndAMCSupport.html')\ndef implementationServices(request):\n    return render(request, 'services/ImplementationServices.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "telecom",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def telecom(request):\n    return render(request, 'byIndustries/Telecom.html')\ndef dataCenter(request):\n    return render(request, 'services/Datacenter.html')\ndef fmsAndamc(request):\n    return render(request, 'services/FMSAndAMCSupport.html')\ndef implementationServices(request):\n    return render(request, 'services/ImplementationServices.html')\ndef infrastructure(request):\n    return render(request, 'services/Infrastructure.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "dataCenter",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def dataCenter(request):\n    return render(request, 'services/Datacenter.html')\ndef fmsAndamc(request):\n    return render(request, 'services/FMSAndAMCSupport.html')\ndef implementationServices(request):\n    return render(request, 'services/ImplementationServices.html')\ndef infrastructure(request):\n    return render(request, 'services/Infrastructure.html')\ndef internet(request):\n    return render(request, 'services/Internet.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "fmsAndamc",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def fmsAndamc(request):\n    return render(request, 'services/FMSAndAMCSupport.html')\ndef implementationServices(request):\n    return render(request, 'services/ImplementationServices.html')\ndef infrastructure(request):\n    return render(request, 'services/Infrastructure.html')\ndef internet(request):\n    return render(request, 'services/Internet.html')\ndef security(request):\n    return render(request, 'services/Security.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "implementationServices",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def implementationServices(request):\n    return render(request, 'services/ImplementationServices.html')\ndef infrastructure(request):\n    return render(request, 'services/Infrastructure.html')\ndef internet(request):\n    return render(request, 'services/Internet.html')\ndef security(request):\n    return render(request, 'services/Security.html')\ndef zeroTrustNetwork(request):\n    return render(request, 'services/ZeroTrustNetwork.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "infrastructure",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def infrastructure(request):\n    return render(request, 'services/Infrastructure.html')\ndef internet(request):\n    return render(request, 'services/Internet.html')\ndef security(request):\n    return render(request, 'services/Security.html')\ndef zeroTrustNetwork(request):\n    return render(request, 'services/ZeroTrustNetwork.html')\ndef mobWebDev(request):\n    return render(request, 'services/MobWebDev.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "internet",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def internet(request):\n    return render(request, 'services/Internet.html')\ndef security(request):\n    return render(request, 'services/Security.html')\ndef zeroTrustNetwork(request):\n    return render(request, 'services/ZeroTrustNetwork.html')\ndef mobWebDev(request):\n    return render(request, 'services/MobWebDev.html')\ndef mobilityAndCloud(request):\n    return render(request, 'services/MobilityAndCloud.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "security",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def security(request):\n    return render(request, 'services/Security.html')\ndef zeroTrustNetwork(request):\n    return render(request, 'services/ZeroTrustNetwork.html')\ndef mobWebDev(request):\n    return render(request, 'services/MobWebDev.html')\ndef mobilityAndCloud(request):\n    return render(request, 'services/MobilityAndCloud.html')\ndef networking(request):\n    return render(request, 'services/Networking.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "zeroTrustNetwork",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def zeroTrustNetwork(request):\n    return render(request, 'services/ZeroTrustNetwork.html')\ndef mobWebDev(request):\n    return render(request, 'services/MobWebDev.html')\ndef mobilityAndCloud(request):\n    return render(request, 'services/MobilityAndCloud.html')\ndef networking(request):\n    return render(request, 'services/Networking.html')\ndef serviceList(request):\n    return render(request, 'services/ServiceList.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "mobWebDev",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def mobWebDev(request):\n    return render(request, 'services/MobWebDev.html')\ndef mobilityAndCloud(request):\n    return render(request, 'services/MobilityAndCloud.html')\ndef networking(request):\n    return render(request, 'services/Networking.html')\ndef serviceList(request):\n    return render(request, 'services/ServiceList.html')\ndef windowsArticle(request):\n    return render(request, 'blogsArticle/Windows.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "mobilityAndCloud",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def mobilityAndCloud(request):\n    return render(request, 'services/MobilityAndCloud.html')\ndef networking(request):\n    return render(request, 'services/Networking.html')\ndef serviceList(request):\n    return render(request, 'services/ServiceList.html')\ndef windowsArticle(request):\n    return render(request, 'blogsArticle/Windows.html')\ndef ecoSystem(request):\n    return render(request, 'blogsArticle/Ecosystem.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "networking",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def networking(request):\n    return render(request, 'services/Networking.html')\ndef serviceList(request):\n    return render(request, 'services/ServiceList.html')\ndef windowsArticle(request):\n    return render(request, 'blogsArticle/Windows.html')\ndef ecoSystem(request):\n    return render(request, 'blogsArticle/Ecosystem.html')\ndef cyberSecurity(request):\n    return render(request, 'blogsArticle/Cybersecurity.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "serviceList",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def serviceList(request):\n    return render(request, 'services/ServiceList.html')\ndef windowsArticle(request):\n    return render(request, 'blogsArticle/Windows.html')\ndef ecoSystem(request):\n    return render(request, 'blogsArticle/Ecosystem.html')\ndef cyberSecurity(request):\n    return render(request, 'blogsArticle/Cybersecurity.html')\ndef exploring(request):\n    return render(request, 'blogsArticle/Exploring.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "windowsArticle",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def windowsArticle(request):\n    return render(request, 'blogsArticle/Windows.html')\ndef ecoSystem(request):\n    return render(request, 'blogsArticle/Ecosystem.html')\ndef cyberSecurity(request):\n    return render(request, 'blogsArticle/Cybersecurity.html')\ndef exploring(request):\n    return render(request, 'blogsArticle/Exploring.html')\ndef itService(request):\n    return render(request, 'blogsArticle/ITservices.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "ecoSystem",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def ecoSystem(request):\n    return render(request, 'blogsArticle/Ecosystem.html')\ndef cyberSecurity(request):\n    return render(request, 'blogsArticle/Cybersecurity.html')\ndef exploring(request):\n    return render(request, 'blogsArticle/Exploring.html')\ndef itService(request):\n    return render(request, 'blogsArticle/ITservices.html')\ndef transformative(request):\n    return render(request, 'blogsArticle/Transformative.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "cyberSecurity",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def cyberSecurity(request):\n    return render(request, 'blogsArticle/Cybersecurity.html')\ndef exploring(request):\n    return render(request, 'blogsArticle/Exploring.html')\ndef itService(request):\n    return render(request, 'blogsArticle/ITservices.html')\ndef transformative(request):\n    return render(request, 'blogsArticle/Transformative.html')\ndef sseJobOpeningForm(request):\n    return render(request, 'main/SSEJobOpeningForm.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "exploring",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def exploring(request):\n    return render(request, 'blogsArticle/Exploring.html')\ndef itService(request):\n    return render(request, 'blogsArticle/ITservices.html')\ndef transformative(request):\n    return render(request, 'blogsArticle/Transformative.html')\ndef sseJobOpeningForm(request):\n    return render(request, 'main/SSEJobOpeningForm.html')\ndef uiuxJobOpeningForm(request):\n    return render(request, 'main/UIUXJobOpeningForm.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "itService",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def itService(request):\n    return render(request, 'blogsArticle/ITservices.html')\ndef transformative(request):\n    return render(request, 'blogsArticle/Transformative.html')\ndef sseJobOpeningForm(request):\n    return render(request, 'main/SSEJobOpeningForm.html')\ndef uiuxJobOpeningForm(request):\n    return render(request, 'main/UIUXJobOpeningForm.html')\ndef daJobOpeningForm(request):\n    return render(request, 'main/DAJobOpeningForm.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "transformative",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def transformative(request):\n    return render(request, 'blogsArticle/Transformative.html')\ndef sseJobOpeningForm(request):\n    return render(request, 'main/SSEJobOpeningForm.html')\ndef uiuxJobOpeningForm(request):\n    return render(request, 'main/UIUXJobOpeningForm.html')\ndef daJobOpeningForm(request):\n    return render(request, 'main/DAJobOpeningForm.html')\ndef accountJobOpeningForm(request):\n    return render(request, 'main/accountJobOpeningForm.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "sseJobOpeningForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def sseJobOpeningForm(request):\n    return render(request, 'main/SSEJobOpeningForm.html')\ndef uiuxJobOpeningForm(request):\n    return render(request, 'main/UIUXJobOpeningForm.html')\ndef daJobOpeningForm(request):\n    return render(request, 'main/DAJobOpeningForm.html')\ndef accountJobOpeningForm(request):\n    return render(request, 'main/accountJobOpeningForm.html')\ndef networkJobOpeningForm(request):\n    return render(request, 'main/networkJobOpeningForm.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "uiuxJobOpeningForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def uiuxJobOpeningForm(request):\n    return render(request, 'main/UIUXJobOpeningForm.html')\ndef daJobOpeningForm(request):\n    return render(request, 'main/DAJobOpeningForm.html')\ndef accountJobOpeningForm(request):\n    return render(request, 'main/accountJobOpeningForm.html')\ndef networkJobOpeningForm(request):\n    return render(request, 'main/networkJobOpeningForm.html')\ndef systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "daJobOpeningForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def daJobOpeningForm(request):\n    return render(request, 'main/DAJobOpeningForm.html')\ndef accountJobOpeningForm(request):\n    return render(request, 'main/accountJobOpeningForm.html')\ndef networkJobOpeningForm(request):\n    return render(request, 'main/networkJobOpeningForm.html')\ndef systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')\ndef indexContactForm(request):\n    if request.method == 'POST':",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "accountJobOpeningForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def accountJobOpeningForm(request):\n    return render(request, 'main/accountJobOpeningForm.html')\ndef networkJobOpeningForm(request):\n    return render(request, 'main/networkJobOpeningForm.html')\ndef systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')\ndef indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "networkJobOpeningForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def networkJobOpeningForm(request):\n    return render(request, 'main/networkJobOpeningForm.html')\ndef systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')\ndef indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "systemEngJobOpeningForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')\ndef indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()\n        message = request.POST.get('message', '').strip()\n        user_captcha = request.POST.get('captcha_input', '').strip()",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "indexContactForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()\n        message = request.POST.get('message', '').strip()\n        user_captcha = request.POST.get('captcha_input', '').strip()\n        generated_captcha = request.session.get('generated_captcha', '')\n        # CAPTCHA validation",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "jobForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def jobForm(request):\n    if request.method == 'POST':\n        # Extract form data\n        name = request.POST.get('fullName', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        coverLetter = request.POST.get('coverLetter', '').strip()\n        resume = request.FILES.get('resume')\n        jobPosition = request.POST.get('jobPosition', '').strip()\n        print('resume', resume)",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "startUp",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def startUp(request):\n    return render(request, 'companySize/startUp.html')\ndef enterprices(request):\n    return render(request, 'companySize/enterprise.html')\ndef msme(request):\n    return render(request, 'companySize/msme.html')\ndef getInTouchForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "enterprices",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def enterprices(request):\n    return render(request, 'companySize/enterprise.html')\ndef msme(request):\n    return render(request, 'companySize/msme.html')\ndef getInTouchForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        message = request.POST.get('message', '').strip()",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "msme",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def msme(request):\n    return render(request, 'companySize/msme.html')\ndef getInTouchForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        message = request.POST.get('message', '').strip()\n        email_body = f\"\"\"\n        Name: {name}",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "getInTouchForm",
+        "kind": 2,
+        "importPath": "GrandOrtusapp.views",
+        "description": "GrandOrtusapp.views",
+        "peekOfCode": "def getInTouchForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        message = request.POST.get('message', '').strip()\n        email_body = f\"\"\"\n        Name: {name}\n        Email: {email}\n        Phone No: {phoneNo}",
+        "detail": "GrandOrtusapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.asgi",
+        "description": "GrandOrtusProduction.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "GrandOrtusProduction.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-&@nwe7vcxbc+!(z%sc@%mvla2_p!wpzoh3l+^8ui&7jg$t=8h+'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nEMAIL_ID = config('emailID')\nEMAIL_PASSWORD = config('emailPassword')",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-&@nwe7vcxbc+!(z%sc@%mvla2_p!wpzoh3l+^8ui&7jg$t=8h+'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nEMAIL_ID = config('emailID')\nEMAIL_PASSWORD = config('emailPassword')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\nEMAIL_ID = config('emailID')\nEMAIL_PASSWORD = config('emailPassword')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\nEMAIL_ID = config('emailID')\nEMAIL_PASSWORD = config('emailPassword')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_ID",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "EMAIL_ID = config('emailID')\nEMAIL_PASSWORD = config('emailPassword')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PASSWORD",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "EMAIL_PASSWORD = config('emailPassword')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'GrandOrtusapp',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'GrandOrtusapp',\n]\nMIDDLEWARE = [",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'GrandOrtusProduction.urls'",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "ROOT_URLCONF = 'GrandOrtusProduction.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / \"templates\"],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / \"templates\"],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'GrandOrtusProduction.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.settings",
+        "description": "GrandOrtusProduction.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "GrandOrtusProduction.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.urls",
+        "description": "GrandOrtusProduction.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('GrandOrtusapp.urls')),\n]",
+        "detail": "GrandOrtusProduction.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "GrandOrtusProduction.wsgi",
+        "description": "GrandOrtusProduction.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "GrandOrtusProduction.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'GrandOrtusProduction.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

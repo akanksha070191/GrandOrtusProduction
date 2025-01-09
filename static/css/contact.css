@@ -107,7 +107,7 @@
 }
 
 .mad-header {
-    background-color: #2575fc;
+    background-color: #575757;
     color: var(--color);
     font-weight: bold;
     padding: 10px;
@@ -122,6 +122,6 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.map-embed iframe {
+/* .map-embed iframe {
     border-radius: 50px 0 50px;
-}
+} */

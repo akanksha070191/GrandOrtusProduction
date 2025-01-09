@@ -18,7 +18,7 @@
   <!-- CSS Link -->
 
   {% block csslink %}{% endblock csslink %}
-  <link rel="stylesheet" href="/static/css/Style.css" />
+  <link rel="stylesheet" href="/static/css/Style.css?v=1.1" />
   <!-- responsive link -->
   <link rel="stylesheet" href="/static/css/responsive.css">
 
@@ -32,6 +32,9 @@
 
   <script src="/static/js/dropdown.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/js/GetInTouch.js" defer></script>
+  <script src="/static/js/getInTouchFormValidation.js" defer></script>
+
 
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -121,7 +124,7 @@
 
             <!-- Solutions Dropdown -->
 
-            <li class="nav-item dropdown me-3 py-2 position-static">
+            <li class="nav-item dropdown me-3 py-2 position-relative">
               <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Solutions
@@ -143,10 +146,12 @@
                     <a class="dropdown-item" href="{% url "ImplementationServices" %}">Implementation Services</a>
                     <a class="dropdown-item" href="{% url "Infrastructure" %}">IT Infrastructure Consulting</a>
                     <a class="dropdown-item" href="{% url "Datacenter" %}">Datacenter Infra Design & Deployment</a>
-                    <a class="dropdown-item" href="{% url "Networking" %}">Networking and Security</a>
+                    <a class="dropdown-item" href="{% url "Networking" %}">Networking and Intranet</a>
+                    <a class="dropdown-item" href="{% url "MobWebDev" %}">Mobile App & Web Development</a>
                     <a class="dropdown-item" href="{% url "MobilityAndCloud" %}">Mobility and Cloud</a>
-                    <a class="dropdown-item" href="{% url "Internet" %}">Intranet</a>
+                    <a class="dropdown-item" href="{% url "Security" %}">Cyber Security</a>
                     <a class="dropdown-item" href="{% url "FMSAndAMCSupport" %}">FMS and AMC Support</a>
+                    <a class="dropdown-item" href="{% url "ZeroTrustNetwork" %}">Zero Trust Network Framework</a>
                   </div>
                   
                   <!-- By Industries Section -->
@@ -169,11 +174,8 @@
           </ul>
 
           <!-- Get a Quote Button -->
-          <form class="d-flex">
-            <button class="btn shadow-none" type="submit">
-              <a href="{% url "Contact" %}">Get a Quote</a>
-            </button>
-          </form>
+          <!-- Get a Quote Button -->
+          <button class="btn shadow-none" type="button" id="getQuoteBtn">Get a Quote</button>
         </div>
       </div>
     </nav>
@@ -226,7 +228,7 @@
           <p><a href="{% url "Blog" %}" class="text-light pb-1">Blogs</a></p>
           <p><a href="{% url "LifeGrandOrtus" %}" class="text-light pb-1">Life @ GrandOrtus</a></p>
           <p><a href="{% url "CaseStudy" %}" class="text-light pb-1">Case Studies</a></p>
-          <p><a href="{% url "Healthcare" %}" class="text-light pb-1">Healthcare Industry</a></p>
+          <p><a href="{% url "ITES" %}" class="text-light pb-1">Industry</a></p>
           <p><a href="{% url "Contact" %}" class="text-light pb-1">Contact Us</a></p>
         </div>
 
@@ -247,6 +249,28 @@
         <p class="mb-0 me-0">ISO/IEC 27001:2022 ISO 9001:2015</p>
       </div>
   </footer>
+
+  <!-- get in touch form start -->
+
+  <div id="formContainer" class="form-container">
+    <form id="getInTouchForm" action="/getInTouchForm/" method="POST" class="form-Getintouch">
+      {% csrf_token %}
+      <input type="text" class="form-control mb-3" name="name" id="getname" placeholder="Name" onblur="validateGetName()">
+      <div id="getname-error" class="error-message"></div>
+  
+      <input type="email" class="form-control mb-3" name="email" id="getemail" placeholder="Email" onblur="validateGetEmail()">
+      <div id="getemail-error" class="error-message"></div>
+  
+      <input type="tel" class="form-control mb-3" name="phone" id="getphone" placeholder="Phone" onblur="validateGetPhone()">
+      <div id="getphone-error" class="error-message"></div>
+  
+      <textarea class="form-control mb-3" name="message" id="getmessage" rows="3" placeholder="Messages" required></textarea>
+  
+      <button type="submit" class="send-btn btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+<!-- get in touch form end -->
 
 
   <!-- Sticky Navbar -->

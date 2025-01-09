@@ -1,7 +1,7 @@
 let generatedCaptcha;
 
 function generateCaptcha() {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     generatedCaptcha = Array.from({ length: 6 }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join('');
     document.getElementById('captcha-code').innerText = generatedCaptcha;
 }
