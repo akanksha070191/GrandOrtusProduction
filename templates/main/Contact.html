@@ -41,42 +41,54 @@
     <!-- contact-add-card section -->
 
     <div class="container my-5">
-        <div class="row gy-4">
+        <div class="row gy-4 justify-content-center">
             <!-- India Office -->
             <div class="col-md-4">
                 <div class="location-box india">
-                    <h5>India Office</h5>
-                    <p><i class="bi bi-geo-alt icon"></i> D 14/31, Block E, Ardee City, Sector 52, Gurugram, Haryana 122003</p>
-                    <p><i class="bi bi-telephone icon"></i>  +91 9899950003</p>
-                    <p><i class="bi bi-envelope icon"></i> <a href="mailto:info@grandortus.com"
-                            style="color: #00d4ff;">info@grandortus.com</a></p>
+                    <h5 >India Office</h5>
+                    <ul style="list-style: none;">
+                        <li style="display: flex;  margin-bottom: 10px;" >
+                            <i class="bi bi-geo-alt icon" ></i>
+                            <span>D 14/31, Block E, Ardee City, Sector 52, Gurugram, Haryana 122003</span>
+                        </li>
+                        <li style="display: flex;  margin-bottom: 10px;" >
+                            <i class="bi bi-telephone icon" ></i>
+                            <span>+91 9899950003</span>
+                        </li>
+                        <li >
+                            <i class="bi bi-envelope icon" ></i>
+                            <a href="mailto:info@grandortus.com" style="color: #00d4ff; text-decoration: none;">info@grandortus.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            
+            
             <!-- Australia Office -->
             <div class="col-md-4">
-                <div class="location-box australia">
-                    <h5>Australia Office</h5>
-                    <p><i class="bi bi-geo-alt icon"></i> 23 Rosetta Street, Schofields 2762, NSW, Australia</p>
-                    <p><i class="bi bi-telephone icon"></i> +61 473 123 937</p>
-                    <p><i class="bi bi-envelope icon"></i> <a href="mailto:info@grandortus.com.au"
-                            style="color: #00d4ff;">info@grandortus.com.au</a></p>
+                <div class="location-box australia" >
+                    <h5 >Australia Office</h5>
+                    <ul style="list-style: none;" >
+                        <li style="display: flex;  margin-bottom: 10px;" >
+                            <i class="bi bi-geo-alt icon" ></i>
+                            <span>23 Rosetta Street, Schofields 2762, NSW, Australia</span>
+                        </li>
+                        <li style="display: flex;  margin-bottom: 10px;" >
+                            <i class="bi bi-telephone icon" ></i>
+                            <span>+61 473 123 937</span>
+                        </li>
+                        <li >
+                            <i class="bi bi-envelope icon" ></i>
+                            <a href="https://mail.google.com/mail/?view=cm&to=info@grandortus.com.au" style="color: #00d4ff; text-decoration: none;">
+                                info@grandortus.com.au
+                              </a>
+                             </li>
+                    </ul>
                 </div>
             </div>
-            <!-- UK Office -->
-            <div class="col-md-4">
-                <div class="location-box uk">
-                    <h5>UK Office</h5>
-                    <p><i class="bi bi-geo-alt icon"></i> 9 Primrose Court, Chiltern Road, Dunstable LU6 1HH</p>
-                    <p><i class="bi bi-telephone icon"></i> +91 98580 14222</p>
-                    <p><i class="bi bi-envelope icon"></i> <a href="mailto:saquib@grandortus.com"
-                            style="color: #00d4ff;">saquib@grandortus.com</a></p>
-                </div>
-            </div>
+            
         </div>
     </div>
-
-
-
 
     <!-- ----Contact Us Section---- -->
 
@@ -175,7 +187,7 @@
     <!-- Map Section -->
     <section class="py-5 section-style">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-around">
                 <div class="col-lg-4">
                     <h4 class="text-center mb-0 mad-header">India Office</h4>
                     <div class="map-embed">
@@ -191,12 +203,12 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.113792283053!2d150.86713497428806!3d-33.706004310642875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129ea489d029b3%3A0x572e90fdfcb8f2dd!2s23%20Rosetta%20St%2C%20Schofields%20NSW%202762%2C%20Australia!5e0!3m2!1sen!2sin!4v1733548900902!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                {% comment %} <div class="col-lg-4">
                     <div class="map-embed">
                         <h4 class="text-center mb-0 mad-header">UK Office</h4>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.55260955574!2d-0.5340409246948888!3d51.887378682875664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764fa967daf141%3A0xd90b90a7442962e5!2sChiltern%20Rd%2C%20Dunstable%2C%20UK!5e0!3m2!1sen!2sin!4v1734065784030!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
 
         </div>
