@@ -904,8 +904,17 @@
       <div id="getphone-error" class="error-message"></div>
   
       <textarea class="form-control mb-3" name="message" id="getmessage" rows="3" placeholder="Messages" required></textarea>
-  
-      <button type="submit" class="send-btn btn btn-primary">Submit</button>
+
+      <div class="captcha">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span id="quote-captcha-code" class="captcha-code"></span>
+            <button type="button" onclick="generateQuoteCaptcha()" class="refresh">↻</button>
+        </div>
+        <input type="hidden" name="generated_captcha" value="{{ captcha_code }}">
+        <input type="text" id="quote-captcha-input" class="cpfill mt-2" placeholder="Enter CAPTCHA" required>
+        <div id="quote-captcha-message" class="error-message mt-2"></div>
+    </div>
+    <button type="submit" class="send-btn" id="submit" onclick="return validateQuoteCaptcha()">Submit</button>
     </form>
   </div>
 
