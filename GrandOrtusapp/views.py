@@ -186,7 +186,7 @@ def indexContactForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "test@grandortus.com"  # Replace with your recipient address
+        recipient_email = "bizop@grandortus.com"  # Replace with your recipient address
 
         try:
             # Create the email message
@@ -242,7 +242,7 @@ def jobForm(request):
         # Sender and recipient email
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "akanksha@grandortus.com"
+        recipient_email = "bizop@grandortus.com"
 
         try:
             # Create email message with attachment (if provided)
@@ -380,7 +380,7 @@ def getInTouchForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
+        recipient_email = "bizop@grandortus.com"  # Replace with your recipient address
 
         try:
             # Create the email message
