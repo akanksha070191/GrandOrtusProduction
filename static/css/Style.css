@@ -55,7 +55,7 @@ h1 {
 }
 
 .navbar-brand img {
-    width: 190px;
+    width: 160px;
 }
 
 .navbar .btn {
@@ -312,7 +312,7 @@ section.hero {
 
 
 .heading-sec h1 {
-    font-size: var(--primary-size);
+    font-size: 40px;
     color: var(--color);
     font-weight: 500;
 }
