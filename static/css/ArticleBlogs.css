@@ -92,4 +92,29 @@
     margin-top: 15px;
     border-radius: 8px;
 }
+.blog-section {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    margin-top: 20px;
+}
 
+.blog-item {
+    margin-bottom: 20px;
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.blog-item p {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.blog-item a {
+    text-decoration: none;
+    font-size: 12px;
+}
