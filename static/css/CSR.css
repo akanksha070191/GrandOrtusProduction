@@ -30,3 +30,9 @@
     z-index: 1;
     color:var(--color);
 }
+.csr-title{
+    font-size: 26px;
+}
+h3 .csr-text{
+    font-size: 15px;
+}
