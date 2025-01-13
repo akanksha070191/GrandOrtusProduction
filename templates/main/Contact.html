@@ -11,6 +11,7 @@
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/Contact.css">
 <script src="/static/js/FormValidation.js" defer></script>
+
 {% endblock csslink %}
 
 
@@ -172,7 +173,18 @@
                             <div class="mb-3">
                               <textarea class="form-control" name="message" id="message" rows="4" placeholder="Messages" required></textarea>
                             </div>
-                            <button type="submit" class="send-btn" id="submit">Submit</button>
+
+                            <div class="captcha">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span id="contact-captcha-code" class="captcha-code"></span>
+                                    <button type="button" onclick="generateContactUsCaptcha()" class="refresh">↻</button>
+                                </div>
+                                <input type="hidden" name="generated_captcha" value="{{ captcha_code }}">
+                                <input type="text" id="contact-captcha-input" class="cpfill mt-2" placeholder="Enter CAPTCHA" required>
+                                <div id="contact-captcha-message" class="error-message mt-2"></div>
+                            </div>
+                            <button type="submit" class="send-btn" id="submit" onclick="return validateContactUsCaptcha()">Submit</button>
+                  
                           </form>
                     </div>
 

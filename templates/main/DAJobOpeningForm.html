@@ -11,6 +11,7 @@
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/JobOpeningForm.css">
 <script src="/static/js/JobOpeningForm.js" defer></script>
+<script src="/static/js/jobDescCaptcha.js" defer></script>
 {% endblock csslink %}
 
 
@@ -48,7 +49,7 @@
                         <div class="job-details">
                             <p><i class="bi bi-briefcase"></i> <strong>Job Category:</strong> Data Analyst</p>
                             <p><i class="bi bi-arrow-right-circle"></i> <strong>Job Type:</strong> Full Time</p>
-                            <p><i class="bi bi-geo-alt"></i> <strong>Job Location:</strong> Remote</p>
+                            <p><i class="bi bi-geo-alt"></i> <strong>Job Location:</strong> Hybrid</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +109,17 @@
                                 <div class="invalid-feedback">You must agree to the terms and conditions to proceed.
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="captcha">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span id="da-captcha-code" class="captcha-code"></span>
+                                    <button type="button" onclick="generateDACaptcha()" class="refresh">↻</button>
+                                </div>
+                                <input type="hidden" name="generated_captcha" value="{{ captcha_code }}">
+                                <input type="text" id="da-captcha-input" class="cpfill mt-2" placeholder="Enter CAPTCHA" required>
+                                <div id="da-captcha-message" class="error-message mt-2"></div>
+                            </div>
+                            <button type="submit" class="send-btn" id="submit" onclick="return validateDACaptcha()">Submit</button>
+                            
                         </form>
                     </div>
                 </div>

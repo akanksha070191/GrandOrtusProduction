@@ -166,13 +166,6 @@ def indexContactForm(request):
         phoneNo = request.POST.get('phone', '').strip()
         services = request.POST.get('services', '').strip()
         message = request.POST.get('message', '').strip()
-        user_captcha = request.POST.get('captcha_input', '').strip()
-        generated_captcha = request.session.get('generated_captcha', '')
-
-        # CAPTCHA validation
-        if user_captcha != generated_captcha:
-            return JsonResponse({'error': 'Invalid CAPTCHA. Please try again.'}, status=400)
-
 
         email_body = f"""
         Name: {name}
@@ -186,7 +179,7 @@ def indexContactForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "test@grandortus.com"  # Replace with your recipient address
+        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
 
         try:
             # Create the email message
@@ -211,7 +204,7 @@ def indexContactForm(request):
                     server.login(sender_email, sender_password)
                     server.send_message(email_msg)
 
-            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})    
+            return render(request, 'main/index.html', {'success_message': "Thanks for your query, We'll get back to you soon!!"})    
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 
@@ -345,7 +338,7 @@ def jobForm(request):
                             message
                         )
 
-            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})
+            return render(request, 'main/index.html', {'success_message': "Job Form Submitted,, Get back to you Soon!!"})
 
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
@@ -372,7 +365,6 @@ def getInTouchForm(request):
         Name: {name}
         Email: {email}
         Phone No: {phoneNo}
-        Message: {message}
         Message:
         {message}
         """
@@ -405,7 +397,7 @@ def getInTouchForm(request):
                     server.login(sender_email, sender_password)
                     server.send_message(email_msg)
 
-            return render(request, 'main/index.html', {'success_message': "Form submitted successfully!"})    
+            return render(request, 'main/index.html', {'success_message': "Thanks for your query, we'll get back to you soon!!"})    
         except Exception as e:
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 

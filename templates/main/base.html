@@ -32,6 +32,7 @@
 
   <script src="/static/js/dropdown.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/js/Captcha.js" defer></script>
   <script src="/static/js/GetInTouch.js" defer></script>
   <script src="/static/js/getInTouchFormValidation.js" defer></script>
 
@@ -130,7 +131,7 @@
                 Solutions
               </a>
               <div class="dropdown-menu p-3 megamenu dropdown-wide" aria-labelledby="solutionsDropdown">
-                <div class="d-flex">
+                <div class="soludro d-flex">
                   <!-- Company Size Section -->
                   <div class="dropdown-column">
                     <h6 class="dropdown-header">Company Size</h6>
@@ -203,9 +204,20 @@
         <!-- Contact Information -->
         <div class="col-md-3 col-lg-3  mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">Get in Touch</h6>
-          <p class="my-lg-4"><i class="fas fa-map-marker-alt mr-2"></i> 23 Rosetta Street, Schofields 2762, NSW, Australia.</p>
-          <p><i class="fas fa-envelope mr-2"></i> info@grandortus.com</p>
-          <p><i class="fas fa-phone mr-2"></i> 01244233760, +919899950003</p>
+          <div >
+            <p class="my-lg-4" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-map-marker-alt" style="font-size: 18px; color: #0090d2; margin-right: 8px;"></i>
+                <span>23 Rosetta Street, Schofields 2762, NSW, Australia</span>
+            </p>
+            <p style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-envelope" style="font-size: 18px; color: #0090d2; margin-right: 8px;"></i>
+                <a href="mailto:info@grandortus.com" style="color: #0090d2; text-decoration: none;">info@grandortus.com</a>
+            </p>
+            <p style="display: flex; align-items: center; ">
+                <i class="fas fa-phone" style=" color: #0090d2; margin-right: 8px;"></i>
+                <span>+61 473 123 937,<br> +91 9899950003</span>
+            </p>
+        </div>
         </div>
 
         <!-- Service Links -->
@@ -264,7 +276,16 @@
   
       <textarea class="form-control mb-3" name="message" id="getmessage" rows="3" placeholder="Messages" required></textarea>
   
-      <button type="submit" class="send-btn btn btn-primary">Submit</button>
+      <div class="captcha">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span id="quote-captcha-code" class="captcha-code"></span>
+            <button type="button" onclick="generateQuoteCaptcha()" class="refresh">↻</button>
+        </div>
+        <input type="hidden" name="generated_captcha" value="{{ captcha_code }}">
+        <input type="text" id="quote-captcha-input" class="cpfill mt-2" placeholder="Enter CAPTCHA" required>
+        <div id="quote-captcha-message" class="error-message mt-2"></div>
+    </div>
+    <button type="submit" class="send-btn" id="submit" onclick="return validateQuoteCaptcha()">Submit</button>
     </form>
   </div>
 

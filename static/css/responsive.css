@@ -215,4 +215,7 @@
         left: 75%;
 
     }
+    #getQuoteBtn{
+        display: none;
+    }
 }
