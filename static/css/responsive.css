@@ -145,6 +145,10 @@
         height: 200px;
     }
 
+    .msme-img{
+        display: none;
+    }
+
     .dropdown-wide {
         max-height: 50vh;
         overflow-y: scroll;
