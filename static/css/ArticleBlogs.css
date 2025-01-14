@@ -103,9 +103,11 @@
 }
 
 .blog-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 150px;
+    height: 66px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-item p {

@@ -1053,7 +1053,7 @@ section.hero {
 }
 
 .workflow-step:last-child .workflow-circle {
-    right: 45%;
+    right: 46%;
 }
 
 .workflow-step:not(:first-child):not(:last-child) .workflow-circle {
