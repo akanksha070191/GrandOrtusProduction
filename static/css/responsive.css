@@ -13,7 +13,7 @@
     .soludro {
         flex-direction: column;
     }
-    
+
     section.hero {
         height: 50vh !important;
     }
@@ -21,7 +21,8 @@
     .Copyright {
         justify-content: center !important;
     }
-    .iso-iec{
+
+    .iso-iec {
         display: none;
     }
 
@@ -145,7 +146,7 @@
         height: 200px;
     }
 
-    .msme-img{
+    .msme-img {
         display: none;
     }
 
@@ -162,12 +163,91 @@
         top: 40px !important;
         width: 100% !important;
     }
+
     /* *, ::after, ::before {
         border: none !important;
     }
 */
-}
 
+    .grand-img::after {
+        content: "";
+        border: 6px solid var(--primary-color);
+        width: 218px;
+        height: 255px;
+    }
+
+    .grand-img::after {
+        content: "";
+        border: 6px solid var(--primary-color);
+        width: 300px;
+        height: 304px;
+        position: absolute;
+        top: 20px;
+        right: -2px;
+        z-index: -1;
+    }
+
+    /* Blog Section */
+
+    .image-container::after {
+        content: "";
+        border: 6px solid var(--primary-color);
+        width: 273px;
+        height: 312px;
+        position: absolute;
+        top: -2px;
+        right: 24px;
+        z-index: -1;
+        border: none;
+    }
+
+    .image-container img {
+        width: 328px;
+        height: 308px;
+    }
+
+    /* case study */
+    .image-health-container::after {
+        content: "";
+        border: 6px solid var(--primary-color);
+        background-color: var(--primary-color);
+        width: 283px;
+        height: 293px;
+        position: absolute;
+        top: 24px;
+        right: 73px;
+        z-index: -1;
+    }
+    .challenge-desc-image::after {
+        content: "";
+        border: 5px solid #597fb0;
+        width: 395px;
+        height: 385px;
+        position: absolute;
+        top: 30px;
+        right: 255px;
+        z-index: -1;
+        border: none;
+    }
+    .challenge-desc-image img {
+        width: 650px;
+        height: 350px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+/* product Section */
+    .product-img::after {
+        content: "";
+        border: 6px solid var(--primary-color);
+        width: 382px;
+        height: 370px;
+        position: absolute;
+        top: 2px;
+        right: 76px;
+        z-index: -1;
+    }
+
+}
 
 /* Responsive Design work flow chart */
 
@@ -215,7 +295,8 @@
         left: 75%;
 
     }
-    #getQuoteBtn{
+
+    #getQuoteBtn {
         display: none;
     }
 }

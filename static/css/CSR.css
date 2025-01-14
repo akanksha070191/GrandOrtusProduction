@@ -30,9 +30,13 @@
     z-index: 1;
     color:var(--color);
 }
-.csr-title{
-    font-size: 26px;
+.csr-sec p{
+font-size: 15px;
 }
-h3 .csr-text{
-    font-size: 15px;
+.csr-title {
+    font-size: 30px;
+}
+.csr-text{
+    font-size: 18px;
+    margin: 10px 0px 10px;
 }
