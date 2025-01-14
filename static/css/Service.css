@@ -70,15 +70,3 @@
     color:var(--primary-color);
     /* cursor: pointer; */
 }
-
-
-
-@media (max-width: 768px) {
-    .service-content {
-        text-align: center;
-    }
-
-    .service-list li {
-        justify-content: center;
-    }
-}

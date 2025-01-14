@@ -634,7 +634,7 @@
         "kind": 2,
         "importPath": "GrandOrtusapp.views",
         "description": "GrandOrtusapp.views",
-        "peekOfCode": "def systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')\ndef indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()\n        message = request.POST.get('message', '').strip()\n        user_captcha = request.POST.get('captcha_input', '').strip()",
+        "peekOfCode": "def systemEngJobOpeningForm(request):\n    return render(request, 'main/systemEngJobOpeningForm.html')\ndef indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()\n        message = request.POST.get('message', '').strip()\n        email_body = f\"\"\"",
         "detail": "GrandOrtusapp.views",
         "documentation": {}
     },
@@ -643,7 +643,7 @@
         "kind": 2,
         "importPath": "GrandOrtusapp.views",
         "description": "GrandOrtusapp.views",
-        "peekOfCode": "def indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()\n        message = request.POST.get('message', '').strip()\n        user_captcha = request.POST.get('captcha_input', '').strip()\n        generated_captcha = request.session.get('generated_captcha', '')\n        # CAPTCHA validation",
+        "peekOfCode": "def indexContactForm(request):\n    if request.method == 'POST':\n        name = request.POST.get('name', '').strip()\n        email = request.POST.get('email', '').strip()\n        phoneNo = request.POST.get('phone', '').strip()\n        services = request.POST.get('services', '').strip()\n        message = request.POST.get('message', '').strip()\n        email_body = f\"\"\"\n        Name: {name}\n        Email: {email}",
         "detail": "GrandOrtusapp.views",
         "documentation": {}
     },
