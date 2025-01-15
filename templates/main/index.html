@@ -91,7 +91,7 @@
                 <li class="dropdown dropend">
                   <a class="dropdown-item dropdown-toggle" href="#" id="careerDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">Career</a>
-                  <ul class="dropdown-menu submenu " aria-labelledby="careerDropdown">
+                  <ul class="dropdown-menu submenu responsive-drop" aria-labelledby="careerDropdown">
                     <li><a class="dropdown-item" href="{% url "LifeGrandOrtus" %}">Life Grand Ortus</a></li>
                     <li><a class="dropdown-item" href="{% url "CurrentJobOpening" %}">Current Openings</a></li>
                     <li><a class="dropdown-item" href="{% url "CSR" %}">Corporate social
@@ -197,7 +197,7 @@
       <div class="row  align-items-center pt-4">
         <div class="col-lg-7 col-md-12 col-12">
           <div class="left-item">
-            <div class="heading-sec ">
+            <div class="main-hero-sec">
               <h1>Transform your business with <br> cutting-edge IT Solutions</h1>
               <p>We are an IT system integrator</p>
             </div>
@@ -562,8 +562,8 @@
     <div class="container text-center">
       <h4 blog-title>Blogs and News</h4>
       <h1 class="blog-heading mb-3">our last blog and news</h1>
-      <div class="row">
-        <div class="col-lg-4">
+      <div class="row g-4 justify-content-center align-content-center">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Windows vs. Linux.png" class="card-img-top" alt="Image 1">
             <div class="card-body">
@@ -575,7 +575,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Exploring.png" class="card-img-top" alt="Image 2">
             <div class="card-body">
@@ -587,7 +587,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="card  shadow-sm h-100">
             <img src="/static/images/Transformative.png" class="card-img-top" alt="Image 2">
             <div class="card-body">
@@ -1013,15 +1013,15 @@
             autoplay: true,
           },
           480: {
-            items: 1,
+            items: 2,
             autoplay: true,
           },
           568: {
-            items: 1,
+            items: 2,
             autoplay: true,
           },
           768: {
-            items: 1,
+            items: 2,
           },
           992: {
             items: 1,
