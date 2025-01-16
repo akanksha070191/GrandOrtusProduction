@@ -213,6 +213,12 @@ body.no-scroll {
     border: none;
 }
 
+/* .responsive-drop{
+        position: absolute;
+        left: 177px;
+        top: 2px;
+} */
+
 .dropdown-menu {
     transition: all 0.3s ease-in-out;
 }
@@ -311,13 +317,13 @@ section.hero {
 }
 
 
-.heading-sec h1 {
+.main-hero h1 {
     font-size: 40px;
     color: var(--color);
     font-weight: 500;
 }
 
-.heading-sec p {
+.main-hero p {
     font-size: var(--secondary-size);
     color: #cfcccc;
 
