@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/ArticleBlogs.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 <body>
 {% block content %}
@@ -45,126 +46,174 @@
           </div>
       </div>
 
-
+    </div>
   </section>
+</div> 
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">1. Efficiency and Productivity </div>
-      <div class="article-body px-2">
-          <ul>
-              <li> One of the primary advantages of IoT devices in industries is their ability to enhance
-                  operational efficiency. By connecting machinery, equipment, and even entire factories to the
-                  internet, businesses can gather real-time data on performance, utilization, and maintenance
-                  needs. This data allows for predictive maintenance, reducing downtime and preventing costly
-                  breakdowns. Moreover, IoT-enabled automation streamlines processes, improving productivity and
-                  reducing human error.
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="article">
+                <div class="article-header  p-2  text-white">1. Efficiency and Productivity </div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> One of the primary advantages of IoT devices in industries is their ability to enhance
+                            operational efficiency. By connecting machinery, equipment, and even entire factories to the
+                            internet, businesses can gather real-time data on performance, utilization, and maintenance
+                            needs. This data allows for predictive maintenance, reducing downtime and preventing costly
+                            breakdowns. Moreover, IoT-enabled automation streamlines processes, improving productivity and
+                            reducing human error.
 
-                  Connected Manufacturing: Industrial robots, already commonplace on factory floors, can now be
-                  extended through IoT. By connecting robots to smart devices, we enable them to communicate,
-                  share data, and coordinate autonomously. This data exchange enhances robotic efficiency,
-                  productivity, and safety.</li>
+                            Connected Manufacturing: Industrial robots, already commonplace on factory floors, can now be
+                            extended through IoT. By connecting robots to smart devices, we enable them to communicate,
+                            share data, and coordinate autonomously. This data exchange enhances robotic efficiency,
+                            productivity, and safety.</li>
 
-          </ul>
-      </div>
-  </div>
-
-
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">2. Predictive Maintenance</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> Imagine a world where equipment breakdowns are minimized. Thanks to IoT-enabled predictive
-                  maintenance, this vision is becoming a reality. By analyzing real-time data from sensors,
-                  companies can predict when machinery requires maintenance.</li>
-
-          </ul>
-      </div>
-  </div>
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">3. Energy Efficiency and Sustainability</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>IoT in manufacturing isn’t just about productivity; it’s also about sustainability. Real-time
-                  monitoring of production lines can lead to significant energy savings.</li>
-
-          </ul>
-      </div>
-  </div>
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">4. Supply Chain Optimization</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>In today’s fast-paced world, supply chain optimization is critical. IoT solutions enhance
-                  operational efficiency, improve production and delivery speeds, and automate repetitive tasks.
-              </li>
-
-          </ul>
-      </div>
-  </div>
+                    </ul>
+                </div>
+            </div>
 
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">5. End-to-End Visibility</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>IoT provides end-to-end visibility across the manufacturing process. From raw materials to
-                  finished products, companies can track assets, monitor quality, and ensure compliance. This
-                  transparency streamlines operations and boosts customer confidence.
-              </li>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header  p-2  text-white">6. Safety and Risk Mitigation</div>
-      <div class="article-body px-2">
-          <p>Safety is paramount in any industry. IoT devices enhance workplace safety by:</p>
-          <ul>
-              <li>Monitoring Hazardous Environments: Sensors can detect dangerous conditions and alert workers.
-              </li>
-              <li>Predicting Equipment Failures: Early warnings prevent accidents.
-              </li>
-              <li>Ensuring Compliance: IoT ensures adherence to safety regulations.
+            <div class="article">
+                <div class="article-header  p-2  text-white">2. Predictive Maintenance</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> Imagine a world where equipment breakdowns are minimized. Thanks to IoT-enabled predictive
+                            maintenance, this vision is becoming a reality. By analyzing real-time data from sensors,
+                            companies can predict when machinery requires maintenance.</li>
 
-              </li>
+                    </ul>
+                </div>
+            </div>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header  p-2  text-white">7. Data-Driven Decision-Making</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>IoT generates a wealth of data. By analyzing this data, manufacturers gain actionable insights.
-                  Whether optimizing production schedules or fine-tuning processes, data-driven decisions lead to
-                  better outcomes.</li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">3. Energy Efficiency and Sustainability</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IoT in manufacturing isn’t just about productivity; it’s also about sustainability. Real-time
+                            monitoring of production lines can lead to significant energy savings.</li>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header  p-2  text-white">8. Industry 4.0 and Beyond</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>IoT is the cornerstone of Industry 4.0—the convergence of physical and digital technologies. As
-                  we embrace automation, artificial intelligence, and edge computing, IoT remains at the heart of
-                  this transformative journey.
+                    </ul>
+                </div>
+            </div>
 
-                  In conclusion, IoT devices are more than mere gadgets; they’re catalysts for change. From smart
-                  factories to connected supply chains, the benefits of IoT are reshaping industries, propelling
-                  us toward a more efficient, sustainable, and interconnected future.
+            <div class="article">
+                <div class="article-header  p-2  text-white">4. Supply Chain Optimization</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>In today’s fast-paced world, supply chain optimization is critical. IoT solutions enhance
+                            operational efficiency, improve production and delivery speeds, and automate repetitive tasks.
+                        </li>
 
-                  So, let’s embrace the transformative power of IoT and embark on this exciting journey beyond
-                  connectivity.
-              </li>
+                    </ul>
+                </div>
+            </div>
 
-          </ul>
-      </div>
-  </div>
 
+            <div class="article">
+                <div class="article-header  p-2  text-white">5. End-to-End Visibility</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IoT provides end-to-end visibility across the manufacturing process. From raw materials to
+                            finished products, companies can track assets, monitor quality, and ensure compliance. This
+                            transparency streamlines operations and boosts customer confidence.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">6. Safety and Risk Mitigation</div>
+                <div class="article-body px-2">
+                    <p>Safety is paramount in any industry. IoT devices enhance workplace safety by:</p>
+                    <ul>
+                        <li>Monitoring Hazardous Environments: Sensors can detect dangerous conditions and alert workers.
+                        </li>
+                        <li>Predicting Equipment Failures: Early warnings prevent accidents.
+                        </li>
+                        <li>Ensuring Compliance: IoT ensures adherence to safety regulations.
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">7. Data-Driven Decision-Making</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IoT generates a wealth of data. By analyzing this data, manufacturers gain actionable insights.
+                            Whether optimizing production schedules or fine-tuning processes, data-driven decisions lead to
+                            better outcomes.</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">8. Industry 4.0 and Beyond</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IoT is the cornerstone of Industry 4.0—the convergence of physical and digital technologies. As
+                            we embrace automation, artificial intelligence, and edge computing, IoT remains at the heart of
+                            this transformative journey.
+
+                            In conclusion, IoT devices are more than mere gadgets; they’re catalysts for change. From smart
+                            factories to connected supply chains, the benefits of IoT are reshaping industries, propelling
+                            us toward a more efficient, sustainable, and interconnected future.
+
+                            So, let’s embrace the transformative power of IoT and embark on this exciting journey beyond
+                            connectivity.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="blog-section">
+                <!-- <h5>Insights, Trends, and Innovations in Networking and Software</h5> -->
+                <input type="text" id="searchBox" class="form-control my-3" placeholder="Search..." onkeyup="searchContent()">
+                <div class="blog-list">
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Windows vs. Linux.png" alt="Exploring the Future of Technology"
+                            class="img-fluid mb-2">
+                            <p><strong>Windows vs. Linux: Unraveling the Battle of Operating Systems</strong></p>
+                            <a href="{% url "Windows" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Exploring.png" alt="Windows vs. Linux" class="img-fluid mb-2">
+                        <p><strong>Exploring the Future of Technology: A Glimpse into Tomorrow</strong></p>
+                        <a href="{% url "Exploring" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Transformative.png" alt="IT Industry Ecosystem" class="img-fluid mb-2">
+                        <p><strong>The Transformative Power of IoT in Industries: A Journey Beyond
+                            Connectivity</strong></p>
+                            <a href="{% url "Transformative" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-ecosystem.jpg" alt="IoT in Industries" class="img-fluid mb-2">
+                        <p><strong>The IT Industry Ecosystem</strong></p>
+                        <a href="{% url "Ecosystem" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/IT-services.jpg" alt="IT Services Reduce Costs" class="img-fluid mb-2">
+                        <p><strong>How can IT services help reduce costs for companies?</strong></p>
+                        <a href="{% url "ITservices" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-Cybersecurity.jpg" alt="Cybersecurity" class="img-fluid mb-2">
+                        <p><strong>Cybersecurity: The Importance of Protecting Your Data</strong></p>
+                        <a href="{% url "Cybersecurity" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 </div>
 {% endblock content %}
  

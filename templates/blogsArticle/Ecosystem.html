@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/ArticleBlogs.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 <body>
   <!-- Windows hero section -->
@@ -43,100 +44,147 @@
           </div>
       </div>
   </section>
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">1. Cloud Computing:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> Above the cityscape, a cloud formation hovers, representing cloud computing services that power
-                  many aspects of modern IT applications and services. It is depicted as a cluster of
-                  interconnected, fluffy clouds, with servers and data centers hidden within.</li>
-
-          </ul>
-      </div>
-  </div>
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">2. Digital Devices:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> Inhabitants of the city are represented by silhouettes using various digital devices, such as
-                  laptops, smartphones, tablets, and wearable gadgets, showcasing the widespread use and
-                  integration of technology in daily life.</li>
-
-          </ul>
-      </div>
-  </div>
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">3. AI Bots and Drones:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>Small AI-powered bots and drones can be seen zipping through the air, representing the role of
-                  artificial intelligence in automating tasks, providing customer support, and managing logistics.
-              </li>
-
-          </ul>
-      </div>
-  </div>
-
-  <div class="article">
-      <div class="article-header  p-2  text-white">4. Cybersecurity Defense Walls:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>Surrounding the cityscape, an array of glowing, protective walls symbolizes the robust
-                  cybersecurity measures employed to safeguard data and systems from cyber threats.</li>
-
-          </ul>
-      </div>
-  </div>
+</div>
 
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">5.Education and Research Centers:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>On the outskirts of the city, there are dedicated zones for research and education institutions,
-                  signifying the constant need for knowledge advancement and skilled professionals in the
-                  ever-evolving IT industry.
-              </li>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="article">
+                <div class="article-header  p-2  text-white">1. Cloud Computing:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> Above the cityscape, a cloud formation hovers, representing cloud computing services that power
+                            many aspects of modern IT applications and services. It is depicted as a cluster of
+                            interconnected, fluffy clouds, with servers and data centers hidden within.</li>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header  p-2  text-white">6.Entrepreneurship and Startups:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>Sprinkled throughout the city are small, budding saplings, denoting the growth of startups and
-                  entrepreneurship within the IT sector, fostering innovation and creativity.
-              </li>
+                    </ul>
+                </div>
+            </div>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header  p-2  text-white">7. Connectivity and Global Reach:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> A network of satellites orbiting above the city illustrates the global reach of the IT
-                  industry, facilitating worldwide communication, and access to information.
-              </li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">2. Digital Devices:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> Inhabitants of the city are represented by silhouettes using various digital devices, such as
+                            laptops, smartphones, tablets, and wearable gadgets, showcasing the widespread use and
+                            integration of technology in daily life.</li>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header  p-2  text-white">8. Green Technology:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>The cityscape is surrounded by lush greenery and sustainable infrastructure, highlighting the
-                  increasing focus on eco-friendly and energy-efficient solutions within the IT industry.
-              </li>
+                    </ul>
+                </div>
+            </div>
 
-          </ul>
-      </div>
-  </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">3. AI Bots and Drones:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>Small AI-powered bots and drones can be seen zipping through the air, representing the role of
+                            artificial intelligence in automating tasks, providing customer support, and managing logistics.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">4. Cybersecurity Defense Walls:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>Surrounding the cityscape, an array of glowing, protective walls symbolizes the robust
+                            cybersecurity measures employed to safeguard data and systems from cyber threats.</li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">5.Education and Research Centers:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>On the outskirts of the city, there are dedicated zones for research and education institutions,
+                            signifying the constant need for knowledge advancement and skilled professionals in the
+                            ever-evolving IT industry.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">6.Entrepreneurship and Startups:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>Sprinkled throughout the city are small, budding saplings, denoting the growth of startups and
+                            entrepreneurship within the IT sector, fostering innovation and creativity.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">7. Connectivity and Global Reach:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> A network of satellites orbiting above the city illustrates the global reach of the IT
+                            industry, facilitating worldwide communication, and access to information.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">8. Green Technology:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>The cityscape is surrounded by lush greenery and sustainable infrastructure, highlighting the
+                            increasing focus on eco-friendly and energy-efficient solutions within the IT industry.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="blog-section">
+                <!-- <h5>Insights, Trends, and Innovations in Networking and Software</h5> -->
+                <input type="text" id="searchBox" class="form-control my-3" placeholder="Search..." onkeyup="searchContent()">
+                <div class="blog-list">
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Windows vs. Linux.png" alt="Exploring the Future of Technology"
+                            class="img-fluid mb-2">
+                            <p><strong>Windows vs. Linux: Unraveling the Battle of Operating Systems</strong></p>
+                            <a href="{% url "Windows" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Exploring.png" alt="Windows vs. Linux" class="img-fluid mb-2">
+                        <p><strong>Exploring the Future of Technology: A Glimpse into Tomorrow</strong></p>
+                        <a href="{% url "Exploring" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Transformative.png" alt="IT Industry Ecosystem" class="img-fluid mb-2">
+                        <p><strong>The Transformative Power of IoT in Industries: A Journey Beyond
+                            Connectivity</strong></p>
+                            <a href="{% url "Transformative" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-ecosystem.jpg" alt="IoT in Industries" class="img-fluid mb-2">
+                        <p><strong>The IT Industry Ecosystem</strong></p>
+                        <a href="{% url "Ecosystem" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/IT-services.jpg" alt="IT Services Reduce Costs" class="img-fluid mb-2">
+                        <p><strong>How can IT services help reduce costs for companies?</strong></p>
+                        <a href="{% url "ITservices" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-Cybersecurity.jpg" alt="Cybersecurity" class="img-fluid mb-2">
+                        <p><strong>Cybersecurity: The Importance of Protecting Your Data</strong></p>
+                        <a href="{% url "Cybersecurity" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 {% endblock content %}

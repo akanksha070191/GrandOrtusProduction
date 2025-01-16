@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/ArticleBlogs.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 <body>
 {% block content %}
@@ -31,7 +32,8 @@
         <section class="content-section">
             <div class="row">
                 <div class="col-lg-6"> <img src="/static/images/Windows vs. Linux.png" alt="Technology Concept"
-                        class="img-fluid rounded"> </div>
+                        class="img-fluid rounded">
+                </div>
                 <div class="col-lg-6">
                     <div class="content-text">
                         <p>When it comes to operating systems, the debate between Windows and Linux has been ongoing
@@ -43,8 +45,9 @@
                     </div>
                 </div>
             </div>
-    </div>
         </section>
+    </div>
+        
 
         <!-- Full Content Display -->
         <div class="container">
@@ -158,39 +161,39 @@
                 <div class="col-lg-2">
                     <div class="blog-section">
                         <!-- <h5>Insights, Trends, and Innovations in Networking and Software</h5> -->
-                        <input type="text" class="form-control my-3" placeholder="Search...">
+                        <input type="text" id="searchBox" class="form-control my-3" placeholder="Search..." onkeyup="searchContent()">
                         <div class="blog-list">
-                            <div class="blog-item">
+                            <div class="blog-item" data-search>
                                 <img src="/static/images/Windows vs. Linux.png" alt="Exploring the Future of Technology"
                                     class="img-fluid mb-2">
                                     <p><strong>Windows vs. Linux: Unraveling the Battle of Operating Systems</strong></p>
-                                    <a href="blog1-link.html" class="btn btn-sm btn-primary">Read More</a>
+                                    <a href="{% url "Windows" %}" class="btn btn-sm btn-primary">Read More</a>
                                 </div>
-                                <div class="blog-item">
+                                <div class="blog-item" data-search>
                                 <img src="/static/images/Exploring.png" alt="Windows vs. Linux" class="img-fluid mb-2">
                                 <p><strong>Exploring the Future of Technology: A Glimpse into Tomorrow</strong></p>
-                                <a href="blog2-link.html" class="btn btn-sm btn-primary">Read More</a>
+                                <a href="{% url "Exploring" %}" class="btn btn-sm btn-primary">Read More</a>
                             </div>
-                            <div class="blog-item">
+                            <div class="blog-item" data-search>
                                 <img src="/static/images/Transformative.png" alt="IT Industry Ecosystem" class="img-fluid mb-2">
                                 <p><strong>The Transformative Power of IoT in Industries: A Journey Beyond
                                     Connectivity</strong></p>
-                                    <a href="blog3-link.html" class="btn btn-sm btn-primary">Read More</a>
+                                    <a href="{% url "Transformative" %}" class="btn btn-sm btn-primary">Read More</a>
                                 </div>
-                                <div class="blog-item">
+                                <div class="blog-item" data-search>
                                 <img src="/static/images/Blog-ecosystem.jpg" alt="IoT in Industries" class="img-fluid mb-2">
                                 <p><strong>The IT Industry Ecosystem</strong></p>
-                                <a href="blog4-link.html" class="btn btn-sm btn-primary">Read More</a>
+                                <a href="{% url "Ecosystem" %}" class="btn btn-sm btn-primary">Read More</a>
                             </div>
-                            <div class="blog-item">
+                            <div class="blog-item" data-search>
                                 <img src="/static/images/IT-services.jpg" alt="IT Services Reduce Costs" class="img-fluid mb-2">
                                 <p><strong>How can IT services help reduce costs for companies?</strong></p>
-                                <a href="blog5-link.html" class="btn btn-sm btn-primary">Read More</a>
+                                <a href="{% url "ITservices" %}" class="btn btn-sm btn-primary">Read More</a>
                             </div>
-                            <div class="blog-item">
+                            <div class="blog-item" data-search>
                                 <img src="/static/images/Blog-Cybersecurity.jpg" alt="Cybersecurity" class="img-fluid mb-2">
                                 <p><strong>Cybersecurity: The Importance of Protecting Your Data</strong></p>
-                                <a href="blog6-link.html" class="btn btn-sm btn-primary">Read More</a>
+                                <a href="{% url "Cybersecurity" %}" class="btn btn-sm btn-primary">Read More</a>
                             </div>
                         </div>
                     </div>
