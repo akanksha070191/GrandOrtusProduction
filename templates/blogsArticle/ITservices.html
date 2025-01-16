@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/ArticleBlogs.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 <body>
 {% block content %}
@@ -47,152 +48,201 @@
 
 
     </section>
+</div>
 
-    <div class="article">
-        <div class="article-header  p-2  text-white">1. Streamlining Processes:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li> IT services can help companies streamline their operations and business processes. By
-                    identifying inefficiencies and implementing automation, companies can save time and reduce the
-                    number of manual tasks, which can lead to cost savings.</li>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="article">
+                <div class="article-header  p-2  text-white">1. Streamlining Processes:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> IT services can help companies streamline their operations and business processes. By
+                            identifying inefficiencies and implementing automation, companies can save time and reduce the
+                            number of manual tasks, which can lead to cost savings.</li>
 
-            </ul>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">2. Improved Resource Utilization:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> IT services can help companies optimize their resource utilization. This includes better
+                            management of hardware, software, and network resources, ensuring that they are used efficiently
+                            and not wasted.</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">3. Cloud Solutions:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>Cloud computing provides scalable and cost-effective solutions. IT services can help companies
+                            migrate to the cloud, reducing the need for physical infrastructure, and allowing them to pay
+                            for the resources they use, which can be more cost-efficient than maintaining and managing their
+                            own servers.</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">4. Enhanced Security and Risk Mitigation:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IT services can implement robust cybersecurity measures to protect the company’s data and
+                            infrastructure from potential threats. Avoiding security breaches and data loss can save a
+                            company significant costs associated with data recovery, legal liabilities, and reputation
+                            damage.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">5. Remote Work and Collaboration:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IT services can enable remote work and collaboration tools, which can lead to cost savings in
+                            office space, utilities, and other overhead expenses.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">6. Data Analysis and Business Intelligence:</div>
+                <div class="article-body px-2">
+                    <p>Safety is paramount in any industry. IoT devices enhance workplace safety by:</p>
+                    <ul>
+                        <li>IT services can help companies gather, process, and analyze data efficiently. This enables
+                            better decision-making, cost optimization, and identifying new business opportunities.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">7. Customer Support and Service Automation:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IT services can help companies implement self-service customer support systems, reducing the
+                            need for extensive human support and decreasing customer service costs.</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">8. Software and License Management:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IT services can assist in managing software licenses effectively, ensuring compliance, and
+                            avoiding unnecessary expenses on over-licensing.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">9. Employee Training and Development:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> IT services can facilitate online training and development programs, reducing the need for
+                            expensive in-person training sessions and materials.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">10. Virtualization and Consolidation:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IT services can help companies consolidate their IT infrastructure through virtualization,
+                            reducing the number of physical servers and associated costs.
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">11. Predictive Maintenance:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>For companies with physical assets, IT services can help implement predictive maintenance
+                            solutions, ensuring timely maintenance and reducing downtime and repair costs.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header  p-2  text-white">12. Energy Efficiency:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>IT services can work towards optimizing data centers and computer systems for energy efficiency,
+                            leading to reduced electricity costs.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
 
-
-
-    <div class="article">
-        <div class="article-header  p-2  text-white">2. Improved Resource Utilization:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li> IT services can help companies optimize their resource utilization. This includes better
-                    management of hardware, software, and network resources, ensuring that they are used efficiently
-                    and not wasted.</li>
-
-            </ul>
+        <div class="col-lg-2">
+            <div class="blog-section">
+                <!-- <h5>Insights, Trends, and Innovations in Networking and Software</h5> -->
+                <input type="text" id="searchBox" class="form-control my-3" placeholder="Search..." onkeyup="searchContent()">
+                <div class="blog-list">
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Windows vs. Linux.png" alt="Exploring the Future of Technology"
+                            class="img-fluid mb-2">
+                            <p><strong>Windows vs. Linux: Unraveling the Battle of Operating Systems</strong></p>
+                            <a href="{% url "Windows" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Exploring.png" alt="Windows vs. Linux" class="img-fluid mb-2">
+                        <p><strong>Exploring the Future of Technology: A Glimpse into Tomorrow</strong></p>
+                        <a href="{% url "Exploring" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Transformative.png" alt="IT Industry Ecosystem" class="img-fluid mb-2">
+                        <p><strong>The Transformative Power of IoT in Industries: A Journey Beyond
+                            Connectivity</strong></p>
+                            <a href="{% url "Transformative" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-ecosystem.jpg" alt="IoT in Industries" class="img-fluid mb-2">
+                        <p><strong>The IT Industry Ecosystem</strong></p>
+                        <a href="{% url "Ecosystem" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/IT-services.jpg" alt="IT Services Reduce Costs" class="img-fluid mb-2">
+                        <p><strong>How can IT services help reduce costs for companies?</strong></p>
+                        <a href="{% url "ITservices" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-Cybersecurity.jpg" alt="Cybersecurity" class="img-fluid mb-2">
+                        <p><strong>Cybersecurity: The Importance of Protecting Your Data</strong></p>
+                        <a href="{% url "Cybersecurity" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
-
-    <div class="article">
-        <div class="article-header  p-2  text-white">3. Cloud Solutions:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>Cloud computing provides scalable and cost-effective solutions. IT services can help companies
-                    migrate to the cloud, reducing the need for physical infrastructure, and allowing them to pay
-                    for the resources they use, which can be more cost-efficient than maintaining and managing their
-                    own servers.</li>
-
-            </ul>
-        </div>
-    </div>
-
-    <div class="article">
-        <div class="article-header  p-2  text-white">4. Enhanced Security and Risk Mitigation:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>IT services can implement robust cybersecurity measures to protect the company’s data and
-                    infrastructure from potential threats. Avoiding security breaches and data loss can save a
-                    company significant costs associated with data recovery, legal liabilities, and reputation
-                    damage.
-                </li>
-
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="article">
-        <div class="article-header  p-2  text-white">5. Remote Work and Collaboration:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>IT services can enable remote work and collaboration tools, which can lead to cost savings in
-                    office space, utilities, and other overhead expenses.
-                </li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="article">
-        <div class="article-header  p-2  text-white">6. Data Analysis and Business Intelligence:</div>
-        <div class="article-body px-2">
-            <p>Safety is paramount in any industry. IoT devices enhance workplace safety by:</p>
-            <ul>
-                <li>IT services can help companies gather, process, and analyze data efficiently. This enables
-                    better decision-making, cost optimization, and identifying new business opportunities.
-                </li>
-
-            </ul>
-        </div>
-    </div>
-
-    <div class="article">
-        <div class="article-header  p-2  text-white">7. Customer Support and Service Automation:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>IT services can help companies implement self-service customer support systems, reducing the
-                    need for extensive human support and decreasing customer service costs.</li>
-
-            </ul>
-        </div>
-    </div>
-
-    <div class="article">
-        <div class="article-header  p-2  text-white">8. Software and License Management:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>IT services can assist in managing software licenses effectively, ensuring compliance, and
-                    avoiding unnecessary expenses on over-licensing.
-                </li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="article">
-        <div class="article-header  p-2  text-white">9. Employee Training and Development:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li> IT services can facilitate online training and development programs, reducing the need for
-                    expensive in-person training sessions and materials.
-                </li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="article">
-        <div class="article-header  p-2  text-white">10. Virtualization and Consolidation:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>IT services can help companies consolidate their IT infrastructure through virtualization,
-                    reducing the number of physical servers and associated costs.
-
-                </li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="article">
-        <div class="article-header  p-2  text-white">11. Predictive Maintenance:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>For companies with physical assets, IT services can help implement predictive maintenance
-                    solutions, ensuring timely maintenance and reducing downtime and repair costs.
-                </li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="article">
-        <div class="article-header  p-2  text-white">12. Energy Efficiency:</div>
-        <div class="article-body px-2">
-            <ul>
-                <li>IT services can work towards optimizing data centers and computer systems for energy efficiency,
-                    leading to reduced electricity costs.
-                </li>
-
-            </ul>
-        </div>
-    </div>
+</div>
 
 </div>
 {% endblock content %}

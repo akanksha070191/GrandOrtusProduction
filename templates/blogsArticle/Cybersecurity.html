@@ -10,6 +10,7 @@
 {% endblock metakeyword %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/ArticleBlogs.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 
 
@@ -60,93 +61,140 @@
           </div>
       </div>
   </section>
+</div>
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">There are many different types of cyberattacks, including:
-      </div>
-      <div class="article-body px-2">
-          <ul>
-              <li class="py-2"> <b>Malware:</b> This is software that is designed to harm a computer system.
-                  Malware can be spread through email attachments, malicious websites, or USB drives.</li>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
 
-              <li class="py-2"> <b>Phishing:</b> This is a type of social engineering attack that involves sending
-                  fraudulent emails that appear to be from a legitimate source. The goal of a phishing attack is
-                  to trick the recipient into clicking on a malicious link or providing sensitive information.
-              </li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">There are many different types of cyberattacks, including:
+                </div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li class="py-2"> <b>Malware:</b> This is software that is designed to harm a computer system.
+                            Malware can be spread through email attachments, malicious websites, or USB drives.</li>
 
-              <li class="py-2"> <b>Ransomware:</b> This is a type of malware that encrypts a victim’s files and
-                  demands a ransom payment in order to decrypt them.</li>
+                        <li class="py-2"> <b>Phishing:</b> This is a type of social engineering attack that involves sending
+                            fraudulent emails that appear to be from a legitimate source. The goal of a phishing attack is
+                            to trick the recipient into clicking on a malicious link or providing sensitive information.
+                        </li>
 
-              <li class="py-2"> <b>DDoS attacks:</b> These attacks involve flooding a website or server with so
-                  much traffic that it becomes unavailable.</li>
+                        <li class="py-2"> <b>Ransomware:</b> This is a type of malware that encrypts a victim’s files and
+                            demands a ransom payment in order to decrypt them.</li>
 
-              <li class="py-2"> <b>Zero-day attacks:</b> These are attacks that exploit vulnerabilities in
-                  software that the software vendor is not aware of. Zero-day attacks are often very difficult to
-                  defend against because there is no patch available to fix the vulnerability.</li>
+                        <li class="py-2"> <b>DDoS attacks:</b> These attacks involve flooding a website or server with so
+                            much traffic that it becomes unavailable.</li>
 
-              <li> <b>Data breaches: </b> A data breach occurs when sensitive data is stolen from a computer
-                  system or network. This data can include personal information, financial data, or intellectual
-                  property.</li>
+                        <li class="py-2"> <b>Zero-day attacks:</b> These are attacks that exploit vulnerabilities in
+                            software that the software vendor is not aware of. Zero-day attacks are often very difficult to
+                            defend against because there is no patch available to fix the vulnerability.</li>
+
+                        <li> <b>Data breaches: </b> A data breach occurs when sensitive data is stolen from a computer
+                            system or network. This data can include personal information, financial data, or intellectual
+                            property.</li>
 
 
-          </ul>
-          <p>Cyberattacks can have a significant impact on individuals and organizations. They can lead to
-              financial losses, identity theft, and even physical harm.</p>
-      </div>
-  </div>
+                    </ul>
+                    <p>Cyberattacks can have a significant impact on individuals and organizations. They can lead to
+                        financial losses, identity theft, and even physical harm.</p>
+                </div>
+            </div>
 
-  <section class="alternate-section">
-      <div class="article-header  p-2  text-white">
-          <h2>There are a number of things that individuals and organizations can do to protect themselves from
-              cyberattacks. These include</h2>
-      </div>
-      <p class="py-2"> <b>Keeping software up to date:</b> Software updates often include security patches that
-          can help to protect against known vulnerabilities.
-          As quantum computers become more accessible, they will unlock new realms of possibilities, from
-          developing new medicines to solving complex logistical challenges.</p>
-      <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
+            <section class="alternate-section">
+                <div class="article-header  p-2  text-white">
+                    <h2>There are a number of things that individuals and organizations can do to protect themselves from
+                        cyberattacks. These include</h2>
+                </div>
+                <p class="py-2"> <b>Keeping software up to date:</b> Software updates often include security patches that
+                    can help to protect against known vulnerabilities.
+                    As quantum computers become more accessible, they will unlock new realms of possibilities, from
+                    developing new medicines to solving complex logistical challenges.</p>
+                <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
 
-      <p class="py-2"> <b>Using strong passwords:</b> Passwords should be long, complex, and unique. They should
-          also be changed regularly.</p>
-      <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
+                <p class="py-2"> <b>Using strong passwords:</b> Passwords should be long, complex, and unique. They should
+                    also be changed regularly.</p>
+                <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
 
-      <p class="py-2"> <b>Being careful about what links you click on:</b> Only click on links in emails or on
-          websites that you trust.</p>
-      <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
+                <p class="py-2"> <b>Being careful about what links you click on:</b> Only click on links in emails or on
+                    websites that you trust.</p>
+                <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
 
-      <p class="py-2"> <b>Using a firewall and antivirus software:</b> Firewalls and antivirus software can help
-          to protect your computer from malware.</p>
-      <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
+                <p class="py-2"> <b>Using a firewall and antivirus software:</b> Firewalls and antivirus software can help
+                    to protect your computer from malware.</p>
+                <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
 
-      <p class="py-2"> <b>Being aware of social engineering attacks:</b> Don’t give out sensitive information in
-          response to emails or phone calls from people you don’t know.</p>
-      <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
-      <p>Cybersecurity is an important issue that everyone needs to be aware of. By taking steps to protect
-          yourself, you can help to keep your data safe and secure.
+                <p class="py-2"> <b>Being aware of social engineering attacks:</b> Don’t give out sensitive information in
+                    response to emails or phone calls from people you don’t know.</p>
+                <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
+                <p>Cybersecurity is an important issue that everyone needs to be aware of. By taking steps to protect
+                    yourself, you can help to keep your data safe and secure.
 
-      </p>
-  </section>
+                </p>
+            </section>
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">Here are some additional tips for cybersecurity:</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> Use two-factor authentication (2FA) whenever possible. This adds an extra layer of security by
-                  requiring you to enter a code from your phone in addition to your password</li>
-              <li>Be careful about what information you share online. Don’t post your social security number,
-                  credit card number, or other sensitive information on social media or other public websites.
-              </li>
-              <li>Back up your data regularly. This way, if your computer is hacked, you won’t lose all of your
-                  important files.
-              </li>
-              <li> Be aware of the latest cybersecurity threats. Read security blogs and articles to stay
-                  up-to-date on the latest threats so you can take steps to protect yourself.
-              <li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">Here are some additional tips for cybersecurity:</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> Use two-factor authentication (2FA) whenever possible. This adds an extra layer of security by
+                            requiring you to enter a code from your phone in addition to your password</li>
+                        <li>Be careful about what information you share online. Don’t post your social security number,
+                            credit card number, or other sensitive information on social media or other public websites.
+                        </li>
+                        <li>Back up your data regularly. This way, if your computer is hacked, you won’t lose all of your
+                            important files.
+                        </li>
+                        <li> Be aware of the latest cybersecurity threats. Read security blogs and articles to stay
+                            up-to-date on the latest threats so you can take steps to protect yourself.
+                        <li>
 
-          </ul>
-      </div>
-  </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-lg-2">
+            <div class="blog-section">
+                <!-- <h5>Insights, Trends, and Innovations in Networking and Software</h5> -->
+                <input type="text" id="searchBox" class="form-control my-3" placeholder="Search..." onkeyup="searchContent()">
+                <div class="blog-list">
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Windows vs. Linux.png" alt="Exploring the Future of Technology"
+                            class="img-fluid mb-2">
+                            <p><strong>Windows vs. Linux: Unraveling the Battle of Operating Systems</strong></p>
+                            <a href="{% url "Windows" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Exploring.png" alt="Windows vs. Linux" class="img-fluid mb-2">
+                        <p><strong>Exploring the Future of Technology: A Glimpse into Tomorrow</strong></p>
+                        <a href="{% url "Exploring" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Transformative.png" alt="IT Industry Ecosystem" class="img-fluid mb-2">
+                        <p><strong>The Transformative Power of IoT in Industries: A Journey Beyond
+                            Connectivity</strong></p>
+                            <a href="{% url "Transformative" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-ecosystem.jpg" alt="IoT in Industries" class="img-fluid mb-2">
+                        <p><strong>The IT Industry Ecosystem</strong></p>
+                        <a href="{% url "Ecosystem" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/IT-services.jpg" alt="IT Services Reduce Costs" class="img-fluid mb-2">
+                        <p><strong>How can IT services help reduce costs for companies?</strong></p>
+                        <a href="{% url "ITservices" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-Cybersecurity.jpg" alt="Cybersecurity" class="img-fluid mb-2">
+                        <p><strong>Cybersecurity: The Importance of Protecting Your Data</strong></p>
+                        <a href="{% url "Cybersecurity" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

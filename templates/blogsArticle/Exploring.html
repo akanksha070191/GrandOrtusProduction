@@ -1,6 +1,7 @@
 {% extends "main/base.html" %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/ArticleBlogs.css">
+<script src="/static/js/blogSearch.js" defer></script>
 {% endblock csslink %}
 <body>
 <!-- Windows hero section -->
@@ -52,114 +53,166 @@
 
   </section>
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">Artificial Intelligence: The Next Frontier</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> Artificial Intelligence (AI) is set to redefine the fabric of society, industry, and daily
-                  life. As AI systems become more sophisticated, we can expect them to take on increasingly
-                  complex tasks, from diagnosing diseases with greater accuracy than human doctors to driving
-                  efficiency in manufacturing processes. Moreover, AI will play a crucial role in addressing some
-                  of the world’s most pressing challenges, including climate change and resource management</li>
+</div>
 
-          </ul>
-      </div>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
 
-  <section class="alternate-section">
-      <div class="article-header  p-2  text-white">
-          <h2>Quantum Computing: Unlocking New Realms</h2>
-      </div>
-      <p>Quantum computing represents a quantum leap forward in our computational capabilities. Unlike traditional
-          computers, which use bits as the smallest unit of information, quantum computers use qubits. This allows
-          them to process information at speeds unfathomable to current technology, offering breakthroughs in
-          fields like cryptography, materials science, and complex system simulation.</p>
-      <p>As quantum computers become more accessible, they will unlock new realms of possibilities, from
-          developing new medicines to solving complex logistical challenges.</p>
-      <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
-  </section>
+            <div class="article">
+                <div class="article-header  p-2  text-white">Artificial Intelligence: The Next Frontier</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> Artificial Intelligence (AI) is set to redefine the fabric of society, industry, and daily
+                            life. As AI systems become more sophisticated, we can expect them to take on increasingly
+                            complex tasks, from diagnosing diseases with greater accuracy than human doctors to driving
+                            efficiency in manufacturing processes. Moreover, AI will play a crucial role in addressing some
+                            of the world’s most pressing challenges, including climate change and resource management</li>
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">Biotechnology: Engineering the Future of Life</div>
-      <div class="article-body px-2">
-          <ul>
-              <li> Biotechnology is at the forefront of extending human capabilities and improving quality of
-                  life. Advances in genetic engineering, for example, hold the promise of eradicating inherited
-                  diseases, while synthetic biology could lead to the creation of new forms of life designed to
-                  tackle specific environmental issues. Furthermore, biotechnology will play a vital role in the
-                  future of food production, with lab-grown meats and genetically modified crops offering
-                  sustainable alternatives to traditional farming methods</li>
+                    </ul>
+                </div>
+            </div>
 
-          </ul>
-      </div>
-  </div>
+            <section class="alternate-section">
+                <div class="article-header  p-2  text-white">
+                    <h2>Quantum Computing: Unlocking New Realms</h2>
+                </div>
+                <p>Quantum computing represents a quantum leap forward in our computational capabilities. Unlike traditional
+                    computers, which use bits as the smallest unit of information, quantum computers use qubits. This allows
+                    them to process information at speeds unfathomable to current technology, offering breakthroughs in
+                    fields like cryptography, materials science, and complex system simulation.</p>
+                <p>As quantum computers become more accessible, they will unlock new realms of possibilities, from
+                    developing new medicines to solving complex logistical challenges.</p>
+                <!-- <img src="images/Quantum Computing.jpg" alt="Quantum Computing Illustration"> -->
+            </section>
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">Space Exploration: Beyond the Final Frontier</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>Space exploration is entering a new golden age, driven by both governmental space agencies and
-                  private enterprises. The quest to colonize Mars, mine asteroids for rare materials, and explore
-                  the outer reaches of our solar system is not just the stuff of science fiction anymore. These
-                  endeavors will not only deepen our understanding of the universe but also spur technological
-                  innovations that could have wide-ranging applications on Earth.</li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">Biotechnology: Engineering the Future of Life</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li> Biotechnology is at the forefront of extending human capabilities and improving quality of
+                            life. Advances in genetic engineering, for example, hold the promise of eradicating inherited
+                            diseases, while synthetic biology could lead to the creation of new forms of life designed to
+                            tackle specific environmental issues. Furthermore, biotechnology will play a vital role in the
+                            future of food production, with lab-grown meats and genetically modified crops offering
+                            sustainable alternatives to traditional farming methods</li>
 
-          </ul>
-      </div>
-  </div>
+                    </ul>
+                </div>
+            </div>
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">Sustainable Technologies: A Green Future</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>As the world grapples with climate change and environmental degradation, sustainable
-                  technologies are becoming increasingly crucial. Innovations in renewable energy, such as solar
-                  and wind, are making clean power more accessible and affordable. Meanwhile, advancements in
-                  battery technology and smart grids are crucial for energy storage and distribution. In the
-                  future, we can expect a greater emphasis on technologies that reduce carbon footprints, enhance
-                  recycling capabilities, and promote a more sustainable interaction with our environment.</li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">Space Exploration: Beyond the Final Frontier</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>Space exploration is entering a new golden age, driven by both governmental space agencies and
+                            private enterprises. The quest to colonize Mars, mine asteroids for rare materials, and explore
+                            the outer reaches of our solar system is not just the stuff of science fiction anymore. These
+                            endeavors will not only deepen our understanding of the universe but also spur technological
+                            innovations that could have wide-ranging applications on Earth.</li>
 
-          </ul>
-      </div>
-  </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header  p-2  text-white">Sustainable Technologies: A Green Future</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>As the world grapples with climate change and environmental degradation, sustainable
+                            technologies are becoming increasingly crucial. Innovations in renewable energy, such as solar
+                            and wind, are making clean power more accessible and affordable. Meanwhile, advancements in
+                            battery technology and smart grids are crucial for energy storage and distribution. In the
+                            future, we can expect a greater emphasis on technologies that reduce carbon footprints, enhance
+                            recycling capabilities, and promote a more sustainable interaction with our environment.</li>
+
+                    </ul>
+                </div>
+            </div>
 
 
-  <div class="article">
-      <div class="article-header  p-2  text-white">The Ethical Dimension</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>With great power comes great responsibility, and the future of technology is no exception.
-                  Ethical
-                  considerations, particularly concerning AI and biotechnology, will become increasingly
-                  important.
-                  Questions about privacy, security, and the moral implications of creating or altering life are
-                  just
-                  the tip of the iceberg. As we navigate this brave new world, ensuring that technological
-                  advancements benefit humanity as a whole, without exacerbating inequalities, will be paramount.
-              </li>
+            <div class="article">
+                <div class="article-header  p-2  text-white">The Ethical Dimension</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>With great power comes great responsibility, and the future of technology is no exception.
+                            Ethical
+                            considerations, particularly concerning AI and biotechnology, will become increasingly
+                            important.
+                            Questions about privacy, security, and the moral implications of creating or altering life are
+                            just
+                            the tip of the iceberg. As we navigate this brave new world, ensuring that technological
+                            advancements benefit humanity as a whole, without exacerbating inequalities, will be paramount.
+                        </li>
 
-          </ul>
-      </div>
-  </div>
-  <div class="article">
-      <div class="article-header bg-success p-2  text-white">Conclusion</div>
-      <div class="article-body px-2">
-          <ul>
-              <li>The future of technology is bright and boundless, offering exciting opportunities and
-                  challenges. As we venture into this uncharted territory, it’s crucial to foster a culture of
-                  innovation, ethical consideration, and inclusivity. By doing so, we can ensure that the
-                  technological advancements of tomorrow not only push the boundaries of human achievement but
-                  also promote a more equitable, sustainable, and flourishing world for all.
+                    </ul>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-header bg-success p-2  text-white">Conclusion</div>
+                <div class="article-body px-2">
+                    <ul>
+                        <li>The future of technology is bright and boundless, offering exciting opportunities and
+                            challenges. As we venture into this uncharted territory, it’s crucial to foster a culture of
+                            innovation, ethical consideration, and inclusivity. By doing so, we can ensure that the
+                            technological advancements of tomorrow not only push the boundaries of human achievement but
+                            also promote a more equitable, sustainable, and flourishing world for all.
 
-                  The journey into the future of technology is a collective adventure, one that requires
-                  collaboration across borders, disciplines, and ideologies. As we explore the vast potential of
-                  what lies ahead, let us move forward with curiosity, caution, and an unwavering commitment to
-                  the betterment of humanity.
-              </li>
+                            The journey into the future of technology is a collective adventure, one that requires
+                            collaboration across borders, disciplines, and ideologies. As we explore the vast potential of
+                            what lies ahead, let us move forward with curiosity, caution, and an unwavering commitment to
+                            the betterment of humanity.
+                        </li>
 
-          </ul>
-      </div>
-  </div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-2">
+            <div class="blog-section">
+                <!-- <h5>Insights, Trends, and Innovations in Networking and Software</h5> -->
+                <input type="text" id="searchBox" class="form-control my-3" placeholder="Search..." onkeyup="searchContent()">
+                <div class="blog-list">
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Windows vs. Linux.png" alt="Exploring the Future of Technology"
+                            class="img-fluid mb-2">
+                            <p><strong>Windows vs. Linux: Unraveling the Battle of Operating Systems</strong></p>
+                            <a href="{% url "Windows" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Exploring.png" alt="Windows vs. Linux" class="img-fluid mb-2">
+                        <p><strong>Exploring the Future of Technology: A Glimpse into Tomorrow</strong></p>
+                        <a href="{% url "Exploring" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Transformative.png" alt="IT Industry Ecosystem" class="img-fluid mb-2">
+                        <p><strong>The Transformative Power of IoT in Industries: A Journey Beyond
+                            Connectivity</strong></p>
+                            <a href="{% url "Transformative" %}" class="btn btn-sm btn-primary">Read More</a>
+                        </div>
+                        <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-ecosystem.jpg" alt="IoT in Industries" class="img-fluid mb-2">
+                        <p><strong>The IT Industry Ecosystem</strong></p>
+                        <a href="{% url "Ecosystem" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/IT-services.jpg" alt="IT Services Reduce Costs" class="img-fluid mb-2">
+                        <p><strong>How can IT services help reduce costs for companies?</strong></p>
+                        <a href="{% url "ITservices" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                    <div class="blog-item" data-search>
+                        <img src="/static/images/Blog-Cybersecurity.jpg" alt="Cybersecurity" class="img-fluid mb-2">
+                        <p><strong>Cybersecurity: The Importance of Protecting Your Data</strong></p>
+                        <a href="{% url "Cybersecurity" %}" class="btn btn-sm btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
 {% endblock content %}
