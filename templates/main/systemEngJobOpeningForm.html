@@ -20,9 +20,9 @@
   {% block content %}
   <section class="job-section">
     <div class="container">
-        <div class="row p-lg-3">
+        <div class="row p-lg-3 justify-content-center">
             <!-- Job Description Section -->
-            <div class="col-lg-6">
+            {% comment %} <div class="col-lg-6">
                 <div class="jobDescription-sec my-4">
                     <h2 class="job-title">Job Description</h2>
                     <p>Technical Skills:-</p>
@@ -55,12 +55,12 @@
                     </div>
                 </div>
 
-            </div>
+            </div> {% endcomment %}
             <!-- Apply Form Section -->
             <div class="col-lg-6">
                 <div class="container mt-5">
                     <div class="Job-form-container">
-                        <h2>Apply For System Engineer</h2>
+                        <h2>Application Form</h2>
                         <form class="my-4" id="applyForm" action="/jobForm/" method="POST" enctype="multipart/form-data" novalidate>
                             {% csrf_token %}
                             <div class="mb-3">

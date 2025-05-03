@@ -6,6 +6,11 @@ import os
 from django.conf import settings
 from email.message import EmailMessage
 from django.http import JsonResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import JobProfile
+from .serializer import JobSerializer
+from datetime import date
 
 
 
@@ -402,3 +407,12 @@ def getInTouchForm(request):
             return HttpResponse(f"Failed to send email. Error: {str(e)}")
 
     return render(request, 'main/index.html')
+
+class JobAPIView(APIView):
+    def get(self, request, *args, **kwargs):
+        JobProfile.objects.filter(validThroughDate__lt=date.today()).delete()
+        data = JobProfile.objects.all()
+        serializer = JobSerializer(data, many=True)
+        return Response(serializer.data)
+
+    

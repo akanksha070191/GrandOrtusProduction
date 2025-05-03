@@ -10,6 +10,7 @@
 {% endblock metakeyword %}
 {% block csslink %}
 <link rel="stylesheet" href="/static/css/CurrentJobOpenings.css">
+
 {% endblock csslink %}
 
 
@@ -42,86 +43,16 @@
       <div class="container">
         <div class="row gy-4">
           <!-- Job Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="job-card p-4">
-              <h4>Senior Software Engineer</h4>
-              <p><strong>Valid Till:</strong> 25th January 2025 </p>
-              <p><strong>Location:</strong> Hybrid </p>
-              <p><strong>Experience:</strong> 5+ years</p>
-              <p><strong>Skills:</strong> Python, Java, C++, JavaScript </p>
-              <div class="text-end">
-                <a href="{% url "SSEJobOpeningForm" %}" class="apply-btn">Apply Now</a>
-              </div>
+
+          <section class="job-listings">
+            <div class="container">
+            <div class="row gy-4" id="job-container">
+            
             </div>
-          </div>
-          <!-- Job Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="job-card p-4">
-              <h4>UI/UX Designer</h4>
-              <p><strong>Valid Till:</strong> 15th January 2025 </p>
-              <p><strong>Location:</strong> Hybrid</p>
-              <p><strong>Experience:</strong> 3+ years</p>
-              <p><strong>Skills:</strong> Figma, Sketch, Adobe XD, HTML</p>
-              <div class="text-end">
-                <a href="{% url "UIUXJobOpeningForm" %}" class="apply-btn">Apply Now</a>
-              </div>
             </div>
-          </div>
-          <!-- Job Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="job-card p-4">
-              <h4>Data Analyst</h4>
-              <p><strong>Valid Till:</strong> 15th January 2025 </p>
-              <p><strong>Location:</strong>Hybrid</p>
-              <p><strong>Experience:</strong> 2+ years</p>
-              <p><strong>Skills:</strong>Data Analysis tools</p>
-              <div class="text-end">
-                <a href="{% url "DAJobOpeningForm" %}" class="apply-btn">Apply Now</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Job Card 4 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="job-card p-4">
-              <h4>Accountant</h4>
-              <p><strong>Valid Till:</strong> 30th January 2025 </p>
-              <p><strong>Location:</strong>Hybrid</p>
-              <p><strong>Experience:</strong> 2+ years</p>
-              <p><strong>Skills:</strong>Bachelor’s degree in Accounting.</p>
-              <div class="text-end">
-                <a href="{% url "accountJobOpeningForm" %}" class="apply-btn">Apply Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Job Card 5 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="job-card p-4">
-              <h4>Network Engineer</h4>
-              <p><strong>Valid Till:</strong> 2nd February 2025 </p>
-              <p><strong>Location:</strong>Hybrid</p>
-              <p><strong>Experience:</strong> 2+ years</p>
-              <p><strong>Skills:</strong>Bachelor’s degree in CS, IT</p>
-              <div class="text-end">
-                <a href="{% url "networkJobOpeningForm" %}" class="apply-btn">Apply Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- Job Card 6 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="job-card p-4">
-              <h4>System Engineer</h4>
-              <p><strong>Valid Till:</strong> 5th February 2025 </p>
-              <p><strong>Location:</strong>Hybrid</p>
-              <p><strong>Experience:</strong> 2+ years</p>
-              <p><strong>Skills:</strong>Bachelor’s degree in CS, IT</p>
-              <div class="text-end">
-                <a href="{% url "systemEngJobOpeningForm" %}" class="apply-btn">Apply Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </section>
+
+         
     </section>
   
     <!-- FAQ Section -->
@@ -171,6 +102,44 @@
         </div>
       </div>
     </section>
+    <script>
+      fetch("http://127.0.0.1:8000/api/job/")
+     .then((response) => {
+     if (!response.ok) {
+     throw new Error("Network response was not ok " + response.statusText);
+     }
+     return response.json();
+     })
+     .then((jobs) => {
+     console.log("Fetched Jobs:", jobs);
+    
+     const container = document.getElementById("job-container");
+    
+     jobs.forEach((job) => {
+     const col = document.createElement("div");
+     col.className = "col-md-6 col-lg-4";
+    
+     col.innerHTML = `
+     <div class="job-card p-4">
+     <h4>${job.jobTitle || "Job Title"}</h4>
+     <p><strong>Location:</strong> ${job.jobLocation || "N/A"}</p>
+     <p><strong>Designation:</strong> ${job.designation || "N/A"}</p>
+     <p><strong>Description:</strong> ${job.jobDescription || "N/A"}</p>
+     <p><strong>Valid Through Date:</strong> ${job.validThroughDate || "N/A"}</p>
+     <div class="text-end">
+      <a href="{% url "systemEngJobOpeningForm" %}" class="apply-btn">Apply Now</a>
+     </div>
+     </div>
+     `;
+    
+     container.appendChild(col);
+     });
+     })
+     .catch((error) => {
+     console.error("There was a problem fetching job data:", error);
+     });
+    </script>
+    
 
   {% endblock content %}
 
