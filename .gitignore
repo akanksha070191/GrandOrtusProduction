@@ -1,2 +1,4 @@
 .env
 go-env
+__pycache__/
+*.py[cod]
