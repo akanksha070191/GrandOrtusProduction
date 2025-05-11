@@ -414,5 +414,6 @@ class JobAPIView(APIView):
         data = JobProfile.objects.all()
         serializer = JobSerializer(data, many=True)
         return Response(serializer.data)
+        
 
     
