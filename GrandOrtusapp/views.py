@@ -184,14 +184,14 @@ def indexContactForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
+        recipient_email = "piyush.r@grandortus.com"  # Replace with your recipient address
 
         try:
             # Create the email message
             email_msg = EmailMessage()
             email_msg['Subject'] = services
             email_msg['From'] = sender_email
-            email_msg['To'] = recipient_email
+            email_msg['To'] = ", ".join(recipient_email)
             email_msg.set_content(email_body)
 
             # Email sending
@@ -240,7 +240,7 @@ def jobForm(request):
         # Sender and recipient email
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "akanksha@grandortus.com"
+        recipient_email = "piyush.r@grandortus.com"
 
         try:
             # Create email message with attachment (if provided)
@@ -264,7 +264,7 @@ def jobForm(request):
                         # MIME structure
                         msg = MIMEMultipart()
                         msg['From'] = sender_email
-                        msg['To'] = recipient_email
+                        msg['To'] = ", ".join(recipient_email)
                         msg['Subject'] = subject
                         
                         # Attach email body
@@ -377,7 +377,7 @@ def getInTouchForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-        recipient_email = "akanksha@grandortus.com"  # Replace with your recipient address
+        recipient_email = ["piyush.r@grandortus.com", "info@grandortus.com"]  # Replace with your recipient address
 
         try:
             # Create the email message
