@@ -58,4 +58,5 @@ urlpatterns = [
     path('/Solutions/enterprise/', views.enterprices, name='enterprise'),
     path('/Solutions/msme/', views.msme, name='msme'),
     path('api/job/', views.JobAPIView.as_view()),
+    path('TermsConditions/', views.TermsConditions, name='TermsConditions'),
 ]

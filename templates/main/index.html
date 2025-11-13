@@ -185,9 +185,15 @@
 
  <!-- Success Message at the Top -->
  {% if success_message %}
+<<<<<<< HEAD
  <div id="flash-message" style="text-align: center; color: green; font-weight: bold; margin: 20px 0;">
      {{ success_message }}
  </div>
+=======
+    <div id="flash-message" style="text-align: center; color: green; font-weight: bold; margin: 20px 0;">
+      {{ success_message }}
+    </div>
+>>>>>>> 818bc6140243fc9932c52aa32fb29003a79ec9f6
  {% endif %} 
 
   <!-- Hero Section -->
@@ -874,6 +880,7 @@
           <p><a href="{% url "CaseStudy" %}" class="text-light pb-1">Case Studies</a></p>
           <p><a href="{% url "ITES" %}" class="text-light pb-1">Industries</a></p>
           <p><a href="{% url "Contact" %}" class="text-light pb-1">Contact Us</a></p>
+          <p><a href="{% url "TermsConditions" %}" class="text-light pb-1">Terms and Conditions</a></p>
         </div>
 
         <!-- Social Media Links -->
@@ -1120,6 +1127,21 @@
     }, 10)
 
   </script>
+
+  <script>
+    // Wait 3 seconds (3000 ms) then hide the message
+    setTimeout(function() {
+    var msg = document.getElementById("flash-message");
+    if (msg) {
+        msg.style.transition = "opacity 1s ease-out";
+        msg.style.opacity = 0;
+        setTimeout(function() {
+        msg.style.display = "none";
+        }, 1000); // Hide completely after fade
+    }
+    }, 3000);
+</script>
+
  <!-- get in touch from hide and show js -->
 
  <!-- flash-message -->
