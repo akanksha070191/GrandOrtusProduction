@@ -187,22 +187,14 @@ def indexContactForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-<<<<<<< HEAD
-        recipient_email = "piyush.r@grandortus.com"  # Replace with your recipient address
-=======
         recipient_email = ["akanksha@grandortus.com", "info@grandortus.com"]  # Replace with your recipient address
->>>>>>> 818bc6140243fc9932c52aa32fb29003a79ec9f6
 
         try:
             # Create the email message
             email_msg = EmailMessage()
             email_msg['Subject'] = services
             email_msg['From'] = sender_email
-<<<<<<< HEAD
-            email_msg['To'] = ", ".join(recipient_email)
-=======
             email_msg['To'] = ', '.join(recipient_email)
->>>>>>> 818bc6140243fc9932c52aa32fb29003a79ec9f6
             email_msg.set_content(email_body)
 
             # Email sending
@@ -251,11 +243,7 @@ def jobForm(request):
         # Sender and recipient email
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-<<<<<<< HEAD
-        recipient_email = "piyush.r@grandortus.com"
-=======
         recipient_email = ["akanksha@grandortus.com", "info@grandortus.com"]
->>>>>>> 818bc6140243fc9932c52aa32fb29003a79ec9f6
 
         try:
             # Create email message with attachment (if provided)
@@ -279,11 +267,7 @@ def jobForm(request):
                         # MIME structure
                         msg = MIMEMultipart()
                         msg['From'] = sender_email
-<<<<<<< HEAD
-                        msg['To'] = ", ".join(recipient_email)
-=======
                         msg['To'] = ', '.join(recipient_email)
->>>>>>> 818bc6140243fc9932c52aa32fb29003a79ec9f6
                         msg['Subject'] = subject
                         
                         # Attach email body
@@ -396,11 +380,7 @@ def getInTouchForm(request):
        
         sender_email = os.getenv("SENDER_EMAIL", settings.EMAIL_ID)
         sender_password = os.getenv("SENDER_PASSWORD", settings.EMAIL_PASSWORD)
-<<<<<<< HEAD
-        recipient_email = ["piyush.r@grandortus.com", "info@grandortus.com"]  # Replace with your recipient address
-=======
         recipient_email = ["akanksha@grandortus.com", "info@grandortus.com"]  # Replace with your recipient address
->>>>>>> 818bc6140243fc9932c52aa32fb29003a79ec9f6
 
         try:
             # Create the email message
